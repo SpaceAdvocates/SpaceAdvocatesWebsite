@@ -1,0 +1,37 @@
+/////// Config defaults for site border style /////// 
+// -----------------------------------------------------------------------------
+
+/////// Config defaults for site colors /////// 
+// -----------------------------------------------------------------------------
+
+/////// Page dimension configuration /////// 
+// -----------------------------------------------------------------------------
+
+/////// Typography configuration /////// 
+// -----------------------------------------------------------------------------
+
+/////// Config defaults for buttons /////// 
+// -----------------------------------------------------------------------------
+
+/////// UI @media breakpoint defaults /////// 
+// -----------------------------------------------------------------------------
+$phone_portrait_width: 		480px;
+$phone_landscape_width: 	800px;
+
+$phone: 					"screen and (max-width: #{$phone_landscape_width})";
+$phone_portrait: 		"screen and (max-width: #{$phone_portrait_width}) and (orientation: portrait)";
+$phone_landscape:		"screen and (max-width: #{$phone_landscape_width}) and (orientation: landscape)";
+
+$tablet_portrait_width: 	800px;
+$tablet_landscape_width:	1280px;
+
+$tablet: 				"screen and (min-width: #{$tablet_portrait_width}) and (max-width: #{$tablet_landscape_width})";
+$tablet_portrait:  	"screen and (max-width: #{$tablet_portrait_width}) and (orientation: portrait)";
+$tablet_landscape: 	"screen and (max-width: #{$tablet_landscape_width}) and (orientation: landscape)";
+
+$desktop_width: 			1280px;
+
+$desktop: 				"screen and (min-width: #{$desktop_width})";
+
+/////// Site Icons and Images /////// 
+// -----------------------------------------------------------------------------

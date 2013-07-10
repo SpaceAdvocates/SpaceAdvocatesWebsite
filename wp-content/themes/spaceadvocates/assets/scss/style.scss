@@ -1,37 +1,22 @@
-/*!
-Theme Name: WordPress Starter Theme
-Theme URI: http://www.THEME.com
-Description: WordPress Starter Theme for use as a starting template for building custom themes.
-Author: Matt Banks
-Author URI: http://www.kernelcreativemedia.com
-License: GNU General Public License v2.0
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Version: 1.0
-*/
+// App Config - this is where most of the magic will happen
+// ------------------------------------------------------------------------------
+@import "config";
 
-// Compass imports
-@import "compass";
+// CSS reset
+// ------------------------------------------------------------------------------
+@import "reset";
 
-// Reset, Variables, Mixins, Etc
-// DO NOT EDIT ORDER OF FILES
-@import "partials/mixins";
-@import "partials/variables";
-@import "partials/normalize";
+// Web fonts
+// ------------------------------------------------------------------------------
+//@import "fonts";
 
-// Globals
-@import "partials/global";
+// Libraries
+// ------------------------------------------------------------------------------
+@import "foundation";
 
-// The grid
-@import "partials/grid";
-
-// Page and Site Styles
-@import "partials/page";
-@import "partials/posts";
-@import "partials/widgets";
-@import "partials/search";
-@import "partials/comments";
-@import "partials/forms";
-
-// Helper Classes, Media Queries, Print, Etc
-@import "partials/helpers";
-@import "partials/print";
+// Custom styles
+// ------------------------------------------------------------------------------
+//@import "mixins";
+//@import "extends";
+//@import "global";
+//@import "modules/**/*";
