@@ -8,9 +8,9 @@
 
 			<div class="entry">
 
-				<p>It looks like nothing was found at this location. Maybe try heading back to the <a href="<?php echo home_url('/'); ?>">home page</a> or a search?</p>
+				<p>It looks like nothing was found at this location. Maybe try heading back to the <a href="<?php echo home_url('/'); ?>">home page</a>?</p>
 
-				<?php get_search_form(); ?>
+				<?php //get_search_form(); ?>
 
 			</div>
 
@@ -18,6 +18,6 @@
 
 	</section> <!-- /#main -->
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 
 <?php get_footer(); ?>

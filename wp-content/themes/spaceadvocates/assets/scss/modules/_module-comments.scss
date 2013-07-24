@@ -1,0 +1,27 @@
+#comments {
+	background-color: $secondary_color;
+	color: $white;
+	padding: 20px;
+	margin-bottom: 20px;
+
+	& > * {
+		width: 60%;
+	}
+	.comments-title {
+		color: $white;
+		font-size: 1.2em;
+		margin-top: 0em;
+		margin-bottom: 1em;
+	}
+	h3 {
+		color: inherit;
+		margin-top: 0px;
+	}
+	.commentlist {
+		list-style-type: none;
+		overflow: hidden;
+	}
+	#respond {
+		clear: both;
+	}
+}

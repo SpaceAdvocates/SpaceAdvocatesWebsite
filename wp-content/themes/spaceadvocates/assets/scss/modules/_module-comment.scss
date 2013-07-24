@@ -1,0 +1,64 @@
+li.comment {
+	overflow: hidden;
+	margin-bottom: 1em;
+
+	&:last-child {
+		margin-bottom: 0em;
+	}
+	div.comment {
+		$sidebar_width: 15%;
+		width: 100%;
+		overflow: hidden;
+
+		.vcard {
+			border: 0em;
+			padding: 0em 0.5em;
+			margin: 0em;
+			float: left;
+			width: $sidebar_width;
+
+			.avatar, .fn {
+				display: block;
+				margin: 0em auto;
+				text-align: center;
+			}
+			.avatar {
+				border-radius: 999em;
+				border: 0.15em solid $white;
+			}
+			.fn {
+				line-height: 1em;
+				font-size: 0.7em;
+				font-style: normal;
+			}
+		}
+		.notice {
+			color: $green;
+		}
+		.main-content {
+			float: left;
+			width: 100 - $sidebar_width;
+
+			.comment-meta {
+				.comment-edit-link {
+					float: right;
+					@extend %btn-light-blue;
+					font-size: 0.8em;
+				}
+			}
+			.comment-content {
+				p:last-child {
+					margin-bottom: 0em;
+				}
+			}
+			.reply {
+				text-align: right;
+
+				.comment-reply-link {
+					@extend %btn-red;
+					font-size: 0.8em;
+				}
+			}
+		}
+	}
+}

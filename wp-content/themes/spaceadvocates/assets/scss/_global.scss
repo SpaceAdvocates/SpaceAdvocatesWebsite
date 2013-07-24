@@ -1,0 +1,18 @@
+body {
+	background: $bg_color url(assets/images/bg/3-planets-1680-1050-3828.jpg) no-repeat fixed center;
+	background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font: normal 1em/1.2em $primary_font;
+	word-spacing: 0.2em;
+	margin: 0em;
+}
+
+ul {
+	margin: 0em;
+}
+
+a {
+	color: $light_blue;
+}

@@ -1,0 +1,25 @@
+aside {
+	.widget {
+		margin-top: 1.5em;
+
+		.widget-title {
+			background-color: $secondary_color;
+			color: $white;
+			padding: 0.7em;
+		}
+		ul {
+			list-style-type: none;
+			background-color: $white;
+			padding: 0.7em;
+
+			li {
+				line-height: 1.2em;
+				color: $light_gray;
+
+				a {
+					color: $black;
+				}
+			}
+		}
+	}
+}

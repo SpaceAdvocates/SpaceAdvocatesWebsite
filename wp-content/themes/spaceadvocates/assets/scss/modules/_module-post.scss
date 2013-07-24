@@ -1,0 +1,55 @@
+.post {
+	margin-top: 1.5em;
+	
+	h1 {
+		font-size: 2.5em;
+		line-height: 1.2em;
+		background-color: $secondary_color;
+		color: $white;
+		padding: 0.4em;
+	}
+	.entry {
+		background-color: $white;
+		padding: 1em;
+
+		.wp-caption {
+			margin: 1em;
+			background-color: $secondary_color;
+			color: $white;
+
+			&.alignright {
+				float: right;
+				margin-right: 0em;
+			}
+			&.alignleft {
+				float: left;
+				margin-left: 0em;
+			}
+			&.aligncenter {
+				margin: 1em auto;
+			}
+			.wp-caption-text {
+				padding: 0.8em;
+				margin: 0px;
+				font-size: 0.8em;
+				line-height: 1.2em;
+			}
+		}
+		img:first-child {
+			width: 100%;
+		}
+		p:last-child {
+			margin-bottom: 0em;
+		}
+		ul {
+			background-color: lighten($light_blue, 20%);
+			padding: 1em;
+			color: $black;
+			margin-bottom: 1.25em;
+
+			li {
+				margin-left: 1em;
+			}
+		}
+	}
+}

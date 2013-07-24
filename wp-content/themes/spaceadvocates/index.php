@@ -2,11 +2,16 @@
 
 	<section id="main" role="main">
 
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php $posts = get_posts(array(
+			'post_type' => 'post',
+			'post_per_page' => 5
+		));
+
+		if( count($posts) > 0 ): foreach( $posts as $post ): setup_postdata( $post ); ?>
 
 			<?php get_template_part( 'templates/partials/content', get_post_format() ); ?>
 
-		<?php endwhile; ?>
+		<?php endforeach; ?>
 
 		<?php get_template_part( 'templates/partials/inc', 'nav' ); ?>
 

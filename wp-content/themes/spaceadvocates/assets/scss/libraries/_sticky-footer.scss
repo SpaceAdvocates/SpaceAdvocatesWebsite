@@ -1,0 +1,48 @@
+/* Required:
+ * $footer_height
+ */
+
+html, body {
+   height: 100%;
+}
+
+body {
+   margin: 0px;
+   padding: 0px;
+}
+
+div#wrapper {
+   width: 100%;
+   min-height: 100%;
+   height: auto !important;
+   height: 100%;
+   margin: 0px 0px ($footer_height * -1) 0px;
+}
+
+footer#footer_wrapper {
+   width: 100%;
+   height: $footer_height;
+}
+
+div#content_wrapper {
+   width: 100%;
+   padding: 0px 0px $footer_height 0px;
+}
+
+/* The following is not needed with the following libraries:
+ * Foundation
+ * 
+ * Required:
+ * $page_width
+ */
+
+/*
+div#footer_wrapper, div#content_wrapper {
+   min-width: $page_width;
+}
+
+div#footer_inner_wrapper, div#content_inner_wrapper {
+   width: $page_width;
+   margin: 0px auto;
+}
+*/

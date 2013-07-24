@@ -1,0 +1,11 @@
+footer {
+	background-color: $secondary_color;
+	color: $white;
+	text-align: center;
+
+	.row {
+		div {
+			padding: 1em 0em;
+		}
+	}
+}

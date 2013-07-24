@@ -3,12 +3,28 @@
 
 /////// Config defaults for site colors /////// 
 // -----------------------------------------------------------------------------
+$secondary_color: #333;
+$bg_color: #eee;
+$blog_color: #444;
+
+$card_color: #333;
+$section_color: #999;
+
+$white: #fff;
+$black: #000;
+$green: #6c6;
+$light_blue: #93d7f9;
+$red: #da3b3b;
+$light_gray: #999;
 
 /////// Page dimension configuration /////// 
 // -----------------------------------------------------------------------------
+$footer_height: 50px;
 
 /////// Typography configuration /////// 
 // -----------------------------------------------------------------------------
+$primary_font: Bebas, Arial, sans-serif;
+$secondary_font: Arial, sans-serif;
 
 /////// Config defaults for buttons /////// 
 // -----------------------------------------------------------------------------

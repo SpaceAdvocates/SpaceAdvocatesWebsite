@@ -1,0 +1,29 @@
+#commentform {
+	margin: 0em;
+
+	.logged-in-as {
+		float: right;
+		margin-bottom: 0px;
+	}
+	.form-allowed-tags {
+		display: none;
+
+		abbr, code {
+			color: $red;
+		}
+	}
+	textarea {
+		margin: 0px;
+	}
+	label {
+		color: inherit;
+		font-size: 1em;
+	}
+	.form-submit {
+		margin: 0em;
+
+		#submit {
+			@extend %btn-red;
+		}
+	}
+}

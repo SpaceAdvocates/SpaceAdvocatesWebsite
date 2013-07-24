@@ -1,0 +1,26 @@
+nav {
+	background-color: $secondary_color;
+	padding: 1em;
+	box-shadow: 0em 0em 1em 0.1em $light_blue;
+
+	#menu-global-nav {
+		list-style-type: none;
+
+		li {
+			display: inline-block;
+			margin-right: 1em;
+			text-transform: uppercase;
+			font-family: $primary_font;
+
+			&:first-child {
+				color: $red;
+				font-size: 1.2em;
+				text-shadow: 0em 0em 1em 0.1em $light_blue;
+
+				a {
+					color: inherit;
+				}
+			}
+		}
+	}
+}

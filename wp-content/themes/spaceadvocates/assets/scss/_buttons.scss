@@ -1,0 +1,31 @@
+%btn {
+	display: inline-block;
+	color: $white;
+	border: 0px;
+	border-radius: 3px;
+	padding: 0.5em;
+	line-height: 1em;
+	font-family: $primary_font;
+	letter-spacing: 0.08em;
+}
+
+%btn-white {
+	@extend %btn;
+	background-color: $white;
+	color: $black;
+}
+
+%btn-light-blue {
+	@extend %btn;
+	background-color: $light_blue;
+}
+
+%btn-red {
+	@extend %btn;
+	background-color: $red;
+}
+
+%btn-green {
+	@extend %btn;
+	background-color: $green;
+}
