@@ -21,6 +21,14 @@ add_action( 'tgmpa_register', 'mb_register_required_plugins' );
 
 
 /****************************************
+Constants
+*****************************************/
+
+define('YT_API_KEY','AIzaSyCKhHOWwZ_0C2sixCrQW8hGbID4PL1BruA');
+define('YT_PLAYLIST_ID','UUHWBRuQtDWvYqPdaGzkGjLA');
+
+
+/****************************************
 Misc Theme Functions
 *****************************************/
 

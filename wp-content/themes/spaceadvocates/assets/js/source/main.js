@@ -1,4 +1,5 @@
 // GET https://www.googleapis.com/youtube/v3/videos
+// GET https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUHWBRuQtDWvYqPdaGzkGjLA&key={YOUR_API_KEY}
 
 $(function(){
 	//window.addEventListener('resize', resizeTablet, false);

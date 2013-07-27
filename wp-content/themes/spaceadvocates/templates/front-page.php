@@ -7,7 +7,7 @@ Template Name: Front Page
 
 <?php get_header(); ?>
 
-	<img src="<?php bloginfo('template_directory'); ?>/assets/images/logo.png" class="logo" />
+	<!-- <img src="<?php bloginfo('template_directory'); ?>/assets/images/logo.png" class="logo" /> -->
 
 	<section id="featured" class="row">
 
@@ -20,9 +20,10 @@ Template Name: Front Page
 				'meta_value' => 'on'
 			));
 
-			foreach( $posts as $post ): setup_postdata( $post ); ?>
-				<?php get_template_part( 'templates/partials/content', 'featured' ); ?>
-			<?php endforeach;
+			foreach( $posts as $post ) {
+				setup_postdata( $post );
+				get_template_part( 'templates/partials/content', 'featured' );
+			}
 
 			wp_reset_query();  // Restore global post data stomped by the_post().
 		?>
@@ -39,9 +40,27 @@ Template Name: Front Page
 				'post_per_page' => 5
 			));
 
-			foreach( $posts as $post ): setup_postdata( $post ); ?>
-				<?php get_template_part( 'templates/partials/content', 'card' ); ?>
-			<?php endforeach;
+			foreach( $posts as $post ) {
+				setup_postdata( $post );
+				get_template_part( 'templates/partials/content', 'card' );
+			}
+
+			wp_reset_query();  // Restore global post data stomped by the_post().
+		?>
+	</section>
+
+	<section id="recent_videos" class="row">
+
+		<h2>Recent Videos</h2>
+
+		<?php
+			$videos = json_decode(file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=' . YT_PLAYLIST_ID . '&key=' . YT_API_KEY));
+
+			foreach( $videos->items as $video) { ?>
+				<div class="small-12 medium-6 large-3 columns">
+					<iframe class="ytplayer" type="text/html" src="https://www.youtube.com/embed/<?php echo $video->snippet->resourceId->videoId ?>" frameborder="0" allowfullscreen ></iframe>
+				</div>
+			<?php }
 		?>
 	</section>
 
