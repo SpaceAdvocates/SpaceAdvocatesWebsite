@@ -7,6 +7,8 @@ Template Name: Front Page
 
 <?php get_header(); ?>
 
+	<img src="<?php bloginfo('template_directory'); ?>/assets/images/logo.png" class="logo" />
+
 	<section id="featured" class="row">
 
 		<h2>Featured Content</h2>
@@ -19,9 +21,7 @@ Template Name: Front Page
 			));
 
 			foreach( $posts as $post ): setup_postdata( $post ); ?>
-				<div class="large-3 columns">
-					<?php get_template_part( 'templates/partials/content', 'featured' ); ?>
-				</div>
+				<?php get_template_part( 'templates/partials/content', 'featured' ); ?>
 			<?php endforeach;
 
 			wp_reset_query();  // Restore global post data stomped by the_post().
@@ -38,18 +38,9 @@ Template Name: Front Page
 				'post_type' => 'post',
 				'post_per_page' => 5
 			));
-		
-			global $post;
-			setup_postdata( $post = array_shift($posts) ); ?>
-				<div class="large-6 columns">
-					<?php get_template_part( 'templates/partials/content', 'card' ); ?>
-				</div>
-			<?php
 
 			foreach( $posts as $post ): setup_postdata( $post ); ?>
-				<div class="large-3 columns">
-					<?php get_template_part( 'templates/partials/content', 'card' ); ?>
-				</div>
+				<?php get_template_part( 'templates/partials/content', 'card' ); ?>
 			<?php endforeach;
 		?>
 	</section>

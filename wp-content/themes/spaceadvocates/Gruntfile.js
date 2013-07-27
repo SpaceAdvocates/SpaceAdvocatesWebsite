@@ -1,4 +1,7 @@
+/* jshint globalstrict: true */
+/* global module, require */
 'use strict';
+
 module.exports = function(grunt) {
 
     // load all grunt tasks
@@ -8,6 +11,9 @@ module.exports = function(grunt) {
 
         // watch for changes and trigger compass, jshint, uglify and livereload
         watch: {
+            options: {
+                livereload: true,
+            },
             compass: {
                 files: ['assets/scss/**/*.{scss,sass}'],
                 tasks: ['compass']
@@ -36,7 +42,7 @@ module.exports = function(grunt) {
         jshint: {
             options: {
                 jshintrc: '.jshintrc',
-                "force": true
+                'force': true
             },
             all: [
                 'Gruntfile.js',
@@ -89,17 +95,27 @@ module.exports = function(grunt) {
         // deploy via rsync
         deploy: {
             staging: {
-                src: "./",
-                dest: "~/www/work/space-advocates/website/wp-content/themes/spaceadvocates",
-                host: "spensus1@spens.us",
+                src: './',
+                dest: '~/www/work/SpaceAdvocatesWebsite/wp-content/themes/spaceadvocates',
+                host: 'spensus1@spens.us',
                 recursive: true,
                 syncDest: true,
-                exclude: ['.git*', 'node_modules', '.sass-cache', 'Gruntfile.js', 'package.json', '.DS_Store', 'README.md', 'config.rb', '.jshintrc']
+                exclude: [
+                    '.git*',
+                    'node_modules',
+                    '.sass-cache',
+                    'Gruntfile.js',
+                    'package.json',
+                    '.DS_Store',
+                    'README.md',
+                    'config.rb',
+                    '.jshintrc'
+                ]
             },
             production: {
-                src: "./",
-                dest: "~/path/to/theme",
-                host: "user@host.com",
+                src: './',
+                dest: '~/path/to/theme',
+                host: 'user@host.com',
                 recursive: true,
                 syncDest: true,
                 exclude: '<%= rsync.staging.exclude %>'

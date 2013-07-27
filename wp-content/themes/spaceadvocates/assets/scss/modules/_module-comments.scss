@@ -25,3 +25,11 @@
 		clear: both;
 	}
 }
+
+@media (max-width: 1000px) {
+	#comments {
+		& > * {
+			width: 100%;
+		}
+	}
+}

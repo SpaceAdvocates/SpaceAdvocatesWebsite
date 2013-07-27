@@ -8,12 +8,13 @@ $bg_color: #eee;
 $blog_color: #444;
 
 $card_color: #333;
-$section_color: #999;
+$section_color: $secondary_color;
 
 $white: #fff;
 $black: #000;
 $green: #6c6;
 $light_blue: #93d7f9;
+$blue: #075181;
 $red: #da3b3b;
 $light_gray: #999;
 
@@ -32,20 +33,20 @@ $secondary_font: Arial, sans-serif;
 /////// UI @media breakpoint defaults /////// 
 // -----------------------------------------------------------------------------
 $phone_portrait_width: 		480px;
-$phone_landscape_width: 	800px;
+$phone_landscape_width: 	600px;
 
 $phone: 					"screen and (max-width: #{$phone_landscape_width})";
 $phone_portrait: 		"screen and (max-width: #{$phone_portrait_width}) and (orientation: portrait)";
 $phone_landscape:		"screen and (max-width: #{$phone_landscape_width}) and (orientation: landscape)";
 
-$tablet_portrait_width: 	800px;
-$tablet_landscape_width:	1280px;
+$tablet_portrait_width: 	600px;
+$tablet_landscape_width:	768px;
 
 $tablet: 				"screen and (min-width: #{$tablet_portrait_width}) and (max-width: #{$tablet_landscape_width})";
 $tablet_portrait:  	"screen and (max-width: #{$tablet_portrait_width}) and (orientation: portrait)";
 $tablet_landscape: 	"screen and (max-width: #{$tablet_landscape_width}) and (orientation: landscape)";
 
-$desktop_width: 			1280px;
+$desktop_width: 			768px;
 
 $desktop: 				"screen and (min-width: #{$desktop_width})";
 

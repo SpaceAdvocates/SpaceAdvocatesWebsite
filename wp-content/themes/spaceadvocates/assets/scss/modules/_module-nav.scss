@@ -1,6 +1,6 @@
 nav {
 	background-color: $secondary_color;
-	padding: 1em;
+	padding: 0.5em;
 	box-shadow: 0em 0em 1em 0.1em $light_blue;
 
 	#menu-global-nav {
@@ -8,18 +8,26 @@ nav {
 
 		li {
 			display: inline-block;
-			margin-right: 1em;
+			margin-right: 0.5em;
 			text-transform: uppercase;
 			font-family: $primary_font;
 
 			&:first-child {
 				color: $red;
 				font-size: 1.2em;
-				text-shadow: 0em 0em 1em 0.1em $light_blue;
-
+				position: relative;
+				top: 0.1em;
+				
 				a {
 					color: inherit;
+					//background-color: transparent;
+					//padding: 0em;
 				}
+			}
+			a {
+				background-color: rgba($black, 0.2);
+				padding: 0.5em 1em;
+				display: block;
 			}
 		}
 	}

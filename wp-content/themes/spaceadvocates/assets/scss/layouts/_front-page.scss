@@ -1,8 +1,9 @@
 @mixin section_background($color) {
-	background: lighten($section_color, 25%) repeating-linear-gradient(-45deg, transparent, transparent 15px, rgba(255,255,255,0.15) 15px, rgba(255,255,255,0.15) 30px);
+	//background: lighten($section_color, 25%) repeating-linear-gradient(-45deg, transparent, transparent 15px, rgba(255,255,255,0.15) 15px, rgba(255,255,255,0.15) 30px);
+	background-color: $section_color;
 	border-radius: 2px;
-	margin: 4em 0em 2em;
-	padding: 3em 1em 0em 1em;
+	margin: 3em 0em 2em;
+	padding: 1em 0em 0em 0em;
 	position: relative;
 
 	h2 {
@@ -10,40 +11,82 @@
 		top: -2em;
 		left: -1em;
 		margin: 0em;
-		padding: 1em 1em;
+		padding: 1em;
 		width: 100%;
+		height: 1em;
 		display: block;
 		color: $white;
 		box-sizing: content-box;
 		box-shadow: 0em 1em 1em -1em darken($color, 20%);
 		background-color: $color;
+		z-index: 1;
 	}
-	& > div {
-		margin-bottom: 1.5em;
-		height: 9em;
+	& > a {
+		padding: 0em;
 	}
 }
 
-#featured {
-	@include section_background($light_blue);
+.logo {
+	width: 100%;
+	margin-top: 2em;
+}
 
-	& > div {
-		margin-bottom: 6em;
+#featured {
+	@include section_background($blue);
+
+	& > a {
+		height: 15em;
 	}
 }
 
 #recent_posts {
 	@include section_background($red);
-	padding-bottom: 0.5em;
 
-	& > div {
-		margin-bottom: 2em;
+	& > a {
+		$post_height: 10em;
+		$post_margin: 1em;
+
+		margin: $post_margin;
+		height: $post_height;
+		@extend .medium-6;
+		@extend .small-12;
+		@media #{$desktop} {
+			width: calc(25% - (#{$post_margin} * 3/2));
+		}
 
 		&:nth-of-type(1) {
-			height: 14em;
-			font-size: 1.5em;
-			padding: 0em 0.5em;
-			margin-bottom: 1em;
+			$font_size: 1.5em;
+
+			@extend .large-6;
+			@extend .medium-12;
+			@extend .small-12;
+			font-size: $font_size;
+			padding: 0em;
+			margin: 0em;
+			height: (($post_height * 2) + ($post_margin * 3)) / ($font_size) * 1em;
+		}
+		&:nth-of-type(2n) {
+			margin-right: 0em;
+		}
+		&:nth-of-type(4n-2),
+		&:nth-of-type(4n-1) {
+			margin-bottom: 0em;
+		}
+	}
+}
+
+@media not #{$desktop} {
+	#featured,
+	#recent_posts {
+		& > a {
+			margin: 0em;
+			height: 15em;
+		}
+		h2 {
+			height: inherit;
+			padding: 1em 0.5em;
+			left: 0em;
+			box-sizing: border-box;
 		}
 	}
 }
