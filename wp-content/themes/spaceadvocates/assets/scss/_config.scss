@@ -1,6 +1,3 @@
-/////// Config defaults for site border style /////// 
-// -----------------------------------------------------------------------------
-
 /////// Config defaults for site colors /////// 
 // -----------------------------------------------------------------------------
 $secondary_color: #333;
@@ -18,9 +15,13 @@ $blue: #075181;
 $red: #da3b3b;
 $light_gray: #999;
 
-/////// Page dimension configuration /////// 
+/////// Config defaults for site border style /////// 
 // -----------------------------------------------------------------------------
-$footer_height: 50px;
+$box_shadow: 0em 0em 1em 0.1em $light_blue;
+
+/////// Page dimension configuration ///////
+// -----------------------------------------------------------------------------
+$footer_height: 420px;
 
 /////// Typography configuration /////// 
 // -----------------------------------------------------------------------------
@@ -52,3 +53,5 @@ $desktop: 				"screen and (min-width: #{$desktop_width})";
 
 /////// Site Icons and Images /////// 
 // -----------------------------------------------------------------------------
+$bg_image: "assets/images/bg/stars3.jpg";
+$logo_image: "assets/images/logo.png"

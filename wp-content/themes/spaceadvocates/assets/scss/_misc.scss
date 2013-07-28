@@ -1,5 +1,5 @@
 body {
-	background: $bg_color url(assets/images/bg/stars3.jpg) repeat fixed center;
+	background: $bg_color url($bg_image) repeat fixed center;
 	//background-size: cover;
 }
 
@@ -15,4 +15,8 @@ ul {
 
 a {
 	color: $light_blue;
+}
+
+label {
+	cursor: default;
 }

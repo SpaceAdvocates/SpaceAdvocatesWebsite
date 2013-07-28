@@ -42,7 +42,7 @@ li.comment {
 			.comment-meta {
 				.comment-edit-link {
 					float: right;
-					@extend %btn-light-blue;
+					@extend .btn-light-blue;
 					font-size: 0.8em;
 				}
 			}
@@ -55,7 +55,7 @@ li.comment {
 				text-align: right;
 
 				.comment-reply-link {
-					@extend %btn-red;
+					@extend .btn-red;
 					font-size: 0.8em;
 				}
 			}

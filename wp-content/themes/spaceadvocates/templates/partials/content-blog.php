@@ -10,7 +10,7 @@
 
 	<div class="entry">
 
-		<?php the_content(); ?>
+		<?php the_content('read&nbsp;more&nbsp;<span>&rarr;</span>', true); ?>
 
 		<?php wp_link_pages( array( 'before' => 'Pages: ', 'next_or_number' => 'number' ) ); ?>
 

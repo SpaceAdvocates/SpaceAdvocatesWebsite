@@ -23,7 +23,7 @@
 		margin: 0em;
 
 		#submit {
-			@extend %btn-red;
+			@extend .btn-red;
 		}
 	}
 }

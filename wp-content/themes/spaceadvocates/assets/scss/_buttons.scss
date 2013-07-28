@@ -9,23 +9,23 @@
 	letter-spacing: 0.08em;
 }
 
-%btn-white {
+.btn-white {
 	@extend %btn;
 	background-color: $white;
 	color: $black;
 }
 
-%btn-light-blue {
+.btn-light-blue {
 	@extend %btn;
 	background-color: $light_blue;
 }
 
-%btn-red {
+.btn-red {
 	@extend %btn;
 	background-color: $red;
 }
 
-%btn-green {
+.btn-green {
 	@extend %btn;
 	background-color: $green;
 }

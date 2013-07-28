@@ -1,7 +1,8 @@
 nav {
 	background-color: $secondary_color;
 	padding: 0.5em;
-	box-shadow: 0em 0em 1em 0.1em $light_blue;
+	box-shadow: $box_shadow;
+	background: linear-gradient(to bottom, $secondary_color 20%, darken($secondary_color, 10%) 90%, $black 100%);
 
 	#menu-global-nav {
 		list-style-type: none;
@@ -20,12 +21,16 @@ nav {
 				
 				a {
 					color: inherit;
+					background: url($logo_image) no-repeat center;
+					background-size: contain;
+					text-indent: -999em;
 				}
 			}
 			a {
-				background-color: rgba($black, 0.2);
+				//background-color: $secondary_color;
 				padding: 0.5em 1em;
 				display: block;
+				//background: linear-gradient(to bottom, darken($secondary_color, 5%) 0%, $secondary_color 100%);
 			}
 		}
 	}

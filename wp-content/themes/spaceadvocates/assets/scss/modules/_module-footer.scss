@@ -1,8 +1,9 @@
 footer {
-	background-color: $secondary_color;
+	//background-color: $secondary_color;
 	color: $white;
 	text-align: center;
-	box-shadow: 0em 0em 1em 0.1em $light_blue;
+	background: linear-gradient(to bottom, darken($secondary_color, 10%) 0%, $black 100%);
+	box-shadow: $box_shadow;
 
 	.row {
 		div {

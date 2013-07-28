@@ -16,6 +16,7 @@
 			margin: 1em;
 			background-color: $secondary_color;
 			color: $white;
+			max-width: 100%;
 
 			&.alignright {
 				float: right;
@@ -38,17 +39,30 @@
 		img:first-child {
 			width: 100%;
 		}
-		p:last-child {
-			margin-bottom: 0em;
+		p {
+			&:last-child {
+				margin-bottom: 0em;
+				overflow: hidden;
+			}
 		}
 		ul {
-			background-color: lighten($light_blue, 20%);
+			background-color: lighten($light_blue, 18%);
 			padding: 1em;
 			color: $black;
 			margin-bottom: 1.25em;
 
 			li {
 				margin-left: 1em;
+			}
+		}
+		.more-link {
+			@extend .btn-red;
+			float: right;
+
+			span {
+				position: relative;
+				top: -2px;
+				font-size: 1.2em;
 			}
 		}
 	}

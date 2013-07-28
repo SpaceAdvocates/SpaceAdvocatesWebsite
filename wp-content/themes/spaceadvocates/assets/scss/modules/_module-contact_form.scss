@@ -1,0 +1,17 @@
+#contact_form {
+	text-align: left;
+
+	label {
+		margin-bottom: 0.5em;
+		color: $white;
+		clear: both;
+	}
+	input, textarea {
+		background-color: $secondary_color;
+		border: 0em;
+		box-shadow: 0em 0em 0.5em 0em $light_blue;
+	}
+	#contact_updates {
+		float: left;
+	}
+}
