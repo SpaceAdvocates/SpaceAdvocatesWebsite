@@ -3,3 +3,5 @@
 *.sublime-workspace
 node_modules
 .sass-cache
+cgi-bin/
+favicon.ico
