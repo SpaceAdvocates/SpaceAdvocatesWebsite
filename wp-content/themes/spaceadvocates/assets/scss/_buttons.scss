@@ -2,11 +2,15 @@
 	display: inline-block;
 	color: $white;
 	border: 0px;
-	border-radius: 3px;
+	border-radius: 0.2em;
 	padding: 0.5em;
 	line-height: 1em;
 	font-family: $primary_font;
 	letter-spacing: 0.08em;
+
+	&:hover {
+		color: $white;
+	}
 }
 
 .btn-white {

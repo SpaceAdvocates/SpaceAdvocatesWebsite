@@ -30,6 +30,9 @@
 // ------------------------------------------------------------------------------
 @import "layouts/_front-page";
 @import "layouts/_blog-feed";
+@import "layouts/_contact";
+@import "layouts/_about";
+@import "layouts/_archive";
 
 // Modules
 // ------------------------------------------------------------------------------
@@ -43,3 +46,4 @@
 @import "modules/_module-commentform";
 @import "modules/_module-aside";
 @import "modules/_module-contact_form";
+@import "modules/_module-person";

@@ -1,22 +1,35 @@
 body {
-	background: $bg_color url($bg_image) repeat fixed center;
-	//background-size: cover;
-}
+	background: $black url($bg_image) repeat fixed center;
+	font-family: $secondary_font;
+	
+	h1, h2, h3, h4, h5, h6 {
+		font: normal 1em/1.2em $primary_font;
+		word-spacing: 0.2em;
+		color: $white;
+		margin: 0.5em 0em;
+	}
 
-h1, h2, h3, h4, h5, h6 {
-	font: normal 1em/1.2em $primary_font;
-	word-spacing: 0.2em;
-	margin: 0em;
-}
+	h1 {
+		font-size: 4em;
+	}
 
-ul {
-	margin: 0em;
-}
+	h2 {
+		font-size: 3em;
+	}
 
-a {
-	color: $light_blue;
-}
+	h3 {
+		font-size: 2em;
+	}
 
-label {
-	cursor: default;
+	ul {
+		margin: 0em;
+	}
+
+	a {
+		color: $light_blue;
+	}
+
+	label {
+		cursor: default;
+	}
 }

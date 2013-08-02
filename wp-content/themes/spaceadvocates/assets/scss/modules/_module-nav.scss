@@ -2,7 +2,7 @@ nav {
 	background-color: $secondary_color;
 	padding: 0.5em;
 	box-shadow: $box_shadow;
-	background: linear-gradient(to bottom, $secondary_color 20%, darken($secondary_color, 10%) 90%, $black 100%);
+	background: linear-gradient(to bottom, lighten($secondary_color, 10%) 0%, $secondary_color 50%, $black 100%);
 
 	#menu-global-nav {
 		list-style-type: none;
@@ -12,12 +12,14 @@ nav {
 			margin-right: 0.5em;
 			text-transform: uppercase;
 			font-family: $primary_font;
+			background-color: #444;
 
 			&:first-child {
 				color: $red;
 				font-size: 1.2em;
 				position: relative;
 				top: 0.1em;
+				background-color: transparent;
 				
 				a {
 					color: inherit;
@@ -33,5 +35,10 @@ nav {
 				//background: linear-gradient(to bottom, darken($secondary_color, 5%) 0%, $secondary_color 100%);
 			}
 		}
+	}
+	.search {
+		margin: 0.5em 0em;
+		border-radius: 999em;
+		padding: 1em;
 	}
 }

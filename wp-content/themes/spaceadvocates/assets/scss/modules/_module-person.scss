@@ -1,0 +1,29 @@
+.person {
+	img {
+		display: block;
+		float: left;
+		margin: 0em 1em 1em 0em;
+		border-radius: 200em;
+		box-shadow: 0em 0em 1em 0.1em $light_blue;
+	}
+	.name {
+		font-size: 3em;
+		margin-bottom: 0em;
+		margin-top: 0.4em;
+		color: $light_blue;
+
+		a {
+			display: block;
+		}
+	}
+	.position {
+		margin-top: 0.2em;
+		font-size: 1.5em;
+	}
+	.bio {
+		font-size: 1.1em;
+		line-height: 1.1em;
+		clear: both;
+		display: none;
+	}
+}

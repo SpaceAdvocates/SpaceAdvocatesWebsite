@@ -9,6 +9,9 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 
+        // settings information
+        settings: grunt.file.readJSON('grunt-settings.json'),
+
         // watch for changes and trigger compass, jshint, uglify and livereload
         watch: {
             options: {
@@ -41,8 +44,7 @@ module.exports = function(grunt) {
         // javascript linting with jshint
         jshint: {
             options: {
-                jshintrc: '.jshintrc',
-                'force': true
+                jshintrc: '.jshintrc'
             },
             all: [
                 'Gruntfile.js',
@@ -58,9 +60,10 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'assets/js/plugins.min.js': [
+                        '!assets/js/vendor/modernizr*.js',
+                        '!assets/js/vendor/jquery*.js',
                         'assets/js/source/plugins.js',
-                        'assets/js/vendor/**/*.js',
-                        '!assets/js/vendor/modernizr*.js'
+                        'assets/js/vendor/**/*.js'
                     ]
                 }
             },
@@ -70,6 +73,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'assets/js/main.min.js': [
+                        'assets/js/source/**/*.js',
                         'assets/js/source/main.js'
                     ]
                 }
@@ -96,8 +100,8 @@ module.exports = function(grunt) {
         deploy: {
             staging: {
                 src: './',
-                dest: '~/www/work/SpaceAdvocatesWebsite/wp-content/themes/spaceadvocates',
-                host: 'spensus1@spens.us',
+                dest: '~/www/dev1/wp-content/themes/spaceadvocates',
+                host: '<%- settings.host %>',
                 recursive: true,
                 syncDest: true,
                 exclude: [
@@ -109,13 +113,14 @@ module.exports = function(grunt) {
                     '.DS_Store',
                     'README.md',
                     'config.rb',
-                    '.jshintrc'
+                    '.jshintrc',
+                    'grunt-settings.json'
                 ]
             },
             production: {
                 src: './',
                 dest: '~/path/to/theme',
-                host: 'user@host.com',
+                host: '<%= rsync.staging.host %>',
                 recursive: true,
                 syncDest: true,
                 exclude: '<%= rsync.staging.exclude %>'

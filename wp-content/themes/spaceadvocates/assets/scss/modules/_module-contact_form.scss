@@ -1,5 +1,6 @@
 #contact_form {
 	text-align: left;
+	font-size: 1.2em;
 
 	label {
 		margin-bottom: 0.5em;
@@ -7,11 +8,28 @@
 		clear: both;
 	}
 	input, textarea {
-		background-color: $secondary_color;
+		//background-color: $secondary_color;
+		//background: linear-gradient(to bottom, $secondary_color 20%, darken($secondary_color, 10%) 90%, $black 100%);
+		background-color: $white;
 		border: 0em;
 		box-shadow: 0em 0em 0.5em 0em $light_blue;
+		color: $black;
 	}
-	#contact_updates {
+	textarea {
+		min-height: 6em;
+	}
+	#contact_updates_label {
 		float: left;
+
+		& + #contact_updates {
+			margin-left: 1em;
+		}
+	}
+	.submit {
+		width: 100%;
+		padding: 1em;
+		margin: 1em 0em;
+		text-align: center;
+		font-size: 1.2em;
 	}
 }

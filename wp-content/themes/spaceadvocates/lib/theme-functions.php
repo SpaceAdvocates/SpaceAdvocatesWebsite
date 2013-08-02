@@ -112,6 +112,65 @@ function mb_custom_menu_order($menu_ord) {
 	);
 }
 
+add_filter('user_contactmethods', 'modify_contact_methods');
+function modify_contact_methods($profile_fields) {
+	// Add new fields
+	$profile_fields['twitter'] = 'Twitter Username';
+	$profile_fields['facebook'] = 'Facebook URL';
+	$profile_fields['gplus'] = 'Google+ URL';
+
+	// Remove old fields
+	unset($profile_fields['aim']);
+	unset($profile_fields['yim']);
+
+	return $profile_fields;
+}
+
+add_action( 'show_user_profile', 'my_show_extra_profile_fields' );
+add_action( 'edit_user_profile', 'my_show_extra_profile_fields' );
+function my_show_extra_profile_fields( $user ) { ?>
+
+	<h3>Position Information</h3>
+
+	<table class="form-table">
+		<tr>
+			<th><label for="position">Poisition</label></th>
+			<td>
+				<input type="text" name="position" id="position" value="<?php echo esc_attr( get_the_author_meta( 'position', $user->ID ) ); ?>" class="regular-text" /><br />
+				<span class="description">Please enter your position title.</span>
+			</td>
+		</tr>
+		<tr>
+			<th>Rank<br><span class="description">Choose which best describes you.</span></th>
+			<td>
+				<?php
+					$ranks = array('director','assistant_director','team');
+					$author_rank = esc_attr( get_the_author_meta( 'rank', $user->ID ) );
+
+					foreach($ranks as $rank): ?>
+						<input type="radio" name="rank" id="rank_<?php echo $rank; ?>" value="<?php echo $rank; ?>" <?php if($author_rank === $rank): ?> checked="checked"<?php endif; ?> />
+						<label for="rank_<?php echo $rank; ?>"><?php echo ucwords(str_replace('_',' ',$rank)); ?></label>
+
+						<br>
+					<?php endforeach;
+				?>
+			</td>
+		</tr>
+	</table>
+<?php }
+
+add_action( 'personal_options_update', 'my_save_extra_profile_fields' );
+add_action( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
+function my_save_extra_profile_fields( $user_id ) {
+
+	if ( !current_user_can( 'edit_user', $user_id ) ) {
+		return false;
+	}
+
+	update_usermeta( $user_id, 'rank', $_POST['rank'] );
+	update_usermeta( $user_id, 'position', $_POST['position'] );
+}
+
 /**
  * Hide Admin Areas that are not used
  */

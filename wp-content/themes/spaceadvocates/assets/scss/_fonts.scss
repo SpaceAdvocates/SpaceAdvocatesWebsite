@@ -1,10 +1,21 @@
-@font-face {
-    font-family: Bebas;
-    src: url('assets/fonts/bebas/BEBAS___-webfont.eot');
-    src: url('assets/fonts/bebas/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
-         url('assets/fonts/bebas/BEBAS___-webfont.woff') format('woff'),
-         url('assets/fonts/bebas/BEBAS___-webfont.ttf') format('truetype'),
-         url('assets/fonts/bebas/BEBAS___-webfont.svg#bebasregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+@mixin font($name, $filename, $font_weight:normal, $font_style:normal) {
+    @font-face {
+        font-family: $name;
+        src: url('assets/fonts/#{$filename}.eot');
+        src: url('assets/fonts/#{$filename}.eot?#iefix') format('embedded-opentype'),
+             url('assets/fonts/#{$filename}.woff') format('woff'),
+             url('assets/fonts/#{$filename}.ttf') format('truetype'),
+             url('assets/fonts/#{$filename}.svg#$name') format('svg');
+        font-weight: $font_weight;
+        font-style: $font_style;
+    }
 }
+
+@include font(Bebas, "bebas/BEBAS___-webfont");
+
+@include font(Crimson, "crimson/crimsontext-roman-webfont");
+@include font(Crimson, "crimson/crimsontext-bold-webfont", bold);
+@include font(Crimson, "crimson/crimsontext-italic-webfont", normal, italic);
+@include font(Crimson, "crimson/crimsontext-bolditalic-webfont", bold, italic);
+@include font(Crimson, "crimson/crimsontext-semibold-webfont", 500);
+@include font(Crimson, "crimson/crimsontext-semibolditalic-webfont", 500, italic);
