@@ -144,7 +144,7 @@ function my_show_extra_profile_fields( $user ) { ?>
 			<th>Rank<br><span class="description">Choose which best describes you.</span></th>
 			<td>
 				<?php
-					$ranks = array('director','assistant_director','team');
+					$ranks = array('director','gardener','graphic','engineer','government_relation');
 					$author_rank = esc_attr( get_the_author_meta( 'rank', $user->ID ) );
 
 					foreach($ranks as $rank): ?>
