@@ -10,7 +10,7 @@ Template Name: About Page
 
 <?php
 	$ranks = $wpdb->get_col("SELECT meta_value FROM $wpdb->usermeta WHERE meta_key = 'rank' GROUP BY meta_value ORDER BY umeta_id" );
-	$ranks = sort ( $ranks )
+	sort ( $ranks );
 	foreach( $ranks as $rank ) { 
 		$people = get_users(array(
 			'meta_key' => 'rank',
