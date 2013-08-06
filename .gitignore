@@ -5,3 +5,6 @@ node_modules
 .sass-cache
 cgi-bin/
 favicon.ico
+wp-content/uploads/
+wp-content/plugins/
+error_log
