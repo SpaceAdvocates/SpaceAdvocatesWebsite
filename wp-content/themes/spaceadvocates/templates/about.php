@@ -17,7 +17,12 @@ Template Name: About Page
 		)); ?>
 		
 		<section>
-			<h2><?php echo ucwords(str_replace('_',' ',$rank)); ?></h2>
+			<h2><?php 
+				if ($rank == 'director')
+					echo ucwords('Directors');
+				else
+					echo ucwords(str_replace('_',' ',$rank)); 
+			?></h2>
 
 			<?php foreach( $people as $person ) {
 				//print_r($person);
