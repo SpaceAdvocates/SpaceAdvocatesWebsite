@@ -1,0 +1,157 @@
+.page-home #featured h2, .page-home #recent_posts h2, .page-home #recent_videos h2  {
+    -moz-box-sizing: content-box;	
+    border: medium none;
+    box-shadow: 0 1em 1em -1em #021420;
+    color: #FFFFFF;
+    display: block;
+    height: auto;
+    left: -0.5em;
+    margin: 0;
+    padding: 0.5em 0.5em;
+    position: absolute;
+    text-indent: 0.5em;
+    text-shadow: 1px 1px 3px #222222;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+	}
+.page-home #featured h2 {
+    background: #075181;
+}
+
+.page-home #recent_videos h2 {
+    background: #B22222;
+
+}
+
+.page-home #recent_posts h2 {
+    background-color: #444444;
+}
+
+.page-home h2 {
+    font-size: 2em;
+}
+
+.card.featured + .drawer {
+    background-color: #053A5C;
+    box-shadow: 0 1px 2px 0 #000000;
+    color: #FFFFFF;
+    height: 4.25em;
+    padding: 1em;
+    text-shadow: 1px 1px 3px #222222;
+    z-index: 0;
+}
+.card.featured + .drawer:hover {background-color: #075181;}
+.card.featured + .drawer h1 {
+    color: inherit;
+    margin: 0;
+    max-height: 2.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card.featured + .drawer .meta {
+    display: none;
+}
+
+.page-home #featured, .page-home #recent_posts, .page-home #recent_videos {
+    background-color: rgba(28, 28, 28, 0.85);
+    border-radius: 2px 2px 2px 2px;
+    margin: 3em 0 2em;
+    padding: 4.5em 0 0;
+    position: relative;
+}
+
+
+.card h1 {
+    background-color: #222;
+    bottom: 0;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0.5em 0.5em 0.7em;
+    position: absolute;
+    width: 100%;
+	text-shadow:none;
+}
+
+.card h1:hover {background-color: #444;}
+
+nav {
+    background: linear-gradient(to bottom, #075181 0%, #000000 100%) repeat scroll 0 0 transparent;
+    box-shadow: 0 0 1em 0.1em #93D7F9;
+    padding: 0;
+}
+
+nav #menu-global-nav { font-size:0;}
+
+nav #menu-global-nav li {
+    background: none;
+    box-shadow: none;
+    line-height: 45px;
+    padding:0;
+    display: inline-block;
+    font-family: Bebas,Arial,sans-serif;
+    margin-right: 0;
+    text-transform: uppercase;
+	font-size:16px;
+}
+
+nav #menu-global-nav li a {
+    display: block;
+	background: linear-gradient(to bottom, #075181 0%, #03273A 100%) repeat scroll 0 0 transparent;
+    box-shadow: -1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset;
+    line-height: 45px;
+    padding: 0 15px;
+    color: white;
+    display: block;
+    font-size: 0.8125em;
+    font-weight: bold;
+    text-decoration: none;
+    width: 100%;
+	text-shadow:none;
+}
+
+nav #menu-global-nav li a:hover {
+    background: linear-gradient(#1D93D7, #075181) repeat scroll 0 0 transparent;
+}
+
+nav #menu-global-nav li:first-child {
+    background-color: transparent;
+	border: none;
+    color: #b22222;
+    position: relative;
+    font-size: 16px;
+	min-width:88px;
+
+    margin: 0;
+    padding-right: 15px;
+	padding: 0;
+}
+
+nav #menu-global-nav li:first-child a {
+	    background-color: transparent;
+	border: none;
+
+    position: relative;
+    font-size: 16px;
+
+    margin: 0;
+    padding-right: 0;
+	padding: 0 15px;
+	}
+
+@media screen and (max-width: 1000px){ 
+.page-home #featured h2, .page-home #recent_posts h2, .page-home #recent_videos h2   {
+    -moz-box-sizing: inherit;
+    color: #FFFFFF;
+    left: 0;
+    padding: 0.75em 0.5em;
+    position: relative;
+    text-indent: 0;
+}
+.page-home #featured, .page-home #recent_posts, .page-home #recent_videos {
+
+    padding: 0
+
+}
+}
