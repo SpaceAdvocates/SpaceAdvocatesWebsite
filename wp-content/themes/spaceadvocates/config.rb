@@ -1,5 +1,11 @@
 # Require any additional compass plugins here.
+# https://github.com/zurb/foundation
 require 'zurb-foundation'
+
+# Sass Globbing
+# @chriseppstein
+# https://github.com/chriseppstein/sass-globbing
+require 'sass-globbing'
 
 # Set this to the root of your project when deployed:
 http_path = "/"

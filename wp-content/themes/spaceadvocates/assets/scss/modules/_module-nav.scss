@@ -1,7 +1,7 @@
 nav {
+	@extend %box-shadow;
 	background-color: $secondary_color;
 	padding: 0.5em;
-	box-shadow: $box_shadow;
 	background: linear-gradient(to bottom, lighten($secondary_color, 10%) 0%, $secondary_color 50%, $black 100%);
 
 	#menu-global-nav {
@@ -9,10 +9,10 @@ nav {
 
 		li {
 			display: inline-block;
-			margin-right: 0.5em;
 			text-transform: uppercase;
 			font-family: $primary_font;
-			background-color: #444;
+			background-color: lighten($secondary_color, 10%);
+			margin-right: 0.5em;
 
 			&:first-child {
 				color: $red;
@@ -21,6 +21,9 @@ nav {
 				top: 0.1em;
 				background-color: transparent;
 				
+				&:hover {
+					background-color: transparent;
+				}
 				a {
 					color: inherit;
 					background: url($logo_image) no-repeat center;
@@ -28,11 +31,12 @@ nav {
 					text-indent: -999em;
 				}
 			}
+			&:hover {
+				background-color: lighten($secondary_color, 8%);
+			}
 			a {
-				//background-color: $secondary_color;
 				padding: 0.5em 1em;
 				display: block;
-				//background: linear-gradient(to bottom, darken($secondary_color, 5%) 0%, $secondary_color 100%);
 			}
 		}
 	}
