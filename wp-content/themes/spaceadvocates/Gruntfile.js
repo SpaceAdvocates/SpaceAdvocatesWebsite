@@ -1,4 +1,4 @@
-/* jshint globalstrict: true */
+/* jshint globalstrict: true, camelcase: false */
 /* global module, require */
 'use strict';
 
@@ -17,13 +17,13 @@ module.exports = function(grunt) {
             options: {
                 livereload: true,
             },
-            compass: {
+            css: {
                 files: ['assets/scss/**/*.{scss,sass}'],
-                tasks: ['compass']
+                tasks: ['compass', 'growl:css']
             },
             js: {
                 files: '<%= jshint.all %>',
-                tasks: ['jshint', 'uglify']
+                tasks: ['jshint', 'uglify', 'growl:js']
             },
             livereload: {
                 options: { livereload: true },
@@ -124,6 +124,20 @@ module.exports = function(grunt) {
                 recursive: true,
                 syncDest: true,
                 exclude: '<%= rsync.staging.exclude %>'
+            }
+        },
+
+        // fire desktop notifications when grunt events have fired
+        growl: {
+            css: {
+                title: 'CSS Complete',
+                message: 'Compass has finished running.',
+                image: 'Safari'
+            },
+            js: {
+                title: 'JS Complete',
+                message: 'JSHint and Uglify have finished running.',
+                image: './assets/images/icon-grunt.png'
             }
         }
 
