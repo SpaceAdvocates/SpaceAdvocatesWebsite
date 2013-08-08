@@ -114,7 +114,8 @@ module.exports = function(grunt) {
                     'README.md',
                     'config.rb',
                     '.jshintrc',
-                    'grunt-settings.json'
+                    'grunt-settings.json',
+                    'dumps'
                 ]
             },
             production: {
@@ -127,7 +128,7 @@ module.exports = function(grunt) {
             }
         },
 
-        // fire desktop notifications when grunt events have fired
+        // desktop notifications when grunt events have fired
         growl: {
             css: {
                 title: 'CSS Complete',
