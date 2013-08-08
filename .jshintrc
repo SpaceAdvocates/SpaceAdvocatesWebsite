@@ -1,0 +1,15 @@
+{
+	"camelcase"		: true,
+	"indent"		: 4,
+	"newcap"		: true,
+	"quotmark"		: "single",
+	"undef"			: true,
+	"unused"		: true,
+	"smarttabs"		: true,
+	"trailing"		: true,
+	"jquery"		: true,
+	"devel"			: true,
+	"predef"        : [
+        "modules"
+    ]
+}

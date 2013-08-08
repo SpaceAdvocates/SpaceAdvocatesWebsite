@@ -41,7 +41,6 @@ These are tools you will need to have on your machine to run the project. If you
 1. Download, install, and update the latest version of [Wordpress](http://wordpress.org/download/).
 2. Navigate to `/wp-content/themes/` in terminal.
 3. `git clone git@github.com:SpaceAdvocates/SpaceAdvocatesWebsite.git` to clone the repository (then activate the theme in the WordPress Dashboard).
-4. `bundle init` to install all Ruby Gems specified in the Gemfile.
 5. `npm install` to install Grunt, its tools, and all other node modules.
 6. `grunt` to execute tasks.
 7. Code as you will.
