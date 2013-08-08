@@ -29,7 +29,6 @@ These are tools you will need to have on your machine to run the project. If you
 
 1. Download and install [Node](http://nodejs.org/).
 2. The package bundler npm should already be installed with Node. If you are running Mac OSX, I would recommend installing [Homebrew](http://brew.sh/) (the missing Node package manager) by running this in terminal.
-
 `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
 
 #### Git
@@ -40,8 +39,8 @@ These are tools you will need to have on your machine to run the project. If you
 ### Installation
 
 1. Download, install, and update the latest version of [Wordpress](http://wordpress.org/download/).
-2. Navigate to the theme directory in terminal.
-3. `git clone git@github.com:SpaceAdvocates/SpaceAdvocatesWebsite.git` to clone this repository into `/wp-content/themes/` (then activate the theme in the WordPress Dashboard).
+2. Navigate to `/wp-content/themes/` in terminal.
+3. `git clone git@github.com:SpaceAdvocates/SpaceAdvocatesWebsite.git` to clone the repository (then activate the theme in the WordPress Dashboard).
 4. `bundle init` to install all Ruby Gems specified in the Gemfile.
 5. `npm install` to install Grunt, its tools, and all other node modules.
 6. `grunt` to execute tasks.
