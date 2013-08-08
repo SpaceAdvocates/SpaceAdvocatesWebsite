@@ -9,3 +9,4 @@ wp-content/uploads/
 wp-content/plugins/
 error_log
 wp-config.php
+grunt-settings.json
