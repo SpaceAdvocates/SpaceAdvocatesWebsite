@@ -1,0 +1,15 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    sass (3.2.10)
+    sass-globbing (1.1.0)
+      sass (>= 3.1)
+    zurb-foundation (4.3.1)
+      sass (>= 3.2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  sass-globbing
+  zurb-foundation
