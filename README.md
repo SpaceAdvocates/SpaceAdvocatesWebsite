@@ -5,8 +5,8 @@ Version: 1.0
 ## Contributors:
 
 * [Joe Spens](https://github.com/josephspens), Senior Web Developer
-* [Rhett Forbes](https://github.com/Rhettajf), CEO and Founder
-* [John Zeller](https://github.com/JohnLZeller), Senior Graphics Designer
+* [Rhett Forbes](https://github.com/Rhettajf), Senior UI Designer
+* [John Zeller](https://github.com/JohnLZeller), Founder and Executive Director
 
 ## Summary
 
