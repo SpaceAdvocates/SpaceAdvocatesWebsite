@@ -24,7 +24,7 @@ You need to download and install [Ruby](http://www.ruby-lang.org/en/downloads/),
 
 1. Download, install, and update the latest version of [Wordpress](http://wordpress.org/download/).
 2. Clone this repository into `/wp-content/themes/` and activate the SpaceAdvocatesWebsite theme in the WordPress Dashboard.
-3. Open the theme directory in terminal and run `npm install` to pull in all Grunt dependencies.
+3. Open the theme directory in terminal and run `npm install` to pull in Grunt and all its tools.
 4. Run `grunt` to execute tasks.
 5. Code as you will.
 
@@ -43,48 +43,35 @@ The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/
 
 ### Structure
 
-* **SpaceAdvocatesWebsite**
-	* **assets**
-		* **fonts**
-		* **images**
-		* **js**
-			* **source** - *Custom written project scripts*
-			* **vendor** - *3rd party plugins and librires*
-			* **map** - *Contains source maps for minified asset files*
-			* main.min.js - *Compiled source scripts*
-			* plugins.min.js - *Compiled plugins*
-		* **scss**
-			* **layouts** - *Files for layouts and page specific styles*
-			* **libraries** - *Vendor libraries*
-			* **modules** - *Partial Sass files for page elements*
-			* _buttons.scss - *Button styles*
-			* _config.scss - *Sass configuration file for project variables*
-			* _fonts.scss - *Includes all font-face styles*
-			* _misc.scss - *Project styles*
-			* _mixins.scss - *Project mixins*
-			* _normalize.scss - *Normalize.css for font reset*
-			* style.scss - *Main file which includes all other partials. It's the only one that is compiled*
-	* **dumps** - *Sample WordPress database dumps used for development environments only. Not includeed in Production*
-	* **lib**
-		* [ WordPress Theme Library Files ]
-	* **templates**
-		* [ *WordPress Theme Content Template Files ]
-	* config.rb - *Compass configuration for Grunt tools*
-	* Gruntfile.js
-	* grunt-settings.json - *Used by Gruntfile.js to access user information*
-	* package.json
-	* README.md
-	* [ WordPress Theme Files ]
-
-### Features
-
-1. Normalized stylesheet for cross-browser compatibility using Normalize.css version 2 (IE8+ only)
-2. Easy to customize
-3. Flexible grid from [Chris Coyier](https://twitter.com/chriscoyier)
-4. Media Queries for mobile and tablets ready to populate
-5. Removed comments from pages
-6. Compass & SCSS with plenty of mixins ready to go
-7. Much much more
+* **assets**
+	* **fonts**
+	* **images**
+	* **js**
+		* **source** - *Custom written project scripts*
+		* **vendor** - *3rd party plugins and librires*
+		* **map** - *Contains source maps for minified asset files*
+		* main.min.js - *Compiled source scripts*
+		* plugins.min.js - *Compiled plugins*
+	* **scss**
+		* **layouts** - *Files for layouts and page specific styles*
+		* **libraries** - *Vendor libraries*
+		* **modules** - *Partial Sass files for page elements*
+		* _buttons.scss - *Button styles*
+		* _config.scss - *Sass configuration file for project variables*
+		* _fonts.scss - *Includes all font-face styles*
+		* _misc.scss - *Project styles*
+		* _mixins.scss - *Project mixins*
+		* _normalize.scss - *Normalize.css for font reset*
+		* style.scss - *Main file which includes all other partials. It's the only one that is compiled*
+* **dumps** - *Sample WordPress database dumps used for development environments only. Not included in Production*
+* **lib** - [ WordPress Theme Library Files ]
+* **templates** - [ *WordPress Theme Content Template Files ]
+* [ WordPress Theme Files ]
+* config.rb - *Compass configuration for Grunt tools*
+* Gruntfile.js - *Used by Grunt*
+* grunt-settings.json - *Used by Gruntfile.js to access user information*
+* package.json - *Used by Grunt*
+* README.md
 
 ### Suggested Plugins
 
