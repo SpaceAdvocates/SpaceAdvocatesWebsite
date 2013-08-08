@@ -18,15 +18,34 @@ The theme is setup to use [Grunt](http://gruntjs.com/) to compile Compass/SCSS, 
 
 ### Dependencies
 
-You need to download and install [Ruby](http://www.ruby-lang.org/en/downloads/), [Node](http://nodejs.org/), and [Git](https://help.github.com/articles/set-up-git). If you're on a Mac, Ruby should already be installed.
+These are tools you will need to have on your machine to run the project. If you're on a Mac, Ruby should already be installed.
+
+#### Ruby
+
+1. Download and install [Ruby](http://www.ruby-lang.org/en/downloads/).
+2. `[sudo] gem install bundler` to install the Ruby package manager.
+
+#### Node
+
+1. Download and install [Node](http://nodejs.org/).
+2. The package bundler npm should already be installed with Node. If you are running Mac OSX, I would recommend installing [Homebrew](http://brew.sh/) (the missing Node package manager) by running this in terminal.
+
+`ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
+
+#### Git
+
+1. Download and install [Git](http://git-scm.com/downloads).
+2. You can set up user information [here](https://help.github.com/articles/set-up-git).
 
 ### Installation
 
 1. Download, install, and update the latest version of [Wordpress](http://wordpress.org/download/).
-2. Clone this repository into `/wp-content/themes/` and activate the SpaceAdvocatesWebsite theme in the WordPress Dashboard.
-3. Open the theme directory in terminal and run `npm install` to pull in Grunt and all its tools.
-4. Run `grunt` to execute tasks.
-5. Code as you will.
+2. Navigate to the theme directory in terminal.
+3. `git clone git@github.com:SpaceAdvocates/SpaceAdvocatesWebsite.git` to clone this repository into `/wp-content/themes/` (then activate the theme in the WordPress Dashboard).
+4. `bundle init` to install all Ruby Gems specified in the Gemfile.
+5. `npm install` to install Grunt, its tools, and all other node modules.
+6. `grunt` to execute tasks.
+7. Code as you will.
 
 If you have the LiveReload browser extension, it will reload after any SCSS or JS changes. If you have Mac OS 10.8 (Mountain Lion) then you will receive desktop notifications when Grunt tasks run.
 
@@ -65,7 +84,7 @@ The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/
 		* style.scss - *Main file which includes all other partials. It's the only one that is compiled*
 * **dumps** - *Sample WordPress database dumps used for development environments only. Not included in Production*
 * **lib** - [ WordPress Theme Library Files ]
-* **templates** - [ *WordPress Theme Content Template Files ]
+* **templates** - [ WordPress Theme Content Template Files ]
 * [ WordPress Theme Files ]
 * config.rb - *Compass configuration for Grunt tools*
 * Gruntfile.js - *Used by Grunt*
