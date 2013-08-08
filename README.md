@@ -1,12 +1,12 @@
-# WordPress Starter Theme
+# Space Advocates
 
-Version: 3.2
+Version: 1.0
 
 ## Contributors:
 
-[Joe Spens](https://github.com/josephspens)
-[Rhett Forbes](https://github.com/Rhettajf)
-[John Zeller](https://github.com/JohnLZeller)
+* [Joe Spens](https://github.com/josephspens), Senior Web Developer
+* [Rhett Forbes](https://github.com/Rhettajf), CEO and Founder
+* [John Zeller](https://github.com/JohnLZeller), Senior Graphics Designer
 
 ## Summary
 
@@ -40,6 +40,41 @@ These tasks:
 ### Deployment
 
 The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/grunt-rsync). The Gruntfile includes setups for staging and production - run `grunt rsync:staging` or `grunt rsync:production` to deploy your files via rsync.
+
+### Structure
+
+> **SpaceAdvocatesWebsite**
+> 	**assets**
+> 		**fonts**
+> 		**images**
+>  		**js**
+> 			**source** - *Custom written project scripts*
+> 			**vendor** - *3rd party plugins and librires*
+>			**map** - *Contains source maps for minified asset files*
+>			main.min.js - *Compiled source scripts*
+>			plugins.min.js - *Compiled plugins*
+> 		**scss**
+> 			**layouts** - *Files for layouts and page specific styles*
+> 			**libraries** - *Vendor libraries*
+> 			**modules** - *Partial Sass files for page elements*
+> 			_buttons.scss - *Button styles*
+> 			_config.scss - *Sass configuration file for project variables*
+> 			_fonts.scss - *Includes all font-face styles*
+> 			_misc.scss - *Project styles*
+> 			_mixins.scss - *Project mixins*
+> 			_normalize.scss - *Normalize.css for font reset*
+> 			style.scss - *Main file which includes all other partials. It's the only one that is compiled*
+> 	**dumps** - *Sample WordPress database dumps used for development environments only. Not includeed in Production*
+> 	**lib**
+> 		[ WordPress Theme Library Files ]
+> 	**templates**
+> 		[ *WordPress Theme Content Template Files ]
+> 	config.rb - *Compass configuration for Grunt tools*
+> 	Gruntfile.js
+> 	grunt-settings.json - *Used by Gruntfile.js to access user information*
+> 	package.json
+> 	README.md
+> 	[ WordPress Theme Files ]
 
 ### Features
 
