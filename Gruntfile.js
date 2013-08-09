@@ -9,9 +9,6 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 
-        // settings information
-        settings: grunt.file.readJSON('grunt-settings.json'),
-
         // watch for changes and trigger compass, jshint, uglify and livereload
         watch: {
             options: {
@@ -101,30 +98,36 @@ module.exports = function(grunt) {
             staging: {
                 src: './',
                 dest: '~/www/dev1/wp-content/themes/spaceadvocates',
-                host: '<%- settings.host %>',
+                host: 'spaceadv@spaceadvocates.com',
                 recursive: true,
                 syncDest: true,
                 exclude: [
                     '.git*',
-                    'node_modules',
                     '.sass-cache',
+                    '.DS_Store',
+                    '.jshintrc',
+                    'node_modules',
+                    'assets/scss',
+                    'dumps',
                     'Gruntfile.js',
                     'package.json',
-                    '.DS_Store',
                     'README.md',
                     'config.rb',
-                    '.jshintrc',
                     'grunt-settings.json',
-                    'dumps'
+                    'grunt-settings-sample.json',
+                    '*.sublime-project',
+                    '*.sublime-workspace',
+                    'Gemfile',
+                    'Gemfile.lock'
                 ]
             },
             production: {
                 src: './',
                 dest: '~/path/to/theme',
-                host: '<%= rsync.staging.host %>',
+                host: 'spaceadv@spaceadvocates.com',
                 recursive: true,
                 syncDest: true,
-                exclude: '<%= rsync.staging.exclude %>'
+                exclude: '<%= deploy.staging.exclude %>'
             }
         },
 
