@@ -124,7 +124,7 @@ module.exports = function(grunt) {
             production: {
                 src: './',
                 dest: '~/path/to/theme',
-                host: 'spaceadv@spaceadvocates.com',
+                host: '<%= deploy.staging.host %>',
                 recursive: true,
                 syncDest: true,
                 exclude: '<%= deploy.staging.exclude %>'
