@@ -26,7 +26,8 @@ body {
 	}
 
 	a {
-		color: $light_blue;
+		color: $blue;
+		&:hover { color:$dark-blue;}
 	}
 
 	label {
