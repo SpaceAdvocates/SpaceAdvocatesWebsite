@@ -1,48 +1,161 @@
 nav {
 	@extend %box-shadow;
-	background-color: $secondary_color;
-	padding: 0.5em;
-	background: linear-gradient(to bottom, lighten($secondary_color, 10%) 0%, $secondary_color 50%, $black 100%);
+	background-color: $dark_blue;
+	padding: 0em;
+	background: $blue_gradient;
+	
+#side-nav {
+	list-style-type: none;
+	font-size: 0;
+	
+	li {
+		display: inline-block;
+		text-transform: uppercase;
+		font-family: $primary_font;
+		margin-right: 0;
+		line-height: 45px;
+		font-size:16px;
+		font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+		font-weight:bold;
+		width:100%;
+		text-align:center;
+		
+		a {
+			padding: 0 1em;
+			display: block;
+			color: $white;
+			background: $red_gradient;
+			box-shadow: -1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset, 1px 0 0 0 rgba(147, 215, 249, 0.5) inset, 2px 0 0 0 #03273A inset;
+			&:hover {
+				background: $red_gradient_hover;
+			}			
+		}
+	}
+}
 
 	#menu-global-nav {
 		list-style-type: none;
+		font-size: 0;
 
 		li {
 			display: inline-block;
 			text-transform: uppercase;
 			font-family: $primary_font;
-			background-color: lighten($secondary_color, 10%);
-			margin-right: 0.5em;
-
+			margin-right: 0;
+			line-height: 45px;
+			font-size:16px;
+			font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+			font-weight:bold;
+		
 			&:first-child {
 				color: $red;
-				font-size: 1.2em;
-				position: relative;
-				top: 0.1em;
 				background-color: transparent;
+				height:45px;
+				min-width:133px;	
+				&:hover {background-color:$dark_blue;}						
 				
-				&:hover {
-					background-color: transparent;
-				}
 				a {
 					color: inherit;
-					background: url($logo_image) no-repeat center;
+					background: url($logo_image) no-repeat 10px center;
 					background-size: contain;
-					text-indent: -999em;
+					text-indent: -999em;					
+					&:hover {
+					background-color: transparent;
+					background: url($logo_image) no-repeat 10px center;
+					background-size: contain;
+					}					
 				}
 			}
-			&:hover {
-				background-color: lighten($secondary_color, 8%);
-			}
+
 			a {
-				padding: 0.5em 1em;
+				padding: 0 1em;
 				display: block;
+				color: $white;
+				background: $blue_gradient;
+   				box-shadow: -1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset;
+				&:hover {
+					background: $blue_gradient_hover;
+				}			
+			}
+			
+			& + .current_page_item {
+				a{
+		
+				background: $red_gradient_hover;
+				}
+			}			
+		}
+	}
+	
+	#searchform {
+		margin: 0;
+  		padding:6px 15px 6px 15px;	
+		box-shadow: 1px 0 0 0 rgba(147, 215, 249, 0.5) inset, 2px 0 0 0 #03273A inset;
+			input {
+			margin:0;
+			}
+			.btn-red {
+				border-radius:0;
+			}
+	}
+}
+
+@media only #{$tablet} {
+	nav {
+		.large-9.columns, .large-3.columns {padding:0; width:auto;}	
+		
+		.search {
+			margin:1em 0 1em 
+		}
+	}
+}
+
+@media only #{$phone} {
+	nav {
+	.large-9.columns, .large-3.columns {padding:0;}	
+	#side-nav {
+		li {
+			width:100%;
+			
+			a {
+				box-shadow: 0 -1px 0 0 rgba(147, 215, 249, 0.5) inset, 0 -2px 0 0 #03273A inset;	
 			}
 		}
 	}
-	.search {
-		margin: 0.5em 0em;
-		border-radius: 999em;
-		padding: 1em;
-	}
+		#menu-global-nav {
+			li {
+				display:block;
+				width:100%;
+				text-align:center;				
+				
+				&:first-child {
+					height:90px;
+					min-width:100%;							
+					
+					a {
+					height:90px;
+					color: inherit;
+					background: url($logo_image) no-repeat center center;
+					background-size: contain;
+					text-indent: -999em;					
+					&:hover {
+					background-color: transparent;
+					background: url($logo_image) no-repeat center center;
+					background-size: contain;
+					}	
+									
+					}
+				}
+	
+				a {
+					box-shadow: 0 -1px 0 0 rgba(147, 215, 249, 0.5) inset, 0 -2px 0 0 #03273A inset;
+				}
+						
+			}
+		}
+		.search {
+		margin:1em 0 1em 0;
+	
+		}
+	}	
 }
