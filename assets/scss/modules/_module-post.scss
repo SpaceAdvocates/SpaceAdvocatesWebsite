@@ -1,10 +1,9 @@
 .post {
-	margin-top: 1.5em;
-	
+	margin-top: 2em;
 	h1 {
 		font-size: 2.5em;
 		line-height: 1.2em;
-		background-color: $secondary_color;
+		background-color: transparent;
 		color: $white;
 		padding: 0.4em;
 	}
@@ -17,7 +16,7 @@
 			background-color: $secondary_color;
 			color: $white;
 			max-width: 100%;
-
+			a { color:$light_blue;}
 			&.alignright {
 				float: right;
 				margin-right: 0em;
