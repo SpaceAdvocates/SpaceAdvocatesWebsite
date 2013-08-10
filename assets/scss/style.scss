@@ -12,8 +12,10 @@
 // Libraries
 // ------------------------------------------------------------------------------
 @import "foundation";
-@import "libraries/sticky-footer/*";
-@import "libraries/spens/*";
+@import "libraries/spens/_extends";
+@import "libraries/spens/_foundation";
+@import "libraries/spens/_functions";
+@import "libraries/spens/_mixins";
 
 // Web fonts
 // ------------------------------------------------------------------------------
@@ -27,26 +29,24 @@
 
 // Layouts
 // ------------------------------------------------------------------------------
-@import "layouts/*";
-//@import "layouts/_front-page";
-//@import "layouts/_blog-feed";
-//@import "layouts/_contact";
-//@import "layouts/_about";
-//@import "layouts/_archive";
+
+@import "layouts/_front-page";
+@import "layouts/_blog-feed";
+@import "layouts/_contact";
+@import "layouts/_about";
+@import "layouts/_archive";
 
 // Modules
 // ------------------------------------------------------------------------------
-@import "modules/*";
-//@import "modules/_module-nav";
-//@import "modules/_module-footer";
-//@import "modules/_module-card";
-//@import "modules/_module-post";
-//@import "modules/_module-sharing";
-//@import "modules/_module-comments";
-//@import "modules/_module-comment";
-//@import "modules/_module-commentform";
-//@import "modules/_module-aside";
-//@import "modules/_module-contact_form";
-//@import "modules/_module-person";
 
-@import "revisions";
+@import "modules/_module-nav";
+@import "modules/_module-footer";
+@import "modules/_module-card";
+@import "modules/_module-post";
+@import "modules/_module-sharing";
+@import "modules/_module-comments";
+@import "modules/_module-comment";
+@import "modules/_module-commentform";
+@import "modules/_module-aside";
+@import "modules/_module-contact_form";
+@import "modules/_module-person";
