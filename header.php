@@ -20,28 +20,8 @@
 			<nav>
 				<div class="row">
 					<?php wp_nav_menu( array( 'container_class' => 'large-9 columns', 'theme_location' => 'primary' ) ); ?>
-					<div class="large-3 columns">
-<ul id="side-nav">
-<li>
-<a href="http://localhost/SpaceAdvocatesWebsite-master/?page_id=13">Donate</a>
-</li>
-</ul>           
-                    </div>
+					<div class="large-3 columns"><input type="text" class="search" placeholder="Search..." /></div>
 				</div>
 			</nav>
-<?php if ( is_front_page() ) { ?>
-<section id="action">
-<div class="row">
-<div class="large-6 columns">
-<h1>EXPLORING THE FINAL FRONTIER MAKES US GREAT</h1>
-</div>
-<div class="large-6 columns">
-<a class="btn-red" href="#">Become A Space Advocate</a>
-</div>
 
-</div>
-
-</section>
-<?php }
-?>
 			<div id="container" class="row">
