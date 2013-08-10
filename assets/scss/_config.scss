@@ -1,14 +1,31 @@
 /////// Config defaults for site colors /////// 
 // -----------------------------------------------------------------------------
-$secondary_color: #222;
+$secondary_color: rgba(28, 28, 28, 0.85);
 
 $white: #fff;
 $black: #000;
+
 $green: #6c6;
-$light_blue: #93d7f9;
+
+$light_blue: #93D7F9;
 $blue: #075181;
-$red: #da3b3b;
+$dark_blue: #053A5C;
+$blue_gradient: linear-gradient(to bottom, rgba( $blue, .5 ) 0%, $dark_blue 100%) repeat scroll 0 0 transparent;
+$blue_gradient_hover: linear-gradient(to bottom, $light_blue 0%, $blue 100%) repeat scroll 0 0 transparent;
+
 $light_gray: #999;
+$grey: #444;
+$dark_grey: #222;
+$grey_gradient: linear-gradient(to bottom, $grey 0%, $dark_grey 100%) repeat scroll 0 0 transparent;
+$grey_gradient_hover: linear-gradient(to bottom, $light_gray 0%, $grey 100%) repeat scroll 0 0 transparent;
+
+
+$light_red: #DD2A2A;
+$red: #b22222;
+$dark_red: #8F1718;
+$red_gradient: linear-gradient(to bottom, $red 0%, $dark_red 100%) repeat scroll 0 0 transparent;
+$red_gradient_hover: linear-gradient(to bottom, $light_red 0%, $red 100%) repeat scroll 0 0 transparent;
+
 
 /////// Config defaults for site border style /////// 
 // -----------------------------------------------------------------------------
@@ -21,7 +38,7 @@ $footer_height: 3em;
 /////// Typography configuration /////// 
 // -----------------------------------------------------------------------------
 $primary_font: Bebas, Arial, sans-serif;
-$secondary_font: Crimson, Arial, sans-serif;
+$secondary_font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /////// Config defaults for buttons /////// 
 // -----------------------------------------------------------------------------
@@ -50,3 +67,5 @@ $desktop: 				"screen and (min-width: #{$desktop_width})";
 // -----------------------------------------------------------------------------
 $bg_image: "assets/images/bg/stars3.jpg";
 $logo_image: "assets/images/logo.png";
+$logo_hov_image: "assets/images/logohov.png";
+$action_image: "assets/images/bg/flare.png";
