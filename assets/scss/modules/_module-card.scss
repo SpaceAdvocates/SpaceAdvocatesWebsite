@@ -20,16 +20,17 @@ $text_shadow: 1px 1px 3px $secondary_color;
 
 		& + .drawer {
 			$drawer_width: 100%;
-			$drawer_color: $blue;
+			$drawer_color: $blue_gradient;
+			$drawer_hover_color: $blue_gradient_hover;
 
 			z-index: 0;
-			padding: 0.4em;
-			background-color: $drawer_color;
+			padding: 1em;
+			background: $blue_gradient;
 			box-shadow: $box_shadow;
 			color: $white;
 			text-shadow: $text_shadow;
 			height: $drawer_height;
-
+			&:hover { background: $drawer_hover_color; }
 			h1 {
 				color: inherit;
 				margin: 0em 0em 0.2em 0em;
@@ -44,13 +45,16 @@ $text_shadow: 1px 1px 3px $secondary_color;
 	}
 	h1 {
 		margin: 0em;
-		padding: 0.5em 0.5em 0.7em 0.5em;
+		padding: 1em;
 		position: absolute;
 		bottom: 0em;
 		color: $white;
 		width: 100%;
-		background-color: rgba($red, 0.85);
-		text-shadow: $text-shadow;
+		background: linear-gradient(to bottom, rgba( $grey, .25 ) 0%, $dark_grey 100%) repeat scroll 0 0 transparent;
+		text-shadow: $text-shadow; 
+
+
+		&:hover { background: $grey_gradient_hover;  }
 	}
 	.comments-link {
 		position: absolute;
