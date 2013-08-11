@@ -1,42 +1,42 @@
 nav {
 	@extend %box-shadow;
 	background-color: $secondary_color;
-	padding: 0.5em;
-	background: linear-gradient(to bottom, lighten($secondary_color, 10%) 0%, $secondary_color 50%, $black 100%);
+	padding: 0em;
+	background: linear-gradient(to bottom, $blue 0%, $black 100%);
 
 	#menu-global-nav {
 		list-style-type: none;
 
 		li {
 			display: inline-block;
-			text-transform: uppercase;
-			font-family: $primary_font;
-			background-color: lighten($secondary_color, 10%);
-			margin-right: 0.5em;
 
-			&:first-child {
-				color: $red;
-				font-size: 1.2em;
-				position: relative;
-				top: 0.1em;
-				background-color: transparent;
-				
-				&:hover {
-					background-color: transparent;
-				}
+			&:first-child {				
 				a {
-					color: inherit;
-					background: url($logo_image) no-repeat center;
+					color: $red;
+					background: url($logo_image) no-repeat left;
 					background-size: contain;
 					text-indent: -999em;
+					padding-right: 2em;
+					box-sizing: border-box;
+
+					&:hover {
+						background: url($logo_image) no-repeat left;
+						background-size: contain;
+					}
 				}
 			}
-			&:hover {
-				background-color: lighten($secondary_color, 8%);
-			}
 			a {
-				padding: 0.5em 1em;
+				padding: 0em 1em;
 				display: block;
+				background: linear-gradient(to bottom, $blue 0%, $dark_blue 100%);
+				box-shadow: -1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 $dark_blue inset;
+				font: bold 1em/3em $primary_font;
+				text-transform: uppercase;
+				color: $white;
+
+				&:hover {
+					background: linear-gradient($pale_blue, $blue);
+				}
 			}
 		}
 	}

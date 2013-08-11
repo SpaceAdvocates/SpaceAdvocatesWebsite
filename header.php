@@ -19,7 +19,7 @@
 		<div id="content_wrapper">
 			<nav>
 				<div class="row">
-					<?php wp_nav_menu( array( 'container_class' => 'large-9 columns', 'theme_location' => 'primary' ) ); ?>
+					<?php echo preg_replace( '/<\/li>\s<li/', '</li><li', wp_nav_menu( array( 'container_class' => 'large-9 columns', 'theme_location' => 'primary', 'echo' => false ) ) ); ?>
 					<div class="large-3 columns"><input type="text" class="search" placeholder="Search..." /></div>
 				</div>
 			</nav>

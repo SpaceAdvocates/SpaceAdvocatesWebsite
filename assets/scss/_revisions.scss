@@ -76,69 +76,7 @@
 
 .card h1:hover {background-color: #444;}
 
-nav {
-    background: linear-gradient(to bottom, #075181 0%, #000000 100%) repeat scroll 0 0 transparent;
-    box-shadow: 0 0 1em 0.1em #93D7F9;
-    padding: 0;
-}
 
-nav #menu-global-nav { font-size:0;}
-
-nav #menu-global-nav li {
-    background: none;
-    box-shadow: none;
-    line-height: 45px;
-    padding:0;
-    display: inline-block;
-    font-family: Bebas,Arial,sans-serif;
-    margin-right: 0;
-    text-transform: uppercase;
-	font-size:16px;
-}
-
-nav #menu-global-nav li a {
-    display: block;
-	background: linear-gradient(to bottom, #075181 0%, #03273A 100%) repeat scroll 0 0 transparent;
-    box-shadow: -1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset;
-    line-height: 45px;
-    padding: 0 15px;
-    color: white;
-    display: block;
-    font-size: 0.8125em;
-    font-weight: bold;
-    text-decoration: none;
-    width: 100%;
-	text-shadow:none;
-}
-
-nav #menu-global-nav li a:hover {
-    background: linear-gradient(#1D93D7, #075181) repeat scroll 0 0 transparent;
-}
-
-nav #menu-global-nav li:first-child {
-    background-color: transparent;
-	border: none;
-    color: #b22222;
-    position: relative;
-    font-size: 16px;
-	min-width:88px;
-
-    margin: 0;
-    padding-right: 15px;
-	padding: 0;
-}
-
-nav #menu-global-nav li:first-child a {
-	    background-color: transparent;
-	border: none;
-
-    position: relative;
-    font-size: 16px;
-
-    margin: 0;
-    padding-right: 0;
-	padding: 0 15px;
-	}
 
 @media screen and (max-width: 1000px){ 
 .page-home #featured h2, .page-home #recent_posts h2, .page-home #recent_videos h2   {
