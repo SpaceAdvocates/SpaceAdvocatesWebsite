@@ -9,11 +9,14 @@
 // ------------------------------------------------------------------------------
 @import "normalize";
 
-// Libraries
+// Compass Libraries
 // ------------------------------------------------------------------------------
 @import "foundation";
-@import "libraries/sticky-footer/*";
-@import "libraries/spens/*";
+@import "compass/css3";
+
+// Vendor Libraries
+// ------------------------------------------------------------------------------
+@import "libraries/spens/index";
 
 // Web fonts
 // ------------------------------------------------------------------------------
@@ -27,26 +30,26 @@
 
 // Layouts
 // ------------------------------------------------------------------------------
-@import "layouts/*";
-//@import "layouts/_front-page";
-//@import "layouts/_blog-feed";
-//@import "layouts/_contact";
-//@import "layouts/_about";
-//@import "layouts/_archive";
+//@import "layouts/*";
+@import "layouts/front-page";
+@import "layouts/blog-feed";
+@import "layouts/contact";
+@import "layouts/about";
+@import "layouts/archive";
 
 // Modules
 // ------------------------------------------------------------------------------
-@import "modules/*";
-//@import "modules/_module-nav";
-//@import "modules/_module-footer";
-//@import "modules/_module-card";
-//@import "modules/_module-post";
-//@import "modules/_module-sharing";
-//@import "modules/_module-comments";
-//@import "modules/_module-comment";
-//@import "modules/_module-commentform";
-//@import "modules/_module-aside";
-//@import "modules/_module-contact_form";
-//@import "modules/_module-person";
+//@import "modules/*";
+@import "modules/module-nav";
+@import "modules/module-footer";
+@import "modules/module-card";
+@import "modules/module-post";
+@import "modules/module-sharing";
+@import "modules/module-comments";
+@import "modules/module-comment";
+@import "modules/module-commentform";
+@import "modules/module-aside";
+@import "modules/module-contact_form";
+@import "modules/module-person";
 
 @import "revisions";
