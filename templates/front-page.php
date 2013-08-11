@@ -7,6 +7,13 @@ Template Name: Front Page
 
 <?php get_header(); ?>
 
+	<section id="action" class="row">
+		<h1 class="large-8 columns">EXPLORING THE FINAL FRONTIER MAKES US GREAT</h1>
+		<div class="large-4 columns">
+			<a class="btn-red" href="#">Become A Space Advocate</a>
+		</div>
+	</section>
+
 	<!-- <img src="<?php bloginfo('template_directory'); ?>/assets/images/logo.png" class="logo" /> -->
 
 	<section id="featured" class="row">
