@@ -1,12 +1,29 @@
 footer {
 	@extend %box-shadow;
 	color: $white;
-	text-align: center;
-	background: linear-gradient(to bottom, $blue 0%, $black 100%);
+	text-align: left;
+	background: linear-gradient(to bottom, lighten($secondary_color, 10%) 0%, $secondary_color 50%, $black 100%);
+}
 
-	.row {
-		div {
-			padding: 1em 0em;
+#footer_wrapper {
+	padding: 1em 0;
+	text-align: left;
+	h4 {
+		color:$red;
+	}
+	ul {
+		color: #FFFFFF;
+   		list-style: none outside none;
+   		margin-left: 0;
+		li {
+			margin-bottom:0.5em;
+		}
+		a {
+			color:$light_blue;
+			text-decoration: underline;
+			&:hover {
+			color:$white;
+			}
 		}
 	}
 }

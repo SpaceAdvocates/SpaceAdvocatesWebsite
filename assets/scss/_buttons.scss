@@ -11,6 +11,9 @@
 	&:hover {
 		color: $white;
 	}
+	&:focus {
+		color: $white;
+	}
 }
 
 .btn-white {
@@ -27,6 +30,10 @@
 .btn-red {
 	@extend %btn;
 	background-color: $red;
+	background: $red_gradient;
+	&:hover {background: $red_gradient_hover;
+	
+	}
 }
 
 .btn-green {

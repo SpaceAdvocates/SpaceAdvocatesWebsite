@@ -42,7 +42,7 @@ function mb_widgets_init() {
 		'name'          => __( 'Footer', 'mb' ),
 		'id'            => 'footer-widgets',
 		'description'   => __( 'Widgets for Footer.', 'mb' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s large-4 column">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'
@@ -206,7 +206,9 @@ Frontend
 function mb_scripts() {
 	// CSS first
 	wp_register_style('mb_style', get_stylesheet_directory_uri().'/style.css', null, '1.0', 'all' );
+
 	wp_enqueue_style( 'mb_style' );
+
 	// JavaScript
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
