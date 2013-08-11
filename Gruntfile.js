@@ -108,6 +108,7 @@ module.exports = function(grunt) {
                     '.jshintrc',
                     'node_modules',
                     'assets/scss',
+                    'assets/js/source',
                     'dumps',
                     'Gruntfile.js',
                     'package.json',
