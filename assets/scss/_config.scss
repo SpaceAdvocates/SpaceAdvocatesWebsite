@@ -7,12 +7,14 @@ $black: #000;
 $green: #6c6;
 $light_blue: #93d7f9;
 $blue: #075181;
+$dark_blue: #03273a;
+$pale_blue: #1d93d7;
 $red: #da3b3b;
 $light_gray: #999;
 
 /////// Config defaults for site border style /////// 
 // -----------------------------------------------------------------------------
-$box_shadow: 0em 0em 1em 0.1em $light_blue;
+$box_shadow: 0em 0em 1em 0.1em #93D7F9;
 
 /////// Page dimension configuration ///////
 // -----------------------------------------------------------------------------
@@ -31,7 +33,7 @@ $secondary_font: Crimson, Arial, sans-serif;
 $phone_portrait_width: 		480px;
 $phone_landscape_width: 	600px;
 
-$phone: 					"screen and (max-width: #{$phone_landscape_width})";
+$phone: 				"screen and (max-width: #{$phone_landscape_width})";
 $phone_portrait: 		"screen and (max-width: #{$phone_portrait_width}) and (orientation: portrait)";
 $phone_landscape:		"screen and (max-width: #{$phone_landscape_width}) and (orientation: landscape)";
 
@@ -39,8 +41,8 @@ $tablet_portrait_width: 	600px;
 $tablet_landscape_width:	768px;
 
 $tablet: 				"screen and (min-width: #{$tablet_portrait_width}) and (max-width: #{$tablet_landscape_width})";
-$tablet_portrait:  	"screen and (max-width: #{$tablet_portrait_width}) and (orientation: portrait)";
-$tablet_landscape: 	"screen and (max-width: #{$tablet_landscape_width}) and (orientation: landscape)";
+$tablet_portrait:  		"screen and (max-width: #{$tablet_portrait_width}) and (orientation: portrait)";
+$tablet_landscape: 		"screen and (max-width: #{$tablet_landscape_width}) and (orientation: landscape)";
 
 $desktop_width: 			768px;
 
