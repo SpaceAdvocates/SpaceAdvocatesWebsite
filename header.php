@@ -19,34 +19,9 @@
 		<div id="content_wrapper">
 			<nav>
 				<div class="row">
-<<<<<<< HEAD
-					<?php echo preg_replace( '/<\/li>\s<li/', '</li><li', wp_nav_menu( array( 'container_class' => 'large-9 columns', 'theme_location' => 'primary', 'echo' => false ) ) ); ?>
+					<?php echo preg_replace( '/<\/li>\s<li/', '</li><li', wp_nav_menu( array( 'container_class' => 'large-6 columns', 'theme_location' => 'primary', 'echo' => false ) ) ); ?>
+					<div class="large-3 columns"><a href="http://localhost/SpaceAdvocatesWebsite-master/?page_id=13" class="donate btn-red">Donate</a></div>
 					<div class="large-3 columns"><input type="text" class="search" placeholder="Search..." /></div>
-=======
-					<?php wp_nav_menu( array( 'container_class' => 'large-9 columns', 'theme_location' => 'primary' ) ); ?>
-					<div class="large-3 columns">
-<ul id="side-nav">
-<li>
-<a href="http://localhost/SpaceAdvocatesWebsite-master/?page_id=13">Donate</a>
-</li>
-</ul>           
-                    </div>
->>>>>>> 64b82a3866ae926a3a8f97fdcf4e385425e3b399
 				</div>
 			</nav>
-<?php if ( is_front_page() ) { ?>
-<section id="action">
-<div class="row">
-<div class="large-6 columns">
-<h1>EXPLORING THE FINAL FRONTIER MAKES US GREAT</h1>
-</div>
-<div class="large-6 columns">
-<a class="btn-red" href="#">Become A Space Advocate</a>
-</div>
-
-</div>
-
-</section>
-<?php }
-?>
 			<div id="container" class="row">
