@@ -1,6 +1,6 @@
 body {
 	background: $black url($bg_image) repeat fixed center;
-	font-family: $secondary_font;
+	font-family: 14px/1em $secondary_font;
 	
 	h1, h2, h3, h4, h5, h6 {
 		font: normal 1em/1.2em $primary_font;
@@ -27,7 +27,10 @@ body {
 
 	a {
 		color: $blue;
-		&:hover { color:$dark-blue;}
+
+		&:hover {
+			color:$dark-blue;
+		}
 	}
 
 	label {

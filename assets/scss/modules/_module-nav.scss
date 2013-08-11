@@ -3,107 +3,63 @@ nav {
 	background-color: $dark_blue;
 	padding: 0em;
 	background: $blue_gradient;
-	
-	#side-nav {
-		list-style-type: none;
-		font-size: 0;
-		
-		li {
-			display: inline-block;
-			text-transform: uppercase;
-			font-family: $primary_font;
-			margin-right: 0;
-			line-height: 45px;
-			font-size:16px;
-			font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
-			font-weight:bold;
-			width:100%;
-			text-align:center;
-			
-			a {
-				padding: 0 1em;
-				display: block;
-				color: $white;
-				background: $red_gradient;
-				box-shadow: -1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset, 1px 0 0 0 rgba(147, 215, 249, 0.5) inset, 2px 0 0 0 #03273A inset;
-				&:hover {
-					background: $red_gradient_hover;
-				}			
-			}
-		}
-	}
 
 	#menu-global-nav {
 		list-style-type: none;
-		font-size: 0;
 
 		li {
 			display: inline-block;
-			text-transform: uppercase;
-			font-family: $primary_font;
-			margin-right: 0;
-			line-height: 45px;
-			font-size:16px;
-			font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
-			font-weight:bold;
 		
-			&:first-child {
-				color: $red;
-				background-color: transparent;
-				height:45px;
-				min-width:133px;	
-				&:hover {background-color:$dark_blue;}						
-				
+			&:first-child {			
 				a {
-					color: inherit;
+					color: $red;
 					background: url($logo_image) no-repeat 10px center;
 					background-size: contain;
-					text-indent: -999em;					
+					text-indent: -999em;
+					padding-right: 3em;
+
 					&:hover {
-					background-color: transparent;
-					background: url($logo_image) no-repeat 10px center;
-					background-size: contain;
+						background: transparent url($logo_image) no-repeat 10px center;
+						background-size: contain;
 					}					
 				}
 			}
-
 			a {
 				padding: 0 1em;
 				display: block;
 				color: $white;
 				background: $blue_gradient;
    				box-shadow: -1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset;
+   				text-transform: uppercase;
+   				font: bold 1em/3.5em "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
 				&:hover {
 					background: $blue_gradient_hover;
 				}			
 			}
-			
 			& + .current_page_item {
-				a{
-		
-				background: $red_gradient_hover;
+				a {
+					background: $red_gradient_hover;
 				}
 			}			
 		}
 	}
-	
-	#searchform {
-		margin: 0;
-  		padding:6px 15px 6px 15px;	
-		box-shadow: 1px 0 0 0 rgba(147, 215, 249, 0.5) inset, 2px 0 0 0 #03273A inset;
-			input {
-			margin:0;
-			}
-			.btn-red {
-				border-radius:0;
-			}
+	.donate {
+		margin: 0.5em 0em 0em 0em;
+		padding: 0.7em;
+		float: right;
+	}
+	.search {
+		margin: 0.7em 0em 0em;
 	}
 }
 
 @media only #{$tablet} {
 	nav {
-		.large-9.columns, .large-3.columns {padding:0; width:auto;}	
-		
+		.large-9.columns, .large-3.columns {
+			padding:0;
+			width:auto;
+		}
 		.search {
 			margin:1em 0 1em 
 		}
@@ -112,7 +68,9 @@ nav {
 
 @media only #{$phone} {
 	nav {
-		.large-9.columns, .large-3.columns {padding:0;}	
+		.large-9.columns, .large-3.columns {
+			padding:0;
+		}	
 		#side-nav {
 			li {
 				width:100%;
@@ -133,20 +91,19 @@ nav {
 					min-width:100%;							
 					
 					a {
-					height:90px;
-					color: inherit;
-					background: url($logo_image) no-repeat center center;
-					background-size: contain;
-					text-indent: -999em;					
-					&:hover {
-					background-color: transparent;
-					background: url($logo_image) no-repeat center center;
-					background-size: contain;
-					}	
-									
+						height:90px;
+						color: inherit;
+						background: url($logo_image) no-repeat center center;
+						background-size: contain;
+						text-indent: -999em;
+
+						&:hover {
+							background-color: transparent;
+							background: url($logo_image) no-repeat center center;
+							background-size: contain;
+						}
 					}
 				}
-	
 				a {
 					box-shadow: 0 -1px 0 0 rgba(147, 215, 249, 0.5) inset, 0 -2px 0 0 #03273A inset;
 				}		
