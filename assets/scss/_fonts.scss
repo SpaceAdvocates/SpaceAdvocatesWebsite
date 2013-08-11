@@ -1,8 +1,8 @@
-@include font(Bebas, "bebas/BEBAS___-webfont");
+@include font-face("Bebas", font-files("bebas/BEBAS___-webfont.ttf", "bebas/BEBAS___-webfont.woff", "bebas/BEBAS___-webfont.svg"), "bebas/BEBAS___-webfont.eot", normal, normal);
 
-@include font(Crimson, "crimson/crimsontext-roman-webfont");
-@include font(Crimson, "crimson/crimsontext-bold-webfont", bold);
-@include font(Crimson, "crimson/crimsontext-italic-webfont", normal, italic);
-@include font(Crimson, "crimson/crimsontext-bolditalic-webfont", bold, italic);
-@include font(Crimson, "crimson/crimsontext-semibold-webfont", 500);
-@include font(Crimson, "crimson/crimsontext-semibolditalic-webfont", 500, italic);
+@include font-face("Crimson", inline-font-files("crimson/crimsontext-roman-webfont.woff", woff, "crimson/crimsontext-roman-webfont.ttf", ttf, "crimson/crimsontext-roman-webfont.svg", svg), "crimson/crimsontext-roman-webfont.eot", normal, normal);
+@include font-face("Crimson", inline-font-files("crimson/crimsontext-bold-webfont.woff", woff, "crimson/crimsontext-bold-webfont.ttf", ttf, "crimson/crimsontext-bold-webfont.svg", svg), "crimson/crimsontext-bold-webfont.eot", bold, normal);
+@include font-face("Crimson", inline-font-files("crimson/crimsontext-italic-webfont.woff", woff, "crimson/crimsontext-italic-webfont.ttf", ttf, "crimson/crimsontext-italic-webfont.svg", svg), "crimson/crimsontext-italic-webfont.eot", normal, italic);
+@include font-face("Crimson", inline-font-files("crimson/crimsontext-bolditalic-webfont.woff", woff, "crimson/crimsontext-bolditalic-webfont.ttf", ttf, "crimson/crimsontext-bolditalic-webfont.svg", svg), "crimson/crimsontext-bolditalic-webfont.eot", bold, italic);
+@include font-face("Crimson", inline-font-files("crimson/crimsontext-semibold-webfont.woff", woff, "crimson/crimsontext-semibold-webfont.ttf", ttf, "crimson/crimsontext-semibold-webfont.svg", svg), "crimson/crimsontext-semibold-webfont.eot", 500, normal);
+@include font-face("Crimson", inline-font-files("crimson/crimsontext-semibolditalic-webfont.woff", woff, "crimson/crimsontext-semibolditalic-webfont.ttf", ttf, "crimson/crimsontext-semibolditalic-webfont.svg", svg), "crimson/crimsontext-semibolditalic-webfont.eot", 500, italic);
