@@ -3,9 +3,12 @@
 require 'zurb-foundation'
 
 # Sass Globbing
-# @chriseppstein
 # https://github.com/chriseppstein/sass-globbing
 require 'sass-globbing'
+
+# Compass Placeholder
+# https://github.com/tinganho/compass-placeholder
+require 'compass-placeholder'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
