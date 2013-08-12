@@ -6392,10 +6392,10 @@ nav, footer {
   font-size: 4em;
   padding: 0em;
 }
-.page-home #action .btn-red, .page-home #action .post .entry .more-link, .post .entry .page-home #action .more-link, .page-home #action li.comment div.comment .main-content .reply .comment-reply-link, li.comment div.comment .main-content .reply .page-home #action .comment-reply-link, .page-home #action #commentform .form-submit #submit, #commentform .form-submit .page-home #action #submit {
+.page-home #action a {
   font-size: 1.2em;
-  margin: 2em 0 0;
   padding: 1em;
+  text-align: center;
 }
 .page-home #featured {
   background-color: rgba(28, 28, 28, 0.85);
@@ -6631,6 +6631,10 @@ nav #menu-global-nav li a {
   box-shadow: -1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273a inset;
   text-transform: uppercase;
   font: bold 1em/3.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 nav #menu-global-nav li a:hover {
   background: linear-gradient(to bottom, #93d7f9 0%, #075181 100%) repeat scroll 0 0 transparent;

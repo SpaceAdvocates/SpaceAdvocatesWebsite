@@ -8,9 +8,11 @@ Template Name: Front Page
 <?php get_header(); ?>
 
 	<section id="action" class="row">
-		<h1 class="large-8 columns">EXPLORING THE FINAL FRONTIER MAKES US GREAT</h1>
-		<div class="large-4 columns">
-			<a class="btn-red" href="#">Become A Space Advocate</a>
+		<div class="row">
+			<h1 class="large-9 columns">EXPLORING THE FINAL FRONTIER MAKES US GREAT</h1>
+		</div>
+		<div class="row">
+			<a class="btn-red large-4 columns" href="javascript:void(0)">Become A Space Advocate</a>
 		</div>
 	</section>
 
