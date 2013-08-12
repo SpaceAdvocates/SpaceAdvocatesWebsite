@@ -5,3 +5,11 @@
 $icons-sprite-dimensions: true;
 
 @include all-icons-sprites;
+
+// Logos Sprite
+// ------------------------------------------------------------------------------
+@import "logos/*.png";
+
+$logos-sprite-dimensions: true;
+
+@include all-logos-sprites;

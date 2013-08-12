@@ -12,16 +12,20 @@ nav {
 		
 			&:first-child {			
 				a {
+					@extend .logos-logo-130;
 					color: $red;
-					background: url($logo_image) no-repeat 10px center;
-					background-size: contain;
 					text-indent: -999em;
-					padding-right: 3em;
+					@include box-sizing(content-box);
+					padding-left: 0em;
 
 					&:hover {
-						background: transparent url($logo_image) no-repeat 10px center;
-						background-size: contain;
-					}					
+						@extend .logos-logo-130;
+					}
+				}
+			}
+			& + .current_page_item {
+				a {
+					background: $red_gradient_hover;
 				}
 			}
 			a {
@@ -31,17 +35,12 @@ nav {
 				background: $blue_gradient;
    				box-shadow: -1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset;
    				text-transform: uppercase;
-   				font: bold 1em/3.5em "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+   				font: bold 1em/3.5em $secondary_font;
 
 				&:hover {
 					background: $blue_gradient_hover;
 				}			
 			}
-			& + .current_page_item {
-				a {
-					background: $red_gradient_hover;
-				}
-			}			
 		}
 	}
 	.donate {
@@ -93,13 +92,11 @@ nav {
 					a {
 						height:90px;
 						color: inherit;
-						background: url($logo_image) no-repeat center center;
 						background-size: contain;
 						text-indent: -999em;
 
 						&:hover {
 							background-color: transparent;
-							background: url($logo_image) no-repeat center center;
 							background-size: contain;
 						}
 					}
