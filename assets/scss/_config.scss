@@ -1,3 +1,8 @@
+/////// Site Icons and Images /////// 
+// -----------------------------------------------------------------------------
+$bg_image: "assets/images/background/stars.jpg";
+$action_image: "assets/images/background/flare.png";
+
 /////// Config defaults for site colors /////// 
 // -----------------------------------------------------------------------------
 $secondary_color: rgba(28, 28, 28, 0.85);
@@ -35,6 +40,8 @@ $box_shadow: 0em 0em 1em 0.1em #93D7F9;
 // -----------------------------------------------------------------------------
 $footer_height: 3em;
 
+$background: $black url($bg_image) repeat fixed center;
+
 /////// Typography configuration /////// 
 // -----------------------------------------------------------------------------
 $primary_font: Bebas, Arial, sans-serif;
@@ -62,8 +69,3 @@ $tablet_landscape: 		"screen and (max-width: #{$tablet_landscape_width}) and (or
 $desktop_width: 			768px;
 
 $desktop: 				"screen and (min-width: #{$desktop_width})";
-
-/////// Site Icons and Images /////// 
-// -----------------------------------------------------------------------------
-$bg_image: "assets/images/background/stars.jpg";
-$action_image: "assets/images/background/flare.png";

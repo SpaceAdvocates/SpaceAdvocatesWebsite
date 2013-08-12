@@ -1,0 +1,29 @@
+.page-donate {
+	color: $white;
+
+	#container {
+		& > p {
+			font-size: 1.2em;
+			line-height: 1.2em;
+		}
+	}
+	#paypal, #mail {
+		background: $blue_gradient;
+		padding: 1em;
+		margin-bottom: 2em;
+
+		h2 {
+			padding-bottom: 0.5em;
+			margin: 0em;
+		}
+		p {
+			line-height: 1.2em;
+		}
+		.mail {
+			margin: 0em;
+			background: $background;
+			padding: 1em;
+			font-size: 1.05em;
+		}
+	}
+}

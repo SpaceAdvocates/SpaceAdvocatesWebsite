@@ -16,8 +16,6 @@ Template Name: Front Page
 		</div>
 	</section>
 
-	<!-- <img src="<?php bloginfo('template_directory'); ?>/assets/images/logo.png" class="logo" /> -->
-
 	<section id="featured" class="row">
 
 		<h2>Featured Content</h2>

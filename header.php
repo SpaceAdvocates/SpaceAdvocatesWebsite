@@ -21,7 +21,7 @@
 				<div class="row">
 					<?php echo preg_replace( '/<\/li>\s<li/', '</li><li', wp_nav_menu( array( 'container_class' => 'large-6 columns', 'theme_location' => 'primary', 'echo' => false ) ) ); ?>
 					<div class="large-3 columns">
-						<a href="http://localhost/SpaceAdvocatesWebsite-master/?page_id=13" class="donate btn-red">Donate</a>
+						<a href="/donate" class="donate btn-red">Donate</a>
 					</div>
 					<div class="large-3 columns search">
 						<input type="text" placeholder="Search..." />

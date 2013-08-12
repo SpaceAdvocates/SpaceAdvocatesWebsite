@@ -41,6 +41,7 @@
 @import "layouts/contact";
 @import "layouts/about";
 @import "layouts/archive";
+@import "layouts/donate";
 
 // Modules
 // ------------------------------------------------------------------------------
@@ -57,3 +58,4 @@
 @import "modules/module-contact_form";
 @import "modules/module-person";
 @import "modules/module-search";
+@import "modules/module-paypal";

@@ -1,0 +1,23 @@
+#paypal {
+	text-align: center;
+
+	h2 {
+		text-align: left;
+	}
+	.once, .recurring {
+		background: $background;
+		padding: 1em;
+
+		h3 {
+			font-size: 1.8em;
+			margin-top: 0em;
+		}
+		form {
+			margin: 0em;
+
+			p {
+				margin: 0em;
+			}
+		}
+	}
+}
