@@ -8,6 +8,13 @@ Template Name: About Page
 
 <h1>About Us</h1>
 
+<div id="mission">
+	<h2>The Mission</h2>
+	<?php if ( have_posts() ) : while( have_posts() ) : the_post();
+    	the_content();
+	endwhile; endif; ?>
+</div>
+
 <?php
 	$ranks = $wpdb->get_col("SELECT meta_value FROM $wpdb->usermeta WHERE meta_key = 'rank' GROUP BY meta_value ORDER BY umeta_id" );
 	sort ( $ranks );
@@ -61,14 +68,6 @@ Template Name: About Page
 			} ?>
 		</section>
 	<?php }
-?>
-
-<?php
-	$page_object = get_queried_object();
-	$page_id = get_queried_object_id();
-	$queried_post = get_post($post_id);
-
-	// echo $queried_post->post_content;
 ?>
 
 <?php get_footer(); ?>

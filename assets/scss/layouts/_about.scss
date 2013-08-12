@@ -10,4 +10,30 @@
 			margin-top: 0em;
 		}
 	}
+	#mission {
+		padding: 1em;
+		background: $blue_gradient;
+
+		h2 {
+			margin-top: 0em;
+		}
+		.row {
+			font-size: 1.2em;
+			line-height: 1.2em;
+
+			div:first-child {
+				font-family: $primary_font;
+				line-height: 1.5em;
+				word-spacing: 0.1em;
+				text-align: center;
+			}
+		}
+		p {
+			margin: 0em auto 1em;
+			font-family: $primary_font;
+		}
+		strong {
+			color: $light_blue;
+		}
+	}
 }
