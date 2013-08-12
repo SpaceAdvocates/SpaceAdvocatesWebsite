@@ -15,25 +15,33 @@ Template Name: About Page
 		$people = get_users(array(
 			'meta_key' => 'rank',
 			'meta_value' => $rank
-		)); ?>
+		));
+
+		usort($people, 'sortPositions');
+
+		$title = ucwords(str_replace('_',' ',$rank));
+		if($rank == 'director') $title .= 's';
+		?>
 		
 		<section>
-			<h2><?php 
-				if ($rank == 'director')
-					echo ucwords('Directors');
-				else
-					echo ucwords(str_replace('_',' ',$rank)); 
-			?></h2>
+			<h2><?php echo $title; ?></h2>
 
-			<?php foreach( $people as $person ) {
-				//print_r($person);
+			<?php
+			$count = 0;
+			foreach( $people as $person ) {
+				$count++;
+
 				$name = $person->data->display_name;
 				$rank = esc_attr( get_the_author_meta( 'rank', $person->ID ) );
 				$position = esc_attr( get_the_author_meta( 'position', $person->ID ) );
 				$url = esc_attr( get_the_author_meta( 'url', $person->ID ) );
 				$user_info = get_userdata( $person->ID );
 				$avatar = get_avatar( $person->ID, 150 );
-				?>
+
+				if ($count % 2 == 1 ): ?>
+				<div class="row">
+				<?php endif; ?>
+				
 				<div class="person columns large-6 small-12">
 					<?php echo $avatar; ?>
 					<h3 class="name">
@@ -46,7 +54,11 @@ Template Name: About Page
 					<h4 class="position"><?php echo $position; ?></h4>
 					<div class="bio"><?php echo $user_info->user_description; ?></div>
 				</div>
-			<?php } ?>
+
+				<?php if ($count % 2 == 0 ): ?>
+				</div>
+				<?php endif;
+			} ?>
 		</section>
 	<?php }
 ?>

@@ -196,6 +196,27 @@ function mb_unhide_kitchensink($args) {
 	return $args;
 }
 
+function sortPositions($a, $b) {
+	$positionA = esc_attr( get_the_author_meta( 'position', $a->ID ) );
+	$positionB = esc_attr( get_the_author_meta( 'position', $b->ID ) );
+
+	$priorities = array(
+		'Executive',
+		'Assistant Director',
+		'Founder',
+		'Lead'
+	);
+
+	// Check for priorities first
+	foreach($priorities as $priority) {
+		if(strpos($positionA, $priority) !== false) return -1;
+		if(strpos($positionB, $priority) !== false) return 1;
+	}
+
+	if ($positionA == $positionB) return 0;
+    return ($positionA < $positionB) ? -1 : 1;
+}
+
 /****************************************
 Frontend
 *****************************************/

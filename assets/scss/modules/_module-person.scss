@@ -1,15 +1,17 @@
 .person {
+	margin-bottom: 2em;
+	
 	img {
 		display: block;
 		float: left;
-		margin: 0em 1em 1em 0em;
-		border-radius: 200em;
-		box-shadow: 0em 0em 1em 0.1em $light_blue;
+		margin: 0em 1em 0em 1em;
+		@include border-radius(200em);
+		@include box-shadow(0em 0em 1em 0.1em $light_blue);
 	}
 	.name {
-		font-size: 3em;
+		font-size: 2em;
 		margin-bottom: 0em;
-		margin-top: 0.4em;
+		margin-top: 0.7em;
 		color: $light_blue;
 
 		a {
