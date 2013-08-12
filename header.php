@@ -19,8 +19,8 @@
 		<div id="content_wrapper">
 			<nav>
 				<div class="row">
-					<?php echo preg_replace( '/<\/li>\s<li/', '</li><li', wp_nav_menu( array( 'container_class' => 'large-6 columns', 'theme_location' => 'primary', 'echo' => false ) ) ); ?>
-					<div class="large-3 columns">
+					<?php echo preg_replace( '/<\/li>\s<li/', '</li><li', wp_nav_menu( array( 'container_class' => 'large-8 columns', 'theme_location' => 'primary', 'echo' => false ) ) ); ?>
+					<div class="large-1 columns">
 						<a href="/donate" class="donate btn-red">Donate</a>
 					</div>
 					<div class="large-3 columns search">
