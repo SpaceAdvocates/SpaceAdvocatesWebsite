@@ -1,16 +1,4 @@
 #blog_feed {
 	padding: 0;
 	margin-bottom: 2em;
-	
-	h1 {
-		margin: 0;
-		@include grey-gradient;
-
-		&.videos {
-			@include red-gradient;
-		}
-		&.featured {
-			@include blue-gradient;
-		}
-	}
 }

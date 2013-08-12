@@ -25,10 +25,10 @@
 }
 
 @mixin red-gradient {
-	background: $blue_gradient;
+	background: $red_gradient;
 	
 	&:hover {
-		background: $blue_gradient_hover;
+		background: $red_gradient_hover;
 	}
 }
 

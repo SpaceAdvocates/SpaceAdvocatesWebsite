@@ -4,17 +4,15 @@
  */
 
 $class = '';
-if ( in_category( 'videos' ) )
-	$class = 'videos';
-elseif (  get_post_meta( get_the_ID(), '_cmb_featured_value', true ) )
+if (  get_post_meta( get_the_ID(), '_cmb_featured_value', true ) )
 	$class = 'featured';
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<a href="<?php the_permalink(); ?>">
 		<h1 class="<?php echo $class; ?>"><?php the_title(); ?></h1>
+		<div class="star"></div>
 	</a>
 
 	<div class="entry">

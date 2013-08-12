@@ -1,11 +1,41 @@
 .post {
 	margin-top: 2em;
-	h1 {
-		font-size: 2.5em;
-		line-height: 1.2em;
-		background-color: transparent;
-		color: $white;
-		padding: 0.4em;
+
+	& > a {
+		position: relative;
+		overflow: hidden;
+		display: block;
+
+		.star {
+			@extend .icons-star-150;
+			position: absolute;
+			right: -1em;
+			top: 1em;
+			@include opacity(0.2);
+			display: none;
+		}
+		h1 {
+			font-size: 2.5em;
+			line-height: 1.2em;
+			background-color: transparent;
+			color: $white;
+			padding: 0.4em;
+			margin: 0em;
+			@include grey-gradient;
+
+			&.featured {
+				@include blue-gradient;
+
+				& + .star {
+					display: block;
+				}
+			}
+		}
+	}
+	&.category-videos {
+		h1 {
+			@include red-gradient;
+		}
 	}
 	.entry {
 		background-color: $white;
