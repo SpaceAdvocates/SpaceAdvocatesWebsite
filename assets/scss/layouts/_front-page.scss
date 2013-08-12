@@ -6,14 +6,17 @@
 	position: relative;
 
 	h2 {
-		padding: 0.5em 0.5em 0.325em 0.5em;
-		width: 100%;
-		color: $white;
-		box-shadow: 0em 1em 1em -1em darken($color, 20%);
-		text-shadow: 1px 1px 3px #222222;
-		background-color: $color;
-		z-index: 1;		
-		margin:0;
+		@include box-shadow(0em 1em 1em -1em #021420);
+		@include box-sizing(content-box);
+	    width: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: -0.5em;
+	    z-index: 1;
+	    margin: 0;
+	    padding: 0.5em 0.5em;
+	    text-indent: 0.5em;
+	    text-shadow: 1px 1px 3px #222222;
 	}
 	& > a {
 		padding: 0em;
@@ -26,7 +29,7 @@
 	}
 	
 	h2 {
-		font-size: 1.75em;
+		font-size: 2em;
 	}
 
 	.logo {
@@ -53,6 +56,9 @@
 	#featured {
 		@include section_background(rgba( $blue, .5 ));
 
+		h2 {
+			background-color: $blue;
+		}
 		& > a {
 			height: 15em;
 		}
@@ -61,6 +67,9 @@
 	#recent_posts {
 		@include section_background($dark-grey);
 
+		h2 {
+			background-color: $grey;
+		}
 		& > a {
 			$post_height: 10em;
 			$post_margin: 1em;
@@ -97,6 +106,9 @@
 	#recent_videos {
 		@include section_background($red);
 
+		h2 {
+			background-color: $red;
+		}
 		.columns {
 			padding-bottom: 20%;
 
