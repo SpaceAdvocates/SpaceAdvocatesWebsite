@@ -6,7 +6,7 @@ $text_shadow: 1px 1px 3px $secondary_color;
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 100%;
-	box-shadow: $box_shadow;
+	@include box-shadow($box_shadow);
 	z-index: 1;
 	padding: 0em;
 	display: block;
@@ -19,7 +19,6 @@ $text_shadow: 1px 1px 3px $secondary_color;
 		height: calc(100% - #{$drawer_height});
 
 		& + .drawer {
-			$drawer_width: 100%;
 			$drawer_color: $blue_gradient;
 			$drawer_hover_color: $blue_gradient_hover;
 
@@ -30,31 +29,36 @@ $text_shadow: 1px 1px 3px $secondary_color;
 			color: $white;
 			text-shadow: $text_shadow;
 			height: $drawer_height;
-			&:hover { background: $drawer_hover_color; }
+
+			&:hover {
+				background: $blue_gradient_hover;
+				background-color: #075181;
+			}
 			h1 {
 				color: inherit;
-				margin: 0em 0em 0.2em 0em;
-				max-height: 3em;
-				overflow: hidden;
-				text-overflow: ellipsis;
+			    margin: 0;
+			    max-height: 2.5em;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
 			}
 			.meta {
 				font-size: 0.8em;
+				display: none;
 			}
 		}
 	}
 	h1 {
 		margin: 0em;
-		padding: 1em;
+		padding: 0.5em 0.5em 0.7em;
 		position: absolute;
 		bottom: 0em;
 		color: $white;
 		width: 100%;
 		background: linear-gradient(to bottom, rgba( $grey, .25 ) 0%, $dark_grey 100%) repeat scroll 0 0 transparent;
-		text-shadow: $text-shadow; 
 
-
-		&:hover { background: $grey_gradient_hover;  }
+		&:hover {
+			background: $grey_gradient_hover;
+		}
 	}
 	.comments-link {
 		position: absolute;
