@@ -32,17 +32,13 @@ nav {
 				}
 			}
 			a {
+				@include blue-gradient;
 				padding: 0 1em;
 				display: block;
 				color: $white;
-				background: $blue_gradient;
-   				box-shadow: -1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset;
+   				@include box-shadow(-1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset);
    				text-transform: uppercase;
-   				font: bold 1em/3.5em $secondary_font;
-
-				&:hover {
-					background: $blue_gradient_hover;
-				}			
+   				font: bold 1em/3.5em $secondary_font;	
 			}
 		}
 	}
@@ -78,22 +74,22 @@ nav {
 				width:100%;
 				
 				a {
-					box-shadow: 0 -1px 0 0 rgba(147, 215, 249, 0.5) inset, 0 -2px 0 0 #03273A inset;	
+					@include box-shadow(0 -1px 0 0 rgba(147, 215, 249, 0.5) inset, 0 -2px 0 0 #03273A inset);	
 				}
 			}
 		}
 		#menu-global-nav {
 			li {
-				display:block;
-				width:100%;
-				text-align:center;				
+				display: block;
+				width: 100%;
+				text-align: center;				
 				
 				&:first-child {
-					height:90px;
-					min-width:100%;							
+					height: 90px;
+					min-width: 100%;							
 					
 					a {
-						height:90px;
+						height: 90px;
 						color: inherit;
 						background-size: contain;
 						text-indent: -999em;
@@ -105,12 +101,12 @@ nav {
 					}
 				}
 				a {
-					box-shadow: 0 -1px 0 0 rgba(147, 215, 249, 0.5) inset, 0 -2px 0 0 #03273A inset;
+					@include box-shadow(0 -1px 0 0 rgba(147, 215, 249, 0.5) inset, 0 -2px 0 0 #03273A inset);
 				}		
 			}
 		}
 		.search {
-			margin:1em 0 1em 0;
+			margin: 1em 0 1em 0;
 		}
 	}	
 }

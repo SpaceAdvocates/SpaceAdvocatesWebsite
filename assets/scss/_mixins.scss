@@ -16,6 +16,30 @@
 	}
 }
 
+@mixin blue-gradient {
+	background: $blue_gradient;
+	
+	&:hover {
+		background: $blue_gradient_hover;
+	}
+}
+
+@mixin red-gradient {
+	background: $blue_gradient;
+	
+	&:hover {
+		background: $blue_gradient_hover;
+	}
+}
+
+@mixin grey-gradient {
+	background: $grey_gradient;
+	
+	&:hover {
+		background: $grey_gradient_hover;
+	}
+}
+
 %box-shadow {
-	box-shadow: 0em 0em 1em 0.1em $light_blue;
+	@include box-shadow(0em 0em 1em 0.1em $light_blue);
 }

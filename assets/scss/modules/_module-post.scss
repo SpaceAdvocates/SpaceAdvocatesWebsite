@@ -16,7 +16,7 @@
 			background-color: $secondary_color;
 			color: $white;
 			max-width: 100%;
-			a { color:$light_blue;}
+
 			&.alignright {
 				float: right;
 				margin-right: 0em;
@@ -30,6 +30,9 @@
 			}
 			&.alignnone {
 				margin: 1em auto;
+			}
+			a {
+				color: $light_blue;
 			}
 			.wp-caption-text {
 				padding: 0.8em;
