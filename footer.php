@@ -5,7 +5,11 @@
 	<footer id="footer_wrapper">
 		<div class="row">
 			<?php dynamic_sidebar( 'Footer' ); ?>
-			<div class="large-12 column">&copy; <?php echo date( "Y" ); echo " "; bloginfo( 'name' ); ?></div>
+		</div>
+		<div class="copy">
+			<div class="row">
+				<div class="large-12 column">&copy; <?php echo date( "Y" ); echo " "; bloginfo( 'name' ); ?></div>
+			</div>
 		</div>
 	</footer>
 

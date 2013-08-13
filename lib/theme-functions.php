@@ -42,7 +42,7 @@ function mb_widgets_init() {
 		'name'          => __( 'Footer', 'mb' ),
 		'id'            => 'footer-widgets',
 		'description'   => __( 'Widgets for Footer.', 'mb' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s large-4 column">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s large-3 column">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'
