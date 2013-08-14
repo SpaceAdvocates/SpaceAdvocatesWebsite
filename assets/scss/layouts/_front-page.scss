@@ -1,6 +1,6 @@
-@mixin section_background($color) {
+%section_background {
 	background-color: $secondary_color;
-	border-radius: 2px;
+	@include border-radius(2px);
 	margin: 3em 0em 2em;
 	padding: 4.5em 0em 0em 0em;
 	position: relative;
@@ -54,7 +54,7 @@
 	}
 	
 	#featured {
-		@include section_background(rgba( $blue, .5 ));
+		@extend %section_background;
 
 		h2 {
 			background-color: $blue;
@@ -65,7 +65,7 @@
 	}
 
 	#recent_posts {
-		@include section_background($dark-grey);
+		@extend %section_background;
 
 		h2 {
 			background-color: $grey;
@@ -104,7 +104,7 @@
 	}
 
 	#recent_videos {
-		@include section_background($red);
+		@extend %section_background;
 
 		h2 {
 			background-color: $red;
@@ -149,10 +149,8 @@
 			h2 {
 				height: inherit;
 				left: 0em;
-				box-sizing: border-box;
-
-				-moz-box-sizing: inherit;
-			    color: #FFFFFF;
+				@include box-sizing(border-box);
+			    color: $white;
 			    left: 0;
 			    padding: 0.75em 0.5em;
 			    position: relative;
