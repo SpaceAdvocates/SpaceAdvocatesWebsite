@@ -4,9 +4,6 @@ nav {
 	padding: 0em;
 	background: $blue_gradient;
 
-	& > .row > .columns:first-child {
-		padding-left: 0em;
-	}
 	#menu-global-nav {
 		list-style-type: none;
 
@@ -54,10 +51,6 @@ nav {
 
 @media only #{$tablet} {
 	nav {
-		.large-9.columns, .large-3.columns {
-			padding:0;
-			width:auto;
-		}
 		.search {
 			margin:1em 0 1em 
 		}
@@ -66,9 +59,10 @@ nav {
 
 @media only #{$phone} {
 	nav {
-		.large-9.columns, .large-3.columns {
-			padding:0;
-		}	
+		& > .row > .columns:first-child {
+		padding-left: 0em;
+		padding-right:0em;
+	}
 		#side-nav {
 			li {
 				width:100%;
@@ -104,6 +98,14 @@ nav {
 					@include box-shadow(0 -1px 0 0 rgba(147, 215, 249, 0.5) inset, 0 -2px 0 0 #03273A inset);
 				}		
 			}
+		}
+		.donate {
+		margin: 1em 0;
+		padding: 0.7em;
+		float: none;
+		width:100%;
+		text-align:center;
+		min-height:44px;
 		}
 		.search {
 			margin: 1em 0 1em 0;
