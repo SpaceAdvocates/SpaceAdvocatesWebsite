@@ -2,20 +2,14 @@
 	background-color: $secondary_color;
 	@include border-radius(2px);
 	margin: 3em 0em 2em;
-	padding: 4.5em 0em 0em 0em;
+	padding: 0em 0em 0em 0em;
 	position: relative;
 
 	h2 {
 		@include box-shadow(0em 1em 1em -1em #021420);
 		@include box-sizing(content-box);
-	    width: 100%;
-	    position: absolute;
-	    top: 0;
-	    left: -0.5em;
-	    z-index: 1;
 	    margin: 0;
 	    padding: 0.5em 0.5em;
-	    text-indent: 0.5em;
 	    text-shadow: 1px 1px 3px #222222;
 	}
 	& > a {
@@ -41,9 +35,10 @@
 		background: url($action_image) no-repeat center center;
 		background-size:cover;
 		padding:2em 0 0;
+		margin:0;
 
 		h1 {
-			font-size: 4em;
+			font-size: 3.5em;
 			padding: 0em;
 		}
 		a {

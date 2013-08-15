@@ -8,12 +8,35 @@ Template Name: Front Page
 <?php get_header(); ?>
 
 	<section id="action" class="row">
-		<div class="row">
-			<h1 class="large-9 columns">EXPLORING THE FINAL FRONTIER MAKES US GREAT</h1>
-		</div>
-		<div class="row">
-			<a class="btn-red large-4 columns" href="javascript:void(0)">Become A Space Advocate</a>
-		</div>
+        <div class="large-6 columns">
+        
+            <h1>EXPLORING THE FINAL FRONTIER MAKES US GREAT</h1>
+            
+        </div>
+        
+        <div class="large-6 columns">
+        
+            <div class="large-12 columns">
+            <a class="btn-blue btn-full" href="#">Become A Space Advocate</a>
+            </div>
+            
+            <div class="small-3 columns">
+                <a class="facebook" href="#"></a>
+            </div>
+            
+            <div class="small-3 columns">
+                <a class="google" href="#"></a>
+            </div>
+            
+            <div class="small-3 columns">
+                <a class="twitter" href="#"></a>
+            </div>
+            
+            <div class="small-3 columns">
+                <a class="youtube" href="#"></a>
+            </div>
+            
+        </div>
 	</section>
 
 	<section id="featured" class="row">
