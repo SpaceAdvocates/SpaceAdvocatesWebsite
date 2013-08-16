@@ -29,11 +29,7 @@
 
 .btn-red {
 	@extend %btn;
-	background-color: $red;
-	background: $red_gradient;
-	&:hover {background: $red_gradient_hover;
-	
-	}
+	@include red-gradient;
 }
 
 .btn-green {

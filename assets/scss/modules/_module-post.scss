@@ -32,6 +32,11 @@
 			}
 		}
 	}
+	& > h1 {
+		margin-bottom: 0em;
+		padding: 0.3em;
+		background-color: $secondary_color;
+	}
 	&.category-videos {
 		h1 {
 			@include red-gradient;

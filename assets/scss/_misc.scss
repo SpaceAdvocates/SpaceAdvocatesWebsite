@@ -1,6 +1,9 @@
 body {
-	background: $black url($bg_image) repeat fixed center;
 	font-family: 14px/1em $secondary_font;
+	background: $black;
+	background: $black url($bg_image) repeat fixed center;
+	position: relative;
+	z-index: 0;
 	
 	h1, h2, h3, h4, h5, h6 {
 		font: normal 1em/1.2em $primary_font;
@@ -35,5 +38,18 @@ body {
 
 	label {
 		cursor: default;
+	}
+
+	#wrapper {
+		position: relative;
+		z-index: 1;
+
+		#content_wrapper {
+			background: $black url($bg_image) repeat fixed center;
+			@include box-shadow(0em 0em 1em 0.1em $light_blue);
+		}
+	}
+	#container {
+		padding-bottom: 2em;
 	}
 }

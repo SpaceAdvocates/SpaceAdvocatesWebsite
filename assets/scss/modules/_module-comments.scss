@@ -5,13 +5,17 @@
 	margin-bottom: 20px;
 
 	& > * {
-		width: 60%;
+		width: 75%;
 	}
 	.comments-title {
 		color: $white;
 		font-size: 1.2em;
 		margin-top: 0em;
 		margin-bottom: 1em;
+
+		em {
+			color: $light_blue;
+		}
 	}
 	h3 {
 		color: inherit;

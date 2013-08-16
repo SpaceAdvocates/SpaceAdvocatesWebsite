@@ -12,25 +12,19 @@ li.comment {
 
 		.vcard {
 			border: 0em;
-			padding: 0em 0.5em;
 			margin: 0em;
 			float: left;
 			width: $sidebar_width;
 
-			.avatar, .fn {
+			.avatar {
 				display: block;
 				margin: 0em auto;
 				text-align: center;
-			}
-			.avatar {
-				border-radius: 999em;
+				@include border-radius(999em);
 				border: 0.15em solid $white;
+				width: 100%;
 			}
-			.fn {
-				line-height: 1em;
-				font-size: 0.7em;
-				font-style: normal;
-			}
+			
 		}
 		.notice {
 			color: $green;
@@ -38,8 +32,20 @@ li.comment {
 		.main-content {
 			float: left;
 			width: 100 - $sidebar_width;
+			background-color: $white;
+			color: $black;
+			padding: 1em;
 
+			.fn {
+				font: normal bold 1.2em/1em $primary_font;
+				float: left;
+				margin-bottom: 0.3em;
+			}
 			.comment-meta {
+				float: right;
+				font-size: 0.9em;
+				line-height: 1em;
+
 				.comment-edit-link {
 					float: right;
 					@extend .btn-light-blue;
@@ -47,6 +53,8 @@ li.comment {
 				}
 			}
 			.comment-content {
+				clear: both;
+
 				p:last-child {
 					margin-bottom: 0em;
 				}

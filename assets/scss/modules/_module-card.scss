@@ -77,19 +77,3 @@ $text_shadow: 1px 1px 3px $secondary_color;
 		font-size: 0.7em;
 	}
 }
-
-@media not #{$desktop} {
-	.card {
-		&.featured {
-			$drawer_height: 4em;
-
-			height: -webkit-calc(100% - #{$drawer_height});
-			height: -moz-calc(100% - #{$drawer_height});
-			height: calc(100% - #{$drawer_height});
-
-			& + .drawer {
-				height: $drawer_height;
-			}
-		}
-	}
-}

@@ -1,3 +1,7 @@
+$recent-posts-height: 10em;
+$recent-posts-margin: 1em;
+$recent-post-font-size: 1.5em;
+
 %section_background {
 	background-color: $secondary_color;
 	@include border-radius(2px);
@@ -71,27 +75,19 @@
 			background-color: $grey;
 		}
 		& > a {
-			$post_height: 10em;
-			$post_margin: 1em;
-
-			margin: $post_margin;
-			height: $post_height;
-			@extend .medium-6;
+			margin: $recent-posts-margin;
+			height: $recent-posts-height;
+			//@extend .medium-6;
 			@extend .small-12;
-			@media #{$desktop} {
-				width: calc(25% - (#{$post_margin} * 3/2));
-			}
 
 			&:nth-of-type(1) {
-				$font_size: 1.5em;
-
 				@extend .large-6;
-				@extend .medium-12;
+				//@extend .medium-12;
 				@extend .small-12;
-				font-size: $font_size;
+				font-size: $recent-post-font-size;
 				padding: 0em;
 				margin: 0em;
-				height: (($post_height * 2) + ($post_margin * 3)) / ($font_size) * 1em;
+				height: (($recent-posts-height * 2) + ($recent-posts-margin * 3)) / ($recent-post-font-size) * 1em;
 			}
 			&:nth-of-type(2n) {
 				margin-right: 0em;
@@ -135,33 +131,13 @@
 	}
 }
 
-@media not #{$desktop} {
+@media #{$medium} {
 	.page-home {
-		#featured,
-		#recent_posts,
-		#recent_videos {
-			padding: 0;
-
+		#recent_posts {
 			& > a {
-				margin: 0em;
-				height: 15em;
-			}
-			h2 {
-				height: inherit;
-				left: 0em;
-				@include box-sizing(border-box);
-			    color: $white;
-			    left: 0;
-			    padding: 0.75em 0.5em;
-			    position: relative;
-			    text-indent: 0;
+				width: calc(25% - (#{$recent-posts-margin} * 3/2));
 			}
 		}
-	}
-}
-
-@media only #{$tablet} {
-	.page-home {
 		#recent_videos {
 			.columns {
 				padding-bottom: 40%;
@@ -170,7 +146,7 @@
 	}
 }
 
-@media only #{$phone} {
+@media #{$small} {
 	.page-home {
 		#recent_videos {
 			.columns {

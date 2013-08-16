@@ -1,34 +1,44 @@
-footer {
-	@extend %box-shadow;
-	color: $white;
-	text-align: left;
-	background: $grey_gradient;
-	padding: 1em 0em 0em 0em;
+#footer_wrapper {
+	background: $blue_gradient;
+	z-index: -2;
+	position: relative;
+	height: $footer_height;
 
-	.widget {
-		margin-top: 0em;
-	}
-	h4 {
-		color: $red;
-	}
-	ul {
+	footer {
 		color: $white;
-   		list-style: none outside none;
-   		margin-left: 0;
+		text-align: left;
+		padding: 1em 0em 0em 0em;
+		position: fixed;
+		bottom: 0em;
+		left: 0%;
+		width: 100%;
+		z-index: -1;
 
-		li {
-			margin-bottom:0.5em;
+		.widget {
+			margin-top: 0em;
 		}
-		a {
-			color:$light_blue;
-			text-decoration: underline;
+		h4 {
+			color: $red;
+		}
+		ul {
+			color: $white;
+	   		list-style: none outside none;
+	   		margin-left: 0;
 
-			&:hover {
-				color:$white;
+			li {
+				//margin-bottom: 0.5em;
+			}
+			a {
+				color: $light_blue;
+				//text-decoration: underline;
+
+				&:hover {
+					color: $white;
+				}
 			}
 		}
-	}
-	.copy {
-		padding: 1em;
+		.copy {
+			padding: 1em;
+		}
 	}
 }

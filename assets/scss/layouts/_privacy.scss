@@ -1,0 +1,14 @@
+.page-privacy {
+	.entry {
+		background-color: $white;
+		color: $black;
+		padding: 2em;
+
+		h4 {
+			color: inherit;
+		}
+		ul, ol {
+			margin-left: 2em;
+		}
+	}
+}

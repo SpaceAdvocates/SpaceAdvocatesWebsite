@@ -1,0 +1,24 @@
+#ts-fab-below {
+	.ts-fab-list {
+		padding-bottom: 0em;
+	}
+	.ts-fab-tabs {
+		//background: $black url($bg_image) repeat fixed center;
+		background: $black url($bg_image) repeat fixed center;
+
+		.ts-fab-tab {
+			background-color: $secondary_color;
+
+			.ts-fab-text {
+				.ts-fab-latest {
+					background-color: inherit;
+					color: $white;
+
+					li {
+						margin-left: 0em;
+					}
+				}
+			}
+		}
+	}
+}

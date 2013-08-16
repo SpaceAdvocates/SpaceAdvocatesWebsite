@@ -24,7 +24,6 @@ function _mbbasetheme_comment( $comment, $args, $depth ) {
 		<div id="comment-<?php comment_ID(); ?>" class="comment">
 			<div class="comment-author vcard">
 				<?php echo get_avatar( $comment, 60 ); ?>
-				<cite class="fn"><?php echo get_comment_author_link(); ?></cite>
 			</div><!-- .comment-author .vcard -->
 			<?php if ( $comment->comment_approved == '0' ) : ?>
 				<em class="notice"><?php _e( 'Your comment is awaiting moderation.', '_mbbasetheme' ); ?></em>
@@ -32,14 +31,12 @@ function _mbbasetheme_comment( $comment, $args, $depth ) {
 			<?php endif; ?>
 
 			<div class="main-content">
+				<cite class="fn"><?php echo get_comment_author_link(); ?></cite>
 				<div class="comment-meta commentmetadata">
-					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
-					<?php
-						/* translators: 1: date, 2: time */
-						printf( __( '%1$s at %2$s', '_mbbasetheme' ), get_comment_date(), get_comment_time() ); ?>
-					</time></a>
-					<?php edit_comment_link( __( 'edit', '_mbbasetheme' ), ' ' );
-					?>
+					<time pubdate datetime="<?php comment_time( 'c' ); ?>">
+						<?php printf( __( '%1$s at %2$s', '_mbbasetheme' ), get_comment_date(), get_comment_time() ); ?>
+					</time>
+					<?php edit_comment_link( __( 'edit', '_mbbasetheme' ), ' ' ); ?>
 				</div><!-- .comment-meta .commentmetadata -->
 
 				<div class="comment-content"><?php comment_text(); ?></div>

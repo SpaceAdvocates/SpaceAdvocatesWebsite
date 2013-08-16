@@ -3,6 +3,7 @@
 $bg_image: "assets/images/background/stars.jpg";
 $action_image: "assets/images/background/flare.png";
 $star_image: "assets/images/star-150.png";
+$logo_image: "assets/images/logo.png";
 
 /////// Config defaults for site colors /////// 
 // -----------------------------------------------------------------------------
@@ -35,11 +36,12 @@ $red_gradient_hover: linear-gradient(to bottom, $light_red 0%, $red 100%) repeat
 
 /////// Config defaults for site border style /////// 
 // -----------------------------------------------------------------------------
-$box_shadow: 0em 0em 1em 0.1em #93D7F9;
+$box_shadow: 0em 0em 1em 0.1em $light_blue;
 
 /////// Page dimension configuration ///////
 // -----------------------------------------------------------------------------
-$footer_height: 13em;
+$footer_height: 11em;
+$page-width: 1000px;
 
 $background: $black url($bg_image) repeat fixed center;
 
@@ -53,20 +55,6 @@ $secondary_font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /////// UI @media breakpoint defaults /////// 
 // -----------------------------------------------------------------------------
-$phone_portrait_width: 		480px;
-$phone_landscape_width: 	600px;
-
-$phone: 				"screen and (max-width: #{$phone_landscape_width})";
-$phone_portrait: 		"screen and (max-width: #{$phone_portrait_width}) and (orientation: portrait)";
-$phone_landscape:		"screen and (max-width: #{$phone_landscape_width}) and (orientation: landscape)";
-
-$tablet_portrait_width: 	600px;
-$tablet_landscape_width:	768px;
-
-$tablet: 				"screen and (min-width: #{$tablet_portrait_width}) and (max-width: #{$tablet_landscape_width})";
-$tablet_portrait:  		"screen and (max-width: #{$tablet_portrait_width}) and (orientation: portrait)";
-$tablet_landscape: 		"screen and (max-width: #{$tablet_landscape_width}) and (orientation: landscape)";
-
-$desktop_width: 			768px;
-
-$desktop: 				"screen and (min-width: #{$desktop_width})";
+$small-screen: 		emCalc(480);
+$medium-screen: 	emCalc(768);
+$large-screen: 		emCalc(1280);

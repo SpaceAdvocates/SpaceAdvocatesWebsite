@@ -17,7 +17,8 @@
 
 // Vendor Libraries
 // ------------------------------------------------------------------------------
-@import "libraries/spens/index";
+@import "libraries/spens/functions";
+//@import "libraries/spens/sticky-footer";
 
 // Web fonts
 // ------------------------------------------------------------------------------
@@ -42,6 +43,7 @@
 @import "layouts/about";
 @import "layouts/archive";
 @import "layouts/donate";
+@import "layouts/privacy";
 
 // Modules
 // ------------------------------------------------------------------------------
@@ -59,3 +61,4 @@
 @import "modules/module-person";
 @import "modules/module-search";
 @import "modules/module-paypal";
+@import "modules/module-author-box";
