@@ -1,38 +1,96 @@
+$button_box_shadow: inset 0 1px 0 rgba($white, .3);
+
 %btn {
-	display: inline-block;
 	color: $white;
-	border: 0px;
 	border-radius: 0.2em;
 	padding: 0.5em;
 	line-height: 1em;
 	font-family: $primary_font;
 	letter-spacing: 0.08em;
-
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	cursor: pointer;
+	overflow: visible;
+	text-decoration: none;
+	white-space: nowrap;
+	border: 1px solid $red;
+	background: $red_gradient;
+	box-shadow: $button_box_shadow;
+	text-shadow: 0 1px 0 rgba($black,.25);
 	&:hover {
+		background: $red_gradient_hover;
 		color: $white;
 	}
 	&:focus {
+		background: linear-gradient(to bottom, $dark_red 0%, $red 100%) repeat scroll 0 0 transparent;
 		color: $white;
 	}
-}
-
-.btn-white {
-	@extend %btn;
-	background-color: $white;
-	color: $black;
-}
-
-.btn-light-blue {
-	@extend %btn;
-	background-color: $light_blue;
 }
 
 .btn-red {
 	@extend %btn;
-	@include red-gradient;
 }
 
-.btn-green {
+.btn-blue {
 	@extend %btn;
-	background-color: $green;
+	border-color:$blue;
+	background: $blue_gradient;
+	box-shadow: $button_box_shadow;
+	&:hover {
+		background: $blue_gradient_hover;
+	}
+	&:focus {
+		background: linear-gradient(to bottom, $dark_blue 0%, $blue 100%) repeat scroll 0 0 transparent;
+	}
+}
+
+.btn-full {
+	font-size: 1.2em;
+	margin: 2em 0 0;
+	padding: 1em;
+	text-align: center;
+	width: 100%;
+}
+
+/////// Social Buttons  /////// 
+// -----------------------------------------------------------------------------
+
+%social-icon {
+	margin:2em auto;
+	height:44px;
+	width:44px;
+	display: block;
+	border-radius:999px;
+	text-align:center;
+	box-shadow:$button_box_shadow;
+	border-width:2px;
+	border-style:solid;
+	&:hover, &:focus, &:active {
+		box-shadow: $box_shadow, $button_box_shadow;
+	}
+}
+
+.google {
+	background: url("assets/images/icons/google.svg") no-repeat center center / contain, $red_gradient_hover;
+	border-color: darken($red, 20%);
+	@extend %social-icon;
+}
+
+.facebook {
+	background: url("assets/images/icons/facebook.svg") no-repeat center center / contain, $blue_gradient;
+	border-color:darken( $blue, 10% );
+	@extend %social-icon;
+}
+
+.twitter {
+	background: url("assets/images/icons/twitter.svg") no-repeat center center / contain, $blue_gradient_hover;
+	border-color:$blue;
+	@extend %social-icon;
+}
+
+.youtube {
+	background: url("assets/images/icons/youtube.svg") no-repeat center center / contain, $grey_gradient_hover;
+	border-color:darken( $grey, 10% );
+	@extend %social-icon;
 }
