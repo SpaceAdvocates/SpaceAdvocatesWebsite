@@ -1,0 +1,25 @@
+body {
+	position: relative;
+	z-index: 0;
+}
+
+.sliding-wrapper {
+	z-index: 1;
+	//position: relative;
+	position: absolute;
+}
+
+.sliding-footer-wrapper {
+	z-index: -2;
+	//position: relative;
+	position: absolute;
+	height: $footer_height;
+
+	footer {
+		position: fixed;
+		bottom: 0em;
+		left: 0%;
+		width: 100%;
+		z-index: -1;
+	}
+}

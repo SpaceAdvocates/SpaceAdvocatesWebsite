@@ -2,8 +2,15 @@
 // ------------------------------------------------------------------------------
 @import "spens/foundation";
 
+// Functions
+// ------------------------------------------------------------------------------
+@import "spens/functions";
+
 // Custom Styles
 // ------------------------------------------------------------------------------
 @import "spens/extends";
-@import "spens/functions";
-@import "spens/sticky-footer";
+
+// Modules
+// ------------------------------------------------------------------------------
+//@import "spens/sliding-footer";
+//@import "spens/sticky-footer";

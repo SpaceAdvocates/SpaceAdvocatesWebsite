@@ -11,7 +11,7 @@ body {
    padding: 0em;
 }
 
-div#wrapper {
+.sticky-wrapper {
    width: 100%;
    min-height: 100%;
    height: auto !important;
@@ -19,12 +19,12 @@ div#wrapper {
    margin: 0em 0em ($footer_height * -1) 0em;
 }
 
-footer#footer_wrapper {
+.sticky-footer-wrapper {
    width: 100%;
    height: $footer_height;
 }
 
-div#content_wrapper {
+.sticky-content-wrapper {
    width: 100%;
    padding: 0em 0em $footer_height 0em;
 }
@@ -37,11 +37,11 @@ div#content_wrapper {
  */
 
 /*
-div#footer_wrapper, div#content_wrapper {
+#footer_wrapper, div#content_wrapper {
    min-width: $page_width;
 }
 
-div#footer_inner_wrapper, div#content_inner_wrapper {
+#footer_inner_wrapper, div#content_inner_wrapper {
    width: $page_width;
    margin: 0px auto;
 }
