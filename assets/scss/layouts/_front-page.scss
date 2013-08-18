@@ -8,12 +8,13 @@ $recent-post-font-size: 1.5em;
 	margin: 3em 0em 2em;
 	padding: 0em 0em 0em 0em;
 	position: relative;
+	z-index: 1;
 
 	h2 {
 		@include box-shadow(0em 1em 1em -1em #021420);
 		@include box-sizing(content-box);
 	    margin: 0 0 0 -0.8em;
-	    padding: 0.6em 0.8em;
+	    padding: 0.5em 0.8em;
 	    text-shadow: 1px 1px 3px $dark_grey;
 	}
 	& > a {
@@ -56,7 +57,8 @@ $recent-post-font-size: 1.5em;
 		@extend %section_background;
 
 		h2 {
-			background-color: $blue;
+			background: $blue_gradient;
+			background-color: $secondary_color;
 		}
 		& > a {
 			height: 15em;
