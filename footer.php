@@ -1,8 +1,8 @@
 			</div> <!-- /#container -->
-		</div> <!-- /#content_wrapper -->
+		</div> <!-- /#content-wrapper -->
 	</div> <!-- /#wrapper -->
 
-	<div id="footer_wrapper">
+	<div id="footer-wrapper" class="sliding-footer-wrapper">
 		<footer>
 			<div class="row">
 				<?php dynamic_sidebar( 'Footer' ); ?>

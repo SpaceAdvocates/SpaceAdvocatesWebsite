@@ -8,6 +8,8 @@ nav {
 	background-color: $dark_blue;
 	padding: 0em;
 	background: $blue_gradient;
+	position: relative;
+	z-index: 1;
 
 	& > .row > .columns:first-child {
 		padding-left: 0em;

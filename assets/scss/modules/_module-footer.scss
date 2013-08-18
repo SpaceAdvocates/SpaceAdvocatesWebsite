@@ -1,18 +1,10 @@
-#footer_wrapper {
+#footer-wrapper {
 	background: $blue_gradient;
-	z-index: -2;
-	position: relative;
-	height: $footer_height;
 
 	footer {
 		color: $white;
 		text-align: left;
 		padding: 1em 0em 0em 0em;
-		position: fixed;
-		bottom: 0em;
-		left: 0%;
-		width: 100%;
-		z-index: -1;
 
 		.widget {
 			margin-top: 0em;
@@ -25,12 +17,8 @@
 	   		list-style: none outside none;
 	   		margin-left: 0;
 
-			li {
-				//margin-bottom: 0.5em;
-			}
 			a {
 				color: $light_blue;
-				//text-decoration: underline;
 
 				&:hover {
 					color: $white;
@@ -39,6 +27,8 @@
 		}
 		.copy {
 			padding: 1em;
+			background-color: rgba($black,0.3);
+			margin-top: 1em;
 		}
 	}
 }
