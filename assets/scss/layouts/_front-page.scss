@@ -12,8 +12,8 @@ $recent-post-font-size: 1.5em;
 	h2 {
 		@include box-shadow(0em 1em 1em -1em #021420);
 		@include box-sizing(content-box);
-	    margin: 0;
-	    padding: 0.5em 0.5em;
+	    margin: 0 0 0 -0.8em;
+	    padding: 0.6em 0.8em;
 	    text-shadow: 1px 1px 3px #222222;
 	}
 	& > a {
@@ -36,19 +36,19 @@ $recent-post-font-size: 1.5em;
 	}
 	
 	#action {
-		background: url($action_image) no-repeat center center;
-		background-size:cover;
-		padding:2em 0 0;
-		margin:0;
+		padding: 2em 0 0;
+		margin: 0;
 
 		h1 {
 			font-size: 3.5em;
 			padding: 0em;
 		}
-		a {
+		.cta {
 			font-size: 1.2em;
 			padding: 1em;
 			text-align: center;
+			display: block;
+			margin-top: 2em;
 		}
 	}
 	
@@ -100,27 +100,20 @@ $recent-post-font-size: 1.5em;
 		h2 {
 			background-color: $red;
 		}
-		.columns {
-			padding-bottom: 20%;
-
-			&:nth-of-type(1) {
-				@extend .large-9;
-				//@extend .medium-12;
-				padding-bottom: 60%;
-
-				iframe {
-					margin: 0em;
-					width: 100%;
-					height: 100%;
-				}
+		.row {
+			clear: both;
+			padding: 1em 0em;
+		}
+		.video {
+			&:nth-child(2) {
+				padding: 0em 2em 0em 1em;
+			}
+			&:nth-child(1) {
+				padding: 0em 0em 0em 2em;
 			}
 			iframe {
-				width: calc(100% - 2em);
-				height: calc(100% - 2em);
-				position: absolute;
-				left: 0em;
-				top: 0em;
-				margin: 1em;
+				min-height: 20em;
+				width: 100%;
 			}
 		}
 	}
@@ -131,21 +124,6 @@ $recent-post-font-size: 1.5em;
 		#recent_posts {
 			& > a {
 				width: calc(25% - (#{$recent-posts-margin} * 3/2));
-			}
-		}
-		#recent_videos {
-			.columns {
-				padding-bottom: 40%;
-			}
-		}
-	}
-}
-
-@media #{$small} {
-	.page-home {
-		#recent_videos {
-			.columns {
-				padding-bottom: 60%;
 			}
 		}
 	}
