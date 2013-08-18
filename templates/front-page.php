@@ -9,39 +9,29 @@ Template Name: Front Page
 
 	<section id="action" class="row">
         <div class="large-6 columns">
-        
             <h1>EXPLORING THE FINAL FRONTIER MAKES US GREAT</h1>
-            
         </div>
         
         <div class="large-6 columns">
-        
-            <div class="large-12 columns">
-            <a class="btn-blue btn-full" href="#">Become A Space Advocate</a>
-            </div>
-            
+            <a class="btn-blue btn-full cta" href="javascript:void(0)">Become A Space Advocate</a>
             <div class="small-3 columns">
-                <a class="facebook" href="#"></a>
+                <a class="facebook" href="javascript:void(0)"></a>
             </div>
-            
             <div class="small-3 columns">
-                <a class="google" href="#"></a>
+                <a class="google" href="javascript:void(0)"></a>
             </div>
-            
             <div class="small-3 columns">
-                <a class="twitter" href="#"></a>
+                <a class="twitter" href="javascript:void(0)"></a>
             </div>
-            
             <div class="small-3 columns">
-                <a class="youtube" href="#"></a>
+                <a class="youtube" href="javascript:void(0)"></a>
             </div>
-            
         </div>
 	</section>
 
 	<section id="featured" class="row">
 
-		<h2>Featured Content</h2>
+		<h2 class="large-12 columns">Featured Content</h2>
 		
 		<?php
 			$posts = get_posts(array(
@@ -62,7 +52,7 @@ Template Name: Front Page
 
 	<section id="recent_posts" class="row">
 
-		<h2>Recent Posts</h2>
+		<h2 class="large-12 columns">Recent Posts</h2>
 
 		<?php
 			$posts = get_posts(array(
@@ -81,16 +71,27 @@ Template Name: Front Page
 
 	<section id="recent_videos" class="row">
 
-		<h2>Recent Videos</h2>
+		<h2 class="large-12 columns">Recent Videos</h2>
 
 		<?php
 			$videos = json_decode(file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=' . YT_PLAYLIST_ID . '&key=' . YT_API_KEY));
 
-			foreach( $videos->items as $video) { ?>
-				<div class="small-12 medium-6 large-3 columns">
+			$i = 0;
+			foreach( $videos->items as $key => $video) {
+				if($key % 2 == 0): ?>
+					<div class="row">
+				<?php endif; ?>
+
+				<div class="video small-12 medium-6 large-6 columns">
 					<iframe class="ytplayer" type="text/html" src="https://www.youtube.com/embed/<?php echo $video->snippet->resourceId->videoId ?>" frameborder="0" allowfullscreen ></iframe>
 				</div>
-			<?php }
+
+				<?php if($key % 2 == 1): ?>
+					</div>
+				<?php endif;
+
+				$i++;
+			}
 		?>
 	</section>
 
