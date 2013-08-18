@@ -1,0 +1,7 @@
+.error404 {
+	#content-wrapper {
+		padding-bottom: -webkit-calc(100% - (#{$footer_height} * 5));
+		padding-bottom: -moz-calc(100% - (#{$footer_height} * 5));
+		padding-bottom: calc(100% - (#{$footer_height} * 5));
+	}
+}
