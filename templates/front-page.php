@@ -13,7 +13,7 @@ Template Name: Front Page
         </div>
         
         <div class="large-6 columns">
-            <a class="btn-blue btn-full cta" href="javascript:void(0)">Become A Space Advocate</a>
+            <a class="btn-red cta" href="javascript:void(0)">Become A Space Advocate</a>
             <div class="small-3 columns">
                 <a class="facebook" href="javascript:void(0)"></a>
             </div>
