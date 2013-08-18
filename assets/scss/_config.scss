@@ -26,13 +26,11 @@ $dark_grey: #222;
 $grey_gradient: linear-gradient(to bottom, $grey 0%, $dark_grey 100%) repeat scroll 0 0 transparent;
 $grey_gradient_hover: linear-gradient(to bottom, $light_gray 0%, $grey 100%) repeat scroll 0 0 transparent;
 
-
 $light_red: #DD2A2A;
 $red: #b22222;
 $dark_red: #8F1718;
 $red_gradient: linear-gradient(to bottom, $red 0%, $dark_red 100%) repeat scroll 0 0 transparent;
 $red_gradient_hover: linear-gradient(to bottom, $light_red 0%, $red 100%) repeat scroll 0 0 transparent;
-
 
 /////// Config defaults for site border style /////// 
 // -----------------------------------------------------------------------------
@@ -49,10 +47,6 @@ $background: $black url($bg_image) repeat fixed center;
 // -----------------------------------------------------------------------------
 $primary_font: Bebas, Arial, sans-serif;
 $secondary_font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-/////// Config defaults for buttons /////// 
-// -----------------------------------------------------------------------------
-$button_box_shadow: inset 0 1px 0 rgba($white, 0.3);
 
 /////// UI @media breakpoint defaults /////// 
 // -----------------------------------------------------------------------------

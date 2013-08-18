@@ -14,7 +14,7 @@ $recent-post-font-size: 1.5em;
 		@include box-sizing(content-box);
 	    margin: 0 0 0 -0.8em;
 	    padding: 0.6em 0.8em;
-	    text-shadow: 1px 1px 3px #222222;
+	    text-shadow: 1px 1px 3px $dark_grey;
 	}
 	& > a {
 		padding: 0em;
