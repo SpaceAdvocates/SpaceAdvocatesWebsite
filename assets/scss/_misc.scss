@@ -2,8 +2,7 @@ body {
 	font-family: 14px/1em $secondary_font;
 	background: $black;
 	background: $black url($bg_image) repeat fixed center;
-	position: relative;
-	z-index: 0;
+	
 	
 	h1, h2, h3, h4, h5, h6 {
 		font: normal 1em/1.2em $primary_font;
@@ -11,23 +10,18 @@ body {
 		color: $white;
 		margin: 0.5em 0em;
 	}
-
 	h1 {
 		font-size: 4em;
 	}
-
 	h2 {
 		font-size: 3em;
 	}
-
 	h3 {
 		font-size: 2em;
 	}
-
 	ul {
 		margin: 0em;
 	}
-
 	a {
 		color: $blue;
 
@@ -35,21 +29,29 @@ body {
 			color:$dark-blue;
 		}
 	}
-
 	label {
 		cursor: default;
 	}
 
-	#wrapper {
-		position: relative;
-		z-index: 1;
-
-		#content_wrapper {
-			background: $black url($bg_image) repeat fixed center;
-			@include box-shadow(0em 0em 1em 0.1em $light_blue);
-		}
+	#flare {
+		background: url($action_image) no-repeat 50% 50%;
+		width: 100%;
+		height: -webkit-calc(100% - #{$footer_height});
+		height: -moz-calc(100% - #{$footer_height});
+		height: calc(100% - #{$footer_height});
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		margin-bottom: $footer_height;
+	}
+	#content-wrapper {
+		background: $black url($bg_image) repeat fixed center;
+		@include box-shadow(0em 0em 1em 0.1em $light_blue);
 	}
 	#container {
 		padding-bottom: 2em;
+		z-index: 1;
+		position: relative;
 	}
 }
