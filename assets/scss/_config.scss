@@ -17,7 +17,8 @@ $green: #6c6;
 $light_blue: #93D7F9;
 $blue: #075181;
 $dark_blue: #053A5C;
-$blue_gradient: linear-gradient(to bottom, rgba( $blue, .5 ) 0%, $dark_blue 100%) repeat scroll 0 0 transparent;
+$trans_dark_blue: rgba($dark_blue,0.5);
+$blue_gradient: linear-gradient(to bottom, $blue 0%, $dark_blue 100%) repeat scroll 0 0 transparent;
 $blue_gradient_hover: linear-gradient(to bottom, $light_blue 0%, $blue 100%) repeat scroll 0 0 transparent;
 
 $light_gray: #999;
@@ -50,6 +51,18 @@ $secondary_font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /////// UI @media breakpoint defaults /////// 
 // -----------------------------------------------------------------------------
-$small-screen: 		emCalc(480);
-$medium-screen: 	emCalc(768);
-$large-screen: 		emCalc(1280);
+$phone_portrait_width: 320px; // min-width //
+$phone_landscape_width: 600px;
+
+$phone: "screen and (max-width: #{$phone_landscape_width})";
+
+$tablet_portrait_width: 601px;
+$tablet_landscape_width: 1024px;
+
+$tablet: "screen and (min-width: #{$tablet_portrait_width}) and (max-width: #{$tablet_landscape_width})";
+
+$desktop_width: 1025px;
+$desktop: "screen and (min-width: #{$desktop_width})";
+
+$breakpoint_width: 1032px; // design breakpoint //
+$breakpoint: "screen and (max-width: #{$breakpoint_width})";

@@ -20,13 +20,9 @@
 			<div id="flare"></div>
 			<nav>
 				<div class="row">
-					<?php echo preg_replace( '/<\/li>\s<li/', '</li><li', wp_nav_menu( array( 'container_class' => 'small-12 medium-9 large-8 columns', 'theme_location' => 'primary', 'echo' => false ) ) ); ?>
-					<div class="small-12 medium-3 large-1 columns">
+					<?php echo preg_replace( '/<\/li>\s<li/', '</li><li', wp_nav_menu( array( 'container_class' => 'small-12 medium-12 large-11 columns', 'theme_location' => 'primary', 'echo' => false ) ) ); ?>
+					<div class="small-12 medium-12 large-1 columns">
 						<a href="/donate" class="donate btn-red">Donate</a>
-					</div>
-					<div class="large-3 columns search">
-						<input type="text" placeholder="Search..." />
-						<div class="icons-search-white"></div>
 					</div>
 				</div>
 			</nav>

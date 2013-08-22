@@ -1,6 +1,24 @@
 #ts-fab-below {
+	.ts-fab-header h4 {
+		color: $white;
+	}
+	a {
+		color: $light_blue;
+		text-decoration: underline !important;
+	}
 	.ts-fab-list {
 		padding-bottom: 0em;
+		li {
+			a {
+				color: $black;
+				text-decoration: none !important;
+			}
+			&.active {
+				a {
+				color: $white;
+				}
+			}
+		}
 	}
 	.ts-fab-tabs {
 		//background: $black url($bg_image) repeat fixed center;
