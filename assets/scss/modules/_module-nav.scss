@@ -14,17 +14,8 @@ nav {
 	& > .row > .columns:first-child {
 		padding-left: 0em;
 	}
-	.donate {
-		margin: 0.5em 0 0;
-		padding: 0 1em;
-		float: right;
-		font-size:0.875em;
-	}
-	.large-11.columns{
+	.large-12.columns{
 		padding: 0;
-	}
-	.search {
-		margin: 0.7em 0 0 0;
 	}
 }
 
@@ -51,9 +42,22 @@ nav {
 
 				&:hover {
 					//@extend .logos-logo-130;
-					background: $dark_blue url($logo_image) no-repeat center center;
+					background: $trans_dark_blue url($logo_image) no-repeat center center;
+
 					background-size: contain;
 				}
+			}
+		}
+	}
+	& > li {	
+		&:last-child {
+			padding:0.5em 0.75em 0;
+			float:right;
+			a {
+				@extend .btn-red;
+				font-size:0.875em;
+				font-weight: normal;
+				margin-bottom:0;
 			}
 		}
 	}
@@ -79,12 +83,12 @@ nav {
 	}
 	a {
 		@include blue-gradient;
-		padding: 0 1em;
+		padding: 0 0.75em;
 		display: block;
 		color: $white;
 		@include box-shadow($nav-box-shadow-right);
 		text-transform: uppercase;
-		font: bold 0.875em/4.125em $secondary_font;	
+		font: 0.875em/4.125em $secondary_font;	
 	}
 	.sub-menu {
 		list-style-type: none;
@@ -111,14 +115,12 @@ nav {
 
 @media #{$tablet} {
 nav {
-.large-1 {
-padding:1em;
-}
 #menu-global-nav {
 	list-style-type: none;
 & > li {	
 		&:first-child {
 		width: 100%;
+		box-shadow: 0 -1px 0 0 $nav-box-shadow-inner-color inset, 0 -2px 0 0 $nav-box-shadow-outer-color inset;
 			&.current_page_item {
 				& > a {
 					background: url($logo_image) no-repeat bottom center;
@@ -147,28 +149,16 @@ padding:1em;
 	}
 	
 		li {
-		a {
-			box-shadow: 0 -1px 0 0 $nav-box-shadow-inner-color inset, 0 -2px 0 0 $nav-box-shadow-outer-color inset;
-		}	
+		display: inline-block;
+			width: auto;
 	}
 	
 }
-	.donate {
-		margin:0;
-		padding: 0 1em;
-		float: none;
-		width:100%;
-		font-size:1em;
-		text-align:center;
-	}
 }
 }
 
 @media #{$phone} {
 nav {
-.large-1 {
-padding:1em;
-}
 #menu-global-nav {
 	list-style-type: none;
 & > li {	
@@ -200,7 +190,19 @@ padding:1em;
 			}
 		}
 	}
-	
+		& > li {	
+		&:last-child {
+			padding:1em;
+			float:right;
+			a {
+				@extend .btn-red;
+				font-size:0.875em;
+				font-weight: normal;
+				margin-bottom:0;
+				width:100%;
+			}
+		}
+	}
 		li {
 		a {
 			box-shadow: 0 -1px 0 0 $nav-box-shadow-inner-color inset, 0 -2px 0 0 $nav-box-shadow-outer-color inset;
@@ -208,13 +210,6 @@ padding:1em;
 	}
 	
 }
-	.donate {
-		margin:0;
-		padding: 0 1em;
-		float: none;
-		width:100%;
-		font-size:1em;
-		text-align:center;
-	}
+
 }
 }
