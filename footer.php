@@ -2,7 +2,7 @@
 		</div> <!-- /#content-wrapper -->
 	</div> <!-- /#wrapper -->
 
-	<div id="footer-wrapper">
+	<div id="footer-wrapper" class="sticky-footer-wrapper">
 		<footer>
 			<div class="row">
 				<?php dynamic_sidebar( 'Footer' ); ?>

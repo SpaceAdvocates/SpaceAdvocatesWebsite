@@ -15,8 +15,8 @@
 	    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 	<![endif]-->
 
-	<div id="wrapper" class="sliding-wrapper">
-		<div id="content-wrapper" class="sliding-content-wrapper">
+	<div id="wrapper" class="sticky-wrapper">
+		<div id="content-wrapper" class="sticky-content-wrapper">
 			<div id="flare"></div>
 			<nav>
 				<div class="row">
