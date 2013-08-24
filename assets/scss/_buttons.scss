@@ -46,30 +46,32 @@ $button_box_shadow: inset 0 1px 0 rgba($white, 0.3);
 // -----------------------------------------------------------------------------
 
 %social-icon {
-	margin:2em auto;
-	height:44px;
-	width:44px;
+	margin: 2em auto;
+	height: 44px;
+	width: 44px;
 	display: block;
-	border-radius:999px;
-	text-align:center;
-	box-shadow:$button_box_shadow;
-	border-width:2px;
-	border-style:solid;
+	@include border-radius(999px);
+	text-align: center;
+	@include box-shadow($button_box_shadow);
+	border-width: 2px;
+	border-style: solid;
+	//@include transition(all 1s);
+
 	&:hover, &:focus, &:active {
-		box-shadow: $box_shadow, $button_box_shadow;
+		@include box-shadow($box_shadow, $button_box_shadow);
 	}
 }
 
 .google {
 	@extend %social-icon;
 	background: url("assets/images/icons/google.svg") no-repeat center center / contain, $red_gradient_hover;
-	border-color: darken($red, 20%);
+	border-color: darken( $red, 20% );
 }
 
 .facebook {
 	@extend %social-icon;
 	background: url("assets/images/icons/facebook.svg") no-repeat center center / contain, $blue_gradient;
-	border-color:darken( $blue, 10% );
+	border-color: darken( $blue, 10% );
 }
 
 .twitter {
