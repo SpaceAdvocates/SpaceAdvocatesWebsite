@@ -1,7 +1,8 @@
 $nav-box-shadow-outer-color: #03273A;
 $nav-box-shadow-inner-color: rgba(147, 215, 249, 0.5);
 $nav-box-shadow-right: -1px 0 0 0 $nav-box-shadow-inner-color inset, -2px 0 0 0 $nav-box-shadow-outer-color inset;
-$nav-box-shadow-left: 1px 0 0 0 $nav-box-shadow-inner-color inset, 2px 0 0 0 $nav-box-shadow-outer-color inset;
+//$nav-box-shadow-left: 1px 0 0 0 $nav-box-shadow-inner-color inset, 2px 0 0 0 $nav-box-shadow-outer-color inset;
+$nav-box-shadow-left: 1px 0 0 0 $nav-box-shadow-outer-color inset, 2px 0 0 0 $nav-box-shadow-inner-color inset;
 
 nav {
 	@include box-shadow(0em 0em 1em 0.1em $light_blue);
@@ -73,7 +74,7 @@ nav {
 			}
 		}
 		a {
-			@include box-shadow($nav-box-shadow-right);
+			@include box-shadow($nav-box-shadow-right, $nav-box-shadow-right);
 		}	
 	}
 	a {
@@ -93,7 +94,7 @@ nav {
 		left: -1px;
 
 		a {
-			@include box-shadow($nav-box-shadow-left, $nav-box-shadow-right);
+			//@include box-shadow($nav-box-shadow-right);
 		}
 	}
 }
