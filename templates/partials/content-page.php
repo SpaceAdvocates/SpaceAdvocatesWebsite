@@ -11,7 +11,7 @@
 
 	<h1><?php the_title(); ?></h1>
 
-	<div class="entry">
+	<div class="entry large-12 column" style="background-color:#fff;">
 
 		<?php the_content(); ?>
 

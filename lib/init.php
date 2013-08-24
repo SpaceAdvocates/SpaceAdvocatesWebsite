@@ -44,7 +44,7 @@ function mb_setup() {
 
 	// Add Image Sizes
 	// add_image_size( $name, $width = 0, $height = 0, $crop = false );
-
+	add_image_size( 'homepage-thumb', 768, 461, true ); // 768 pixels wide by 461 pixels tall, hard crop mode
 	// Enable Custom Headers
 	// add_theme_support( 'custom-header' );
 

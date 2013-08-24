@@ -21,7 +21,7 @@ body {
 
 .sticky-footer-wrapper {
    width: 100%;
-   height: $footer_height;
+   min-height: $footer_height;
 }
 
 .sticky-content-wrapper {

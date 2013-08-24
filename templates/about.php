@@ -5,15 +5,26 @@ Template Name: About Page
 ?>
 
 <?php get_header(); ?>
+	<section id="main" role="main" class="row">
 
-<h1>About Us</h1>
+<h1>
+We are concerned citizens.<br />
+We are scientists.<br />
+We are students.<br />
+We are teachers.<br />
+We brought you Penny4NASA.<br />
+We are Space Advocates.
+</h1>
+
 
 <div id="mission">
-	<h2>The Mission</h2>
+	<h2>our Mission</h2>
 	<?php if ( have_posts() ) : while( have_posts() ) : the_post();
     	the_content();
 	endwhile; endif; ?>
 </div>
+
+<h2>The Advocates</h2>
 
 <?php
 	$ranks = $wpdb->get_col("SELECT meta_value FROM $wpdb->usermeta WHERE meta_key = 'rank' GROUP BY meta_value ORDER BY umeta_id" );
@@ -31,7 +42,7 @@ Template Name: About Page
 		?>
 		
 		<section>
-			<h2><?php echo $title; ?></h2>
+			<h3><?php echo $title; ?></h3>
 
 			<?php
 			$count = 0;
@@ -51,14 +62,14 @@ Template Name: About Page
 				
 				<div class="person columns large-6 small-12">
 					<?php echo $avatar; ?>
-					<h3 class="name">
+					<h4 class="name">
 						<?php if($url): ?>
 							<a href="<?php echo $url; ?>"><?php echo $name; ?></a>
 						<?php else: ?>
 							<?php echo $name; ?>
 						<?php endif; ?>
-					</h3>
-					<h4 class="position"><?php echo $position; ?></h4>
+					</h4>
+					<h5 class="position"><?php echo $position; ?></h5>
 					<div class="bio"><?php echo $user_info->user_description; ?></div>
 				</div>
 
@@ -69,5 +80,5 @@ Template Name: About Page
 		</section>
 	<?php }
 ?>
-
+</section> <!-- /#main -->
 <?php get_footer(); ?>
