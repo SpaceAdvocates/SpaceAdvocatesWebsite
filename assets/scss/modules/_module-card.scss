@@ -27,7 +27,8 @@ $text_shadow: 1px 1px 3px $secondary_color;
 		& + .drawer {
 			z-index: 0;
 			padding: 0.8em;
-			@include blue-gradient;
+			//@include blue-gradient;
+			background-color: $blue;
 			@include box-shadow($box_shadow);
 			color: $white;
 			text-shadow: $text_shadow;
@@ -35,6 +36,7 @@ $text_shadow: 1px 1px 3px $secondary_color;
 
 			&:hover {
 				background-color: $blue;
+				background: $blue_gradient_hover;
 			}
 			h1 {
 				color: inherit;
