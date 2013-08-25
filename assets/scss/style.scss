@@ -9,9 +9,10 @@
 // ------------------------------------------------------------------------------
 @import "normalize";
 
-// Compass Libraries
+// Libraries
 // ------------------------------------------------------------------------------
 @import "foundation";
+@import "libraries/foundation/variables";
 @import "compass/css3";
 @import "compass-placeholder";
 @import "spens/sticky-footer";
