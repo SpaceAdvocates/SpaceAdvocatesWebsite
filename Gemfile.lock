@@ -12,6 +12,8 @@ GEM
     sass (3.2.10)
     sass-globbing (1.1.0)
       sass (>= 3.1)
+    spens (0.1)
+      compass (>= 0.11)
     zurb-foundation (4.3.1)
       sass (>= 3.2.0)
 
@@ -21,4 +23,5 @@ PLATFORMS
 DEPENDENCIES
   compass-placeholder
   sass-globbing
+  spens
   zurb-foundation

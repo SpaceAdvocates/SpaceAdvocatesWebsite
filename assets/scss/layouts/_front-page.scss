@@ -5,18 +5,22 @@ $recent-post-font-size: 1.5em;
 %section_background {
 	background-color: $secondary_color;
 	@include border-radius(2px);
-	margin: 3em 0em 2em;
+	margin: 2.5em 0em 0em;
 	padding: 0em 0em 0em 0em;
 	position: relative;
 	z-index: 1;
 
 	h2 {
-		@include box-shadow(0em 1em 1em -1em #021420);
-		@include box-sizing(content-box);
-	    margin: 0 0 0 -0.8em;
-	    padding: 0.5em 0.8em;
+	    margin: 0 -0.5em;
+	    padding: 0.5em 0.5em;
+		text-indent: 0.4375em;
 	    text-shadow: 1px 1px 3px $dark_grey;
-	    z-index: 1;
+		border-bottom: 1px solid $black;
+		@include box-shadow(0 1px 0 rgba($white, 0.3) inset);
+		@media #{$breakpoint} {
+			margin: 0 0 0 0;
+			text-indent:0;
+		}
 	}
 	& > a {
 		padding: 0em;
@@ -31,70 +35,110 @@ $recent-post-font-size: 1.5em;
 	h2 {
 		font-size: 2em;
 	}
-
-	.logo {
-		width: 100%;
-		margin-top: 2em;
-	}
 	
 	#action {
-		padding: 2em 0 0;
-		margin: 0;
-
+		margin: 2.75em 0em 0em;
+		padding: 0em 0em 0em 0em;
+		position: relative;
+		%social-icon {
+			margin:0 auto 0;
+			@media #{$tablet} {
+				margin-top:2em;
+				margin-bottom: 0em;
+			}
+			}
 		h1 {
-			font-size: 3.5em;
+			font-size: 3em;
 			padding: 0em;
+			margin:0;
+			line-height:1.4em;
+			@media #{$tablet} {
+				text-align:center;
+				font-size: 2.25em;
+			}
+			@media #{$phone} {
+				text-align:center;
+				font-size: 2em;
+			}
 		}
 		.cta {
-			font-size: 1.2em;
-			padding: 1em;
 			text-align: center;
 			display: block;
-			margin-top: 2em;
+			margin-bottom: 2em;
+			@media #{$tablet} {
+				margin-top:2em;
+				margin-bottom: 0em;
+			}
+			@media #{$phone} {
+				margin-top:2em;
+			}
 		}
+	}
+	
+	
+	#orbitmission {
+		@extend %section_background;
+	
+		h2 {
+			//background-color: $secondary_color;
+			//background: $blue_gradient;
+			background-color: $blue;
+		}
+		.btn-red {
+		float:right;
+		}
+		#orbit{
+			position:relative;
+			z-index:1;
+			.btn-full { 
+				margin-bottom:0;
+			}
+		}
+		
+		.orbit-caption {
+			background: $trans_dark_blue;
+			font-size: 1em;
+			padding:2em 1em;
+			h1 {
+			font-size:1.2em;
+			}
+		}
+		
+		.orbit-bullets {
+			margin: 0 auto;
+			top: 0;
+			a { 
+				height:44px;
+				line-height:44px;
+				font-family:$primary_font;
+				color:#fff;
+				text-align:center;
+				background:$blue_gradient;
+				box-shadow: -1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset;
+				&:first-child { 
+					box-shadow: -1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset;
+				}
+				&:last-child { 
+					box-shadow: none;
+				}
+				&:hover {
+					color:#fff; 
+					background:$blue_gradient_hover;
+				}
+				&.active {
+				color:#fff; 
+				background:transparent;
+				}
+			}
+		}		
 	}
 	
 	#featured {
 		@extend %section_background;
 
 		h2 {
-			//background-color: $secondary_color;
-			//background: $blue_gradient;
-			background-color: $blue;
-		}
-		& > a {
-			height: 15em;
-		}
-	}
-
-	#recent_posts {
-		@extend %section_background;
-
-		h2 {
-			background-color: $grey;
-		}
-		& > a {
-			margin: $recent-posts-margin;
-			height: $recent-posts-height;
-			//@extend .medium-6;
-			@extend .small-12;
-
-			&:nth-of-type(1) {
-				@extend .large-6;
-				//@extend .medium-12;
-				@extend .small-12;
-				font-size: $recent-post-font-size;
-				padding: 0em;
-				margin: 0em;
-				height: (($recent-posts-height * 2) + ($recent-posts-margin * 3)) / ($recent-post-font-size) * 1em;
-			}
-			&:nth-of-type(2n) {
-				margin-right: 0em;
-			}
-			&:nth-of-type(4n-2),
-			&:nth-of-type(4n-1) {
-				margin-bottom: 0em;
-			}
+			background: $blue_gradient;
+			background-color: $secondary_color;
 		}
 	}
 
@@ -104,31 +148,11 @@ $recent-post-font-size: 1.5em;
 		h2 {
 			background-color: $red;
 		}
-		.row {
-			clear: both;
-			padding: 1em 0em;
+		& > div {
+			padding: 0;
 		}
-		.video {
-			&:nth-child(2) {
-				padding: 0em 2em 0em 1em;
-			}
-			&:nth-child(1) {
-				padding: 0em 0em 0em 2em;
-			}
-			iframe {
-				min-height: 20em;
-				width: 100%;
-			}
-		}
-	}
-}
-
-@media #{$medium} {
-	.page-home {
-		#recent_posts {
-			& > a {
-				width: calc(25% - (#{$recent-posts-margin} * 3/2));
-			}
+		.flex-video {
+			margin-bottom: 0em;
 		}
 	}
 }

@@ -16,7 +16,7 @@
         <input type="text" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'foundation' ); ?>" />
         </div>
         <div class="small-4 mobile-one columns">
-        <input type="submit" class="btn-red prefix" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'foundation' ); ?>" />
+        <input type="submit" class="btn-blue prefix" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'foundation' ); ?>" />
         </div>
     </div>
 </form> 

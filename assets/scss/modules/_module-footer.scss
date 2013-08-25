@@ -1,13 +1,14 @@
 #footer-wrapper {
-	background: $blue_gradient;
+	background: $secondary-color;
 
 	footer {
 		color: $white;
 		text-align: left;
-		padding: 1em 0em 0em 0em;
-
+		padding: 2em 0em 0em 0em;
+box-shadow: 0 1px 0 rgba($light_gray, 0.5) inset;
 		.widget {
 			margin-top: 0em;
+			margin-bottom: 1em;
 		}
 		h4 {
 			color: $red;
@@ -19,16 +20,25 @@
 
 			a {
 				color: $light_blue;
+				text-decoration:underline;
 
 				&:hover {
 					color: $white;
 				}
 			}
 		}
+		hr { 
+		border-color:transparent;
+		border:0;
+		box-shadow: 0 -1px 0 0 rgba($light_gray, 0.5), 0 -2px 0 0 $black;
+		height:2px;
+		margin: 1em 0 2em;
+		}
 		.copy {
 			padding: 1em;
 			background-color: rgba($black,0.3);
 			margin-top: 1em;
+			box-shadow: 0 -1px 0 0 rgba($light_gray, 0.5), 0 -2px 0 0 $black;
 		}
 	}
 }

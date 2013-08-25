@@ -10,6 +10,10 @@ require 'sass-globbing'
 # https://github.com/tinganho/compass-placeholder
 require 'compass-placeholder'
 
+# Spens Compass/Sass Library
+# https://github.com/josephspens/spens
+require 'spens'
+
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "/"

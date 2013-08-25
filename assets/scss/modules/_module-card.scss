@@ -1,6 +1,16 @@
 $box_shadow: 0px 1px 2px 0px $black;
 $text_shadow: 1px 1px 3px $secondary_color;
 
+@mixin card($drawer_height) {
+	height: -webkit-calc(100% - #{$drawer_height});
+	height: -moz-calc(100% - #{$drawer_height});
+	height: calc(100% - #{$drawer_height});
+
+	& + .drawer {
+		height: $drawer_height;
+	}
+}
+
 .card {
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -10,13 +20,12 @@ $text_shadow: 1px 1px 3px $secondary_color;
 	z-index: 1;
 	padding: 0em;
 	display: block;
+	position:relative;
 
 	&.featured {
 		$drawer_height: 5em;
 
-		height: -webkit-calc(100% - #{$drawer_height});
-		height: -moz-calc(100% - #{$drawer_height});
-		height: calc(100% - #{$drawer_height});
+		@include card($drawer_height);
 
 		&:hover {
 			& + .drawer {
@@ -25,28 +34,30 @@ $text_shadow: 1px 1px 3px $secondary_color;
 			}
 		}
 		& + .drawer {
-			z-index: 0;
-			padding: 0.8em;
-			//@include blue-gradient;
 			background-color: $blue;
-			@include box-shadow($box_shadow);
-			color: $white;
-			text-shadow: $text_shadow;
-			height: $drawer_height;
 
 			&:hover {
 				background-color: $blue;
 				background: $blue_gradient_hover;
 			}
-			h1 {
-				color: inherit;
-			    margin: 0;
-			    overflow: hidden;
-			    text-overflow: ellipsis;
+		}
+	}
+	&.recentvideo{
+		$drawer_height: 3em;
+
+		@include card($drawer_height);
+
+		&:hover {
+			& + .drawer {
+				background: $red_gradient_hover;
+				background-color: $red;
 			}
-			.meta {
-				font-size: 0.8em;
-				display: none;
+		}
+		& + .drawer {
+			@include red-gradient;
+
+			&:hover {
+				background-color: $red;
 			}
 		}
 	}
@@ -55,21 +66,39 @@ $text_shadow: 1px 1px 3px $secondary_color;
 			background: $grey_gradient_hover;
 		}
 	}
+	& + .drawer {
+		z-index: 0;
+		padding: 0.8em;
+		@include box-shadow($box_shadow);
+		color: $white;
+		text-shadow: $text_shadow;
+
+		h1 {
+			color: inherit;
+		    margin: 0;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		}
+		.meta {
+			font-size: 0.8em;
+			display: none;
+		}
+	}
 	h1 {
 		margin: 0em;
-		padding: 0.5em 0.5em 0.7em;
+		padding: 0.5em 0.5em;
 		position: absolute;
 		bottom: 0em;
 		color: $white;
 		width: 100%;
-		background: linear-gradient(to bottom, rgba( $grey, 0.8 ) 0%, $dark_grey 100%) repeat scroll 0 0 transparent;
+		background: linear-gradient(to bottom, rgba( $grey, 0.75 ) 0%, $dark_grey 100%) repeat scroll 0 0 transparent;
 	}
 	.comments-link {
 		position: absolute;
 		right: -0.5em;
 		bottom: -1.2em;
-		background-color: #fff;
-		color: #000;
+		background-color: $white;
+		color: $black;
 		padding: 0.5em;
 		font-size: 0.7em;
 	}

@@ -42,7 +42,7 @@ function mb_widgets_init() {
 		'name'          => __( 'Footer', 'mb' ),
 		'id'            => 'footer-widgets',
 		'description'   => __( 'Widgets for Footer.', 'mb' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s large-3 column">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s large-3 medium-3 small-12 column">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'
@@ -239,8 +239,25 @@ function mb_scripts() {
 		wp_enqueue_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.6.2.min.js', false, NULL );
 		wp_enqueue_script('customplugins', get_template_directory_uri() . '/assets/js/plugins.min.js', array('jquery'), NULL, true );
 		wp_enqueue_script('customscripts', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), NULL, true );
+		wp_enqueue_script('orbit', get_template_directory_uri() . '/assets/js/vendor/foundation.min.js', array('jquery'), NULL, true );	
 	}
 }
+
+/**
+ * Initialise Foundation JS
+ * @see: http://foundation.zurb.com/docs/javascript.html
+ */
+
+if ( ! function_exists( 'foundation_js_init' ) ) :
+
+function foundation_js_init () {
+    echo '<script>$(document).foundation();</script>';
+}
+
+add_action('wp_footer', 'foundation_js_init', 50);
+
+endif;
+
 
 /**
  * Remove Query Strings From Static Resources

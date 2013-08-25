@@ -1,40 +1,21 @@
 .page-about {
 	color: $white;
 
+	#main {
+		h1 {
+			text-align: center;
+		}
+	}
 	section {
 		overflow: hidden;
 		margin-top: 2em;
-
-		h2 {
-			font-size: 3em;
-			margin-top: 0em;
-		}
 	}
 	#mission {
-		padding: 1em;
+		padding: 1.5em 1em;
 		background: $blue_gradient;
-
-		h2 {
-			margin-top: 0em;
-		}
-		.row {
-			font-size: 1.2em;
-			line-height: 1.2em;
-
-			div:first-child {
-				font-family: $primary_font;
-				line-height: 1.5em;
-				text-align: center;
-				word-spacing: 0.1em;
-			}
-		}
-		p {
-			margin: 0em auto 1em;
-			word-spacing: 0.1em;
-			font-family: $primary_font;
-		}
-		strong {
-			color: $light_blue;
-		}
+		margin-bottom: 2em;
+	}
+	.person img {
+		margin-right: 1.5em;
 	}
 }

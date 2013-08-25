@@ -10,21 +10,13 @@ nav {
 	padding: 0em;
 	background: $blue_gradient;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 
 	& > .row > .columns:first-child {
 		padding-left: 0em;
 	}
-	.donate {
-		margin: 0.5em 0em 0em -0.7em;
-		padding: 0.7em;
-		float: right;
-	}
-	.large-9.columns, .large-3.columns {
+	.large-12.columns{
 		padding: 0;
-	}
-	.search {
-		margin: 0.7em 0 0 0;
 	}
 }
 
@@ -35,25 +27,34 @@ nav {
 		&:first-child {
 			&.current_page_item {
 				& > a {
-					background: url($logo_image) no-repeat center left;
+					background: url($logo_image) no-repeat center center;
 					background-size: contain;
 				}
 			}
 			a {
-				//@extend .logos-logo-130;
-				background: url($logo_image) no-repeat center left;
+				background: url($logo_image) no-repeat center center;
 				background-size: contain;
-				width: 9em;
+				width: 10em;
 				color: $red;
 				text-indent: -999em;
 				@include box-sizing(content-box);
 				padding-left: 0em;
 
 				&:hover {
-					//@extend .logos-logo-130;
-					background: url($logo_image) no-repeat center left;
+					background: url($logo_image) no-repeat center center;
 					background-size: contain;
 				}
+			}
+		}	
+		&:last-child {
+			padding:0.5em 0.75em 0;
+			float:right;
+
+			a {
+				@extend .btn-red;
+				font-size: 0.875em;
+				font-weight: normal;
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -73,37 +74,126 @@ nav {
 				display: block;
 			}
 		}
-		a {
-			@include box-shadow($nav-box-shadow-right, $nav-box-shadow-right);
-		}	
 	}
 	a {
 		@include blue-gradient;
-		padding: 0 1em;
+		padding: 0 0.75em;
 		display: block;
 		color: $white;
 		@include box-shadow($nav-box-shadow-right);
 		text-transform: uppercase;
-		font: bold 1em/3.5em $secondary_font;	
+		font: 0.875em/4.125em $secondary_font;	
 	}
 	.sub-menu {
 		list-style-type: none;
 		margin: 0em;
 		display: none;
 		position: absolute;
-		left: -1px;
+		left: -2px;
 
 		a {
-			//@include box-shadow($nav-box-shadow-right);
+			@include box-shadow($nav-box-shadow-left, $nav-box-shadow-right);
 		}
 	}
 }
 
-@media #{$small} {
+@media #{$desktop} {
 	#menu-global-nav {
 		li {
 			display: inline-block;
 			width: auto;
+		}
+	}
+}
+
+
+@media #{$tablet} {
+	#menu-global-nav {
+		list-style-type: none;
+
+		& > li {	
+			&:first-child {
+				width: 100%;
+				box-shadow: 0 -1px 0 0 $nav-box-shadow-inner-color inset, 0 -2px 0 0 $nav-box-shadow-outer-color inset;
+
+				&.current_page_item {
+					& > a {
+						background: url($logo_image) no-repeat bottom center;
+						background-size: contain;
+					}
+				}
+				a {
+					//@extend .logos-logo-130;
+					background: $trans_dark_blue url($logo_image) no-repeat bottom center;
+					background-size: contain;
+					width: 100%;
+					min-height:7em;
+					color: $red;
+					text-indent: -999em;
+					@include box-sizing(content-box);
+					padding: 0em;
+					margin:0;
+
+					&:hover {
+						//@extend .logos-logo-130;
+						background: $dark_blue url($logo_image) no-repeat bottom center;
+						background-size: contain;
+					}
+				}
+			}
+		}		
+		li {
+			display: inline-block;
+			width: auto;
+		}
+	}
+}
+
+@media #{$phone} {
+	#menu-global-nav {
+		list-style-type: none;
+
+		& > li {	
+			&:first-child {
+				width: 100%;
+
+				&.current_page_item {
+					& > a {
+						background: url($logo_image) no-repeat bottom center;
+						background-size: contain;
+					}
+				}
+				a {
+					//@extend .logos-logo-130;
+					background: $trans_dark_blue url($logo_image) no-repeat bottom center;
+					background-size: contain;
+					width: 100%;
+					min-height:7em;
+					color: $red;
+					text-indent: -999em;
+					@include box-sizing(content-box);
+					padding: 0em;
+					margin:0;
+
+					&:hover {
+						//@extend .logos-logo-130;
+						background: $dark_blue url($logo_image) no-repeat bottom center;
+						background-size: contain;
+					}
+				}
+			}
+			&:last-child {
+				padding:1em;
+
+				a {
+					width:100%;
+				}
+			}
+		}
+		li {
+			a {
+				box-shadow: 0 -1px 0 0 $nav-box-shadow-inner-color inset, 0 -2px 0 0 $nav-box-shadow-outer-color inset;
+			}	
 		}
 	}
 }

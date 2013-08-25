@@ -9,16 +9,13 @@
 // ------------------------------------------------------------------------------
 @import "normalize";
 
-// Compass Libraries
+// Libraries
 // ------------------------------------------------------------------------------
 @import "foundation";
+@import "libraries/foundation/variables";
 @import "compass/css3";
 @import "compass-placeholder";
-
-// Vendor Libraries
-// ------------------------------------------------------------------------------
-@import "libraries/spens/functions";
-@import "libraries/spens/sliding-footer";
+@import "spens/sticky-footer";
 
 // Web fonts
 // ------------------------------------------------------------------------------
@@ -30,13 +27,13 @@
 
 // Custom Styles
 // ------------------------------------------------------------------------------
-@import "misc";
 @import "mixins";
 @import "buttons";
 
 // Layouts
 // ------------------------------------------------------------------------------
 //@import "layouts/*";
+@import "layouts/_global";
 @import "layouts/front-page";
 @import "layouts/blog-feed";
 @import "layouts/contact";
@@ -44,7 +41,6 @@
 @import "layouts/archive";
 @import "layouts/donate";
 @import "layouts/privacy";
-@import "layouts/404";
 
 // Modules
 // ------------------------------------------------------------------------------
