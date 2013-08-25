@@ -1,8 +1,9 @@
 .page-about {
-		color: $white;
+	color: $white;
+
 	#main {
 		h1 {
-		text-align:center;
+			text-align: center;
 		}
 	}
 	section {
@@ -12,10 +13,9 @@
 	#mission {
 		padding: 1.5em 1em;
 		background: $blue_gradient;
-		margin-bottom:2em;
-
+		margin-bottom: 2em;
 	}
 	.person img {
-	margin-right:1.5em;
+		margin-right: 1.5em;
 	}
 }

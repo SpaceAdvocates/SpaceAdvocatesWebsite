@@ -27,13 +27,13 @@
 
 // Custom Styles
 // ------------------------------------------------------------------------------
-@import "misc";
 @import "mixins";
 @import "buttons";
 
 // Layouts
 // ------------------------------------------------------------------------------
 //@import "layouts/*";
+@import "layouts/_global";
 @import "layouts/front-page";
 @import "layouts/blog-feed";
 @import "layouts/contact";

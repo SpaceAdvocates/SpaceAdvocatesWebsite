@@ -13,16 +13,15 @@ $recent-post-font-size: 1.5em;
 	h2 {
 	    margin: 0 -0.5em;
 	    padding: 0.5em 0.5em;
-		text-indent:0.4375em;
+		text-indent: 0.4375em;
 	    text-shadow: 1px 1px 3px $dark_grey;
-		border-bottom:1px solid #000;
-		box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+		border-bottom: 1px solid $black;
+		@include box-shadow(0 1px 0 rgba($white, 0.3) inset);
 		@media #{$breakpoint} {
 			margin: 0 0 0 0;
 			text-indent:0;
 		}
 	}
-
 	& > a {
 		padding: 0em;
 	}
@@ -148,6 +147,9 @@ $recent-post-font-size: 1.5em;
 
 		h2 {
 			background-color: $red;
+		}
+		& > div {
+			padding: 0;
 		}
 		.flex-video {
 			margin-bottom: 0em;

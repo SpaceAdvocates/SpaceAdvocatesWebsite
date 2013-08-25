@@ -1,8 +1,6 @@
 body {
-	font-family: 14px/1em $secondary_font;
-	background-color: $black;
-	background:url($bg_image) repeat fixed center;
-
+	font: #{$base-font-size}/1em $secondary_font;
+	background: $black url($bg_image) repeat fixed center;
 
 	h1, h2, h3, h4, h5, h6 {
 		font: normal 1em/1.2em $primary_font;
@@ -29,13 +27,13 @@ body {
 		margin: 0em;
 	}
 	p a {
-		text-decoration:underline;
+		text-decoration: underline;
 	}
 	a {
 		color: $blue;
 
 		&:hover {
-			color:$dark-blue;
+			color: $dark-blue;
 		}
 	}
 	label {
@@ -57,6 +55,7 @@ body {
 	}
 	#main {
 		margin: 2.75em 0em 0em;
+
 		h1 {
 			font-size: 3em;
 			padding: 0em;
@@ -73,13 +72,13 @@ body {
 			}
 		}
 		article {
-		h2, h3, h4, h5 {
-		color:$black;
-		}
-		.entry{
-		padding-top:1em;
-		padding-bottom:1em;
-		}
+			h2, h3, h4, h5 {
+				color: $black;
+			}
+			.entry{
+				padding-top: 1em;
+				padding-bottom: 1em;
+			}
 		}
 	}
 }

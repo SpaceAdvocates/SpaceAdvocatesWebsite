@@ -4,6 +4,22 @@ Template Name: Front Page
 */
 ?>
 
+<?php
+
+    $topPosts = get_posts(array(
+        'post_type' => 'post',
+        'meta_key' => '_cmb_featured_value',
+        'meta_value' => 'on'
+    ));
+
+    $recentVideos = get_posts(array(
+        'post_type' => 'post',
+        'category_name' => 'Videos',
+        'posts_per_page' => 2
+    ));
+
+?>
+
 
 <?php get_header(); ?>
 
@@ -80,41 +96,24 @@ Template Name: Front Page
 		<h2>Top Stories</h2>
 		
 		<?php
-			$posts = get_posts(array(
-				'post_type' => 'post',
-				'meta_key' => '_cmb_featured_value',
-				'meta_value' => 'on'
-			));
-
-			foreach( $posts as $post ) {
+			foreach( $topPosts as $post ) {
 				setup_postdata( $post );
 				get_template_part( 'templates/partials/content', 'featured' );
 			}
-
-			wp_reset_query();  // Restore global post data stomped by the_post().
 		?>
 
 	</section>
     
-    	<section id="recent_videos" class="row">
+    <section id="recent_videos" class="row">
 
 		<h2>Recent Videos</h2>
 		
 		<?php
-			$posts = get_posts(array(
-				'post_type' => 'post',
-				'category_name'         => 'Videos',
-				'posts_per_page' => 2
-			));
-
-			foreach( $posts as $post ) {
-				setup_postdata( $post );
+			foreach( $recentVideos as $post ) {
+                setup_postdata( $post );
 				get_template_part( 'templates/partials/content', 'recentvideo' );
 			}
-
-			wp_reset_query();  // Restore global post data stomped by the_post().
 		?>
-        
 
 	</section>
 

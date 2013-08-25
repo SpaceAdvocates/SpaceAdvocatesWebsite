@@ -1,6 +1,16 @@
 $box_shadow: 0px 1px 2px 0px $black;
 $text_shadow: 1px 1px 3px $secondary_color;
 
+@mixin card($drawer_height) {
+	height: -webkit-calc(100% - #{$drawer_height});
+	height: -moz-calc(100% - #{$drawer_height});
+	height: calc(100% - #{$drawer_height});
+
+	& + .drawer {
+		height: $drawer_height;
+	}
+}
+
 .card {
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -15,9 +25,7 @@ $text_shadow: 1px 1px 3px $secondary_color;
 	&.featured {
 		$drawer_height: 5em;
 
-		height: -webkit-calc(100% - #{$drawer_height});
-		height: -moz-calc(100% - #{$drawer_height});
-		height: calc(100% - #{$drawer_height});
+		@include card($drawer_height);
 
 		&:hover {
 			& + .drawer {
@@ -26,37 +34,18 @@ $text_shadow: 1px 1px 3px $secondary_color;
 			}
 		}
 		& + .drawer {
-			z-index: 0;
-			padding: 0.8em;
-			//@include blue-gradient;
 			background-color: $blue;
-			@include box-shadow($box_shadow);
-			color: $white;
-			text-shadow: $text_shadow;
-			height: $drawer_height;
 
 			&:hover {
 				background-color: $blue;
 				background: $blue_gradient_hover;
 			}
-			h1 {
-				color: inherit;
-			    margin: 0;
-			    overflow: hidden;
-			    text-overflow: ellipsis;
-			}
-			.meta {
-				font-size: 0.8em;
-				display: none;
-			}
 		}
 	}
 	&.recentvideo{
-		$drawer_height: 5em;
+		$drawer_height: 3em;
 
-		height: -webkit-calc(100% - #{$drawer_height});
-		height: -moz-calc(100% - #{$drawer_height});
-		height: calc(100% - #{$drawer_height});
+		@include card($drawer_height);
 
 		&:hover {
 			& + .drawer {
@@ -65,69 +54,34 @@ $text_shadow: 1px 1px 3px $secondary_color;
 			}
 		}
 		& + .drawer {
-			z-index: 0;
-			padding: 0.8em;
 			@include red-gradient;
-			@include box-shadow($box_shadow);
-			color: $white;
-			text-shadow: $text_shadow;
-			height: $drawer_height;
 
 			&:hover {
 				background-color: $red;
-			}
-			h1 {
-				color: inherit;
-			    margin: 0;
-			    overflow: hidden;
-			    text-overflow: ellipsis;
-			}
-			.meta {
-				font-size: 0.8em;
-				display: none;
-			}
-		}
-	}
-	&.recent{
-		$drawer_height: 5em;
-
-		height: -webkit-calc(100% - #{$drawer_height});
-		height: -moz-calc(100% - #{$drawer_height});
-		height: calc(100% - #{$drawer_height});
-
-		&:hover {
-			& + .drawer {
-				background: $grey_gradient_hover;
-				background-color: $grey;
-			}
-		}
-		& + .drawer {
-			z-index: 0;
-			padding: 0.8em;
-			@include grey-gradient;
-			@include box-shadow($box_shadow);
-			color: $white;
-			text-shadow: $text_shadow;
-			height: $drawer_height;
-
-			&:hover {
-				background-color: $grey;
-			}
-			h1 {
-				color: inherit;
-			    margin: 0;
-			    overflow: hidden;
-			    text-overflow: ellipsis;
-			}
-			.meta {
-				font-size: 0.8em;
-				display: none;
 			}
 		}
 	}
 	&:hover {
 		h1 {
 			background: $grey_gradient_hover;
+		}
+	}
+	& + .drawer {
+		z-index: 0;
+		padding: 0.8em;
+		@include box-shadow($box_shadow);
+		color: $white;
+		text-shadow: $text_shadow;
+
+		h1 {
+			color: inherit;
+		    margin: 0;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		}
+		.meta {
+			font-size: 0.8em;
+			display: none;
 		}
 	}
 	h1 {
@@ -143,8 +97,8 @@ $text_shadow: 1px 1px 3px $secondary_color;
 		position: absolute;
 		right: -0.5em;
 		bottom: -1.2em;
-		background-color: #fff;
-		color: #000;
+		background-color: $white;
+		color: $black;
 		padding: 0.5em;
 		font-size: 0.7em;
 	}
