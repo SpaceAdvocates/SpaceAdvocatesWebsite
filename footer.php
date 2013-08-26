@@ -26,7 +26,7 @@
 							<a class="youtube" href="http://www.youtube.com/SpaceAdvocates"></a>
 						</div>
 					</div>
-					<a class="btn-red large-4 column" href="javascript:void(0)">Become A Space Advocate</a>
+					<a class="btn-red large-4 column" href="/join)">Become A Space Advocate</a>
 				</div>
 			</div>
 			<div class="section copy">
