@@ -5,7 +5,8 @@
 		color: $white;
 		text-align: left;
 		padding: 2em 0em 0em 0em;
-box-shadow: 0 1px 0 rgba($light_gray, 0.5) inset;
+		@include box-shadow(0 1px 0 rgba($light_gray, 0.5) inset);
+
 		.widget {
 			margin-top: 0em;
 			margin-bottom: 1em;
@@ -20,25 +21,25 @@ box-shadow: 0 1px 0 rgba($light_gray, 0.5) inset;
 
 			a {
 				color: $light_blue;
-				text-decoration:underline;
 
 				&:hover {
 					color: $white;
+					text-decoration: underline;
 				}
 			}
 		}
 		hr { 
-		border-color:transparent;
-		border:0;
-		box-shadow: 0 -1px 0 0 rgba($light_gray, 0.5), 0 -2px 0 0 $black;
-		height:2px;
-		margin: 1em 0 2em;
+			border-color: transparent;
+			border: 0;
+			@include box-shadow(0 -1px 0 0 rgba($light_gray, 0.5), 0 -2px 0 0 $black);
+			height: 2px;
+			margin: 1em 0 2em;
 		}
 		.copy {
 			padding: 1em;
-			background-color: rgba($black,0.3);
+			background-color: rgba($black, 0.3);
 			margin-top: 1em;
-			box-shadow: 0 -1px 0 0 rgba($light_gray, 0.5), 0 -2px 0 0 $black;
+			@include box-shadow(0 -1px 0 0 rgba($light_gray, 0.5), 0 -2px 0 0 $black);
 		}
 	}
 }
