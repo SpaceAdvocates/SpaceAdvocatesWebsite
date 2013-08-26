@@ -46,18 +46,19 @@ $recent-post-font-size: 1.5em;
 				margin-top:2em;
 				margin-bottom: 0em;
 			}
-			}
+		}
 		h1 {
 			font-size: 3em;
 			padding: 0em;
-			margin:0;
+			margin: 0;
 			line-height:1.4em;
+
 			@media #{$tablet} {
-				text-align:center;
+				text-align: center;
 				font-size: 2.25em;
 			}
 			@media #{$phone} {
-				text-align:center;
+				text-align: center;
 				font-size: 2em;
 			}
 		}
@@ -65,6 +66,7 @@ $recent-post-font-size: 1.5em;
 			text-align: center;
 			display: block;
 			margin-bottom: 2em;
+
 			@media #{$tablet} {
 				margin-top:2em;
 				margin-bottom: 0em;
@@ -80,54 +82,53 @@ $recent-post-font-size: 1.5em;
 		@extend %section_background;
 	
 		h2 {
-			//background-color: $secondary_color;
-			//background: $blue_gradient;
 			background-color: $blue;
 		}
 		.btn-red {
-		float:right;
+			float:right;
 		}
 		#orbit{
 			position:relative;
 			z-index:1;
+
 			.btn-full { 
-				margin-bottom:0;
+				margin-bottom: 0;
 			}
 		}
-		
 		.orbit-caption {
 			background: $trans_dark_blue;
 			font-size: 1em;
-			padding:2em 1em;
+			padding: 2em 1em;
+
 			h1 {
-			font-size:1.2em;
+				font-size: 1.2em;
 			}
 		}
-		
 		.orbit-bullets {
 			margin: 0 auto;
 			top: 0;
+
 			a { 
-				height:44px;
-				line-height:44px;
-				font-family:$primary_font;
-				color:#fff;
-				text-align:center;
-				background:$blue_gradient;
-				box-shadow: -1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset;
+				height: 44px;
+				line-height: 44px;
+				font-family: $primary_font;
+				color: $white;
+				text-align: center;
+				@include blue_gradient;
+				@include box-shadow(-1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset);
+
 				&:first-child { 
-					box-shadow: -1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset;
+					@include box-shadow(-1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset);
 				}
 				&:last-child { 
-					box-shadow: none;
+					@include box-shadow(none);
 				}
 				&:hover {
-					color:#fff; 
-					background:$blue_gradient_hover;
+					color: $white;
 				}
 				&.active {
-				color:#fff; 
-				background:transparent;
+					color: $white; 
+					background: transparent;
 				}
 			}
 		}		
@@ -139,6 +140,9 @@ $recent-post-font-size: 1.5em;
 		h2 {
 			background: $blue_gradient;
 			background-color: $secondary_color;
+		}
+		& > a {
+			height: 16em;
 		}
 	}
 
