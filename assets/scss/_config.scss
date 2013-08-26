@@ -41,6 +41,11 @@ $red_gradient_hover: linear-gradient(to bottom, $light_red 0%, $red 100%) repeat
 // -----------------------------------------------------------------------------
 $box_shadow: 0em 0em 1em 0.1em $light_blue;
 
+/////// Config defaults for site button style /////// 
+// -----------------------------------------------------------------------------
+$button_line_height: 2.75em;
+$button_box_shadow: inset 0 1px 0 rgba($white, 0.3);
+
 /////// Page dimension configuration ///////
 // -----------------------------------------------------------------------------
 $footer_height: 23em;

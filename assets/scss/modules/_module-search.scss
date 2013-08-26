@@ -1,13 +1,22 @@
-
-
 #searchform {
+	margin: 0;
+
 	input[type="text"] {
-background-color: $secondary-color;
-@extend %btn;
-border-radius: 0.2em 0 0 0.2em;
-color:$white;
-border-right-width:0px;
-margin: 0 0 0.5em;
+		//@extend %btn;
+		color: $white;
+		background-color: $secondary-color;
+		@include border-radius(0.2em 0 0 0.2em);
+		border-right-width: 0;
+		font-family: $primary_font;
+		letter-spacing: 0.08em;
+		border-color: transparent;
+		@include box-shadow(inset 0 1px 0 rgba($white, 0.3));
+		text-shadow: 0 1px 0 rgba($black, 0.25);
+		min-height: $button_line_height;
+		line-height: $button_line_height;
+		height: auto;
+		padding: 0em 1em;
+
 		&:focus {
 			background-color: $dark-blue;
 			@include box-shadow(inset 0px 0 0.5em 0px $black);
@@ -17,20 +26,6 @@ margin: 0 0 0.5em;
 
 #searchsubmit {
 	@extend .btn-blue;
-	border-radius: 0 0.2em 0.2em 0;
-	margin: 0 0 0.5em;
+	@include border-radius(0 0.2em 0.2em 0);
 	border-left-width:0px;
-	}
-
-footer {
-	#searchform {
-	input[type="text"] {
-			&:focus {
-			background-color: $dark-red;
-			}
-		}
-	}
-	#searchsubmit {
-		@extend .btn-red;
-	}
 }
