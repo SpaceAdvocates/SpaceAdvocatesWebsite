@@ -30,7 +30,7 @@ Template Name: Front Page
         
         <div class="large-4 medium-12 small-12 columns">
         	<div class="large-12 medium-6 small-12 columns">
-				<a class="btn-red cta" href="javascript:void(0)">Become A Space Advocate</a>
+				<a class="btn-red cta" href="/join">Become A Space Advocate</a>
             </div>
             <div class="large-12 medium-6 small-12 columns">
                 <div class="small-3 columns">
