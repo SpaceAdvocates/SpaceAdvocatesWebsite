@@ -91,17 +91,13 @@ $recent-post-font-size: 1.5em;
 		#orbit{
 			position:relative;
 			z-index:1;
-
-			.btn-full { 
-				margin-bottom: 0;
-			}
 		}
 		.orbit-caption {
 			background: $trans_dark_blue;
 			font-size: 1em;
 			padding: 2em 1em;
 
-			h1 {
+			h3 {
 				font-size: 1.2em;
 			}
 		}
