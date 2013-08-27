@@ -82,7 +82,8 @@ $recent-post-font-size: 1.5em;
 		@extend %section_background;
 	
 		h2 {
-			background-color: $blue;
+			background: $blue_gradient;
+			background-color: $secondary_color;
 		}
 		.btn-red {
 			float:right;
