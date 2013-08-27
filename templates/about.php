@@ -19,12 +19,11 @@ We are Space Advocates.
 
 <div id="mission">
 	<h2>our Mission</h2>
-	<?php if ( have_posts() ) : while( have_posts() ) : the_post();
-    	the_content();
-	endwhile; endif; ?>
+	<p>Space Advocates is a nonprofit space advocacy organization focused on propelling us into the universe through mining our most precious asset: people. We call upon these space advocates to help us push the envelope, to speak louder, to become involved and put us at the forefront of space exploration.<br><br>
+	We are space advocates and <strong>together we will be heard.</strong></p>
 </div>
 
-<h2>The Advocates</h2>
+<h2>The Crew</h2>
 
 <?php
 	$ranks = $wpdb->get_col("SELECT meta_value FROM $wpdb->usermeta WHERE meta_key = 'rank' GROUP BY meta_value ORDER BY umeta_id" );

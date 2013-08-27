@@ -27,7 +27,7 @@
 						</div>
 					</div>
 					<div class="large-4 column">
-						<a class="btn-red" href="javascript:void(0)">Become A Space Advocate</a>
+						<a class="btn-red" href="/join">Become A Space Advocate</a>
 					</div>
 				</div>
 			</div>
