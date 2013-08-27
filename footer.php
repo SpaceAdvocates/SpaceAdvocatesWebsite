@@ -26,7 +26,9 @@
 							<a class="youtube" href="http://www.youtube.com/SpaceAdvocates"></a>
 						</div>
 					</div>
-					<a class="btn-red large-4 column" href="javascript:void(0)">Become A Space Advocate</a>
+					<div class="large-4 column">
+						<a class="btn-red" href="javascript:void(0)">Become A Space Advocate</a>
+					</div>
 				</div>
 			</div>
 			<div class="section copy">
@@ -36,9 +38,6 @@
 			</div>
 		</footer>
 	</div>
-
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery-2.0.3.min.js"><\/script>')</script>
 
 	<?php wp_footer(); ?>
 
