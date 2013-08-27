@@ -1,28 +1,14 @@
 <?php get_header(); ?>
 
-	<section id="main" role="main">
+	<section id="search_feed" role="main" class="large-9 columns">
 
 		<?php if ( have_posts() ) : ?>
 
 			<h1>Search Results</h1>
 
-			<?php get_template_part( 'templates/partials/inc', 'nav' ); ?>
-
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-
-					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-
-					<?php get_template_part( 'templates/partials/inc', 'meta' ); ?>
-
-					<div class="entry">
-
-						<?php the_excerpt(); ?>
-
-					</div>
-
-				</article>
+				<?php get_template_part( 'templates/partials/content', 'blog' ); ?>
 
 			<?php endwhile; ?>
 

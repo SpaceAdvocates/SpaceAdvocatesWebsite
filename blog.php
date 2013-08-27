@@ -2,11 +2,17 @@
 
 	<section id="blog_feed" role="main" class="large-9 columns">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php if ( have_posts() ) : ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'templates/partials/content', 'blog' ); ?>
+				<?php get_template_part( 'templates/partials/content', 'blog' ); ?>
 
-		<?php endwhile; ?>
+			<?php endwhile; ?>
+		<?php else : ?>
+
+			<h1>No posts found.</h1>
+
+		<?php endif; ?>
 
 	</section> <!-- /#main -->
 
