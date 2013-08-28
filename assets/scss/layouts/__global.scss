@@ -53,32 +53,4 @@ body {
 		z-index: 1;
 		position: relative;
 	}
-	#main {
-		margin: 2.75em 0em 0em;
-
-		h1 {
-			font-size: 3em;
-			padding: 0em;
-			margin:0;
-			line-height:1.4em;
-			margin-bottom:0.75em;
-			@media #{$tablet} {
-				text-align:center;
-				font-size: 2.25em;
-			}
-			@media #{$phone} {
-				text-align:center;
-				font-size: 2em;
-			}
-		}
-		article {
-			h2, h3, h4, h5 {
-				color: $black;
-			}
-			.entry{
-				padding-top: 1em;
-				padding-bottom: 1em;
-			}
-		}
-	}
 }

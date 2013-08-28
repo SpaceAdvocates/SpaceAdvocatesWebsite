@@ -2,10 +2,14 @@
 /**
  * The template used for displaying blog content in portfolio.php
  */
+?>
 
-$class = '';
-if (  get_post_meta( get_the_ID(), '_cmb_featured_value', true ) )
-	$class = 'featured';
+<?php
+
+	$class = '';
+	if (  get_post_meta( get_the_ID(), '_cmb_featured_value', true ) )
+		$class = 'featured';
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
