@@ -3,26 +3,14 @@
 
 	h1 {
 		font-size: 3em;
-		//padding: 0em;
-		//margin: 0;
-		//line-height:1.4em;
-		//margin-bottom:0.75em;
+		line-height:1.4em;
 		@media #{$tablet} {
-			//text-align:center;
+			text-align:center;
 			font-size: 2.25em;
 		}
 		@media #{$phone} {
-			//text-align:center;
+			text-align:center;
 			font-size: 2em;
-		}
-	}
-	article {
-		h2, h3, h4, h5 {
-			color: $black;
-		}
-		.entry{
-			padding-top: 1em;
-			padding-bottom: 1em;
 		}
 	}
 }
