@@ -4,11 +4,8 @@
 	padding: 20px;
 	margin-bottom: 20px;
 
-	& > * {
-		width: 75%;
-	}
 	a {
-	color: $light_blue;
+		color: $light_blue;
 	}
 	.comments-title {
 		color: $white;
@@ -30,13 +27,5 @@
 	}
 	#respond {
 		clear: both;
-	}
-}
-
-@media (max-width: 1000px) {
-	#comments {
-		& > * {
-			width: 100%;
-		}
 	}
 }

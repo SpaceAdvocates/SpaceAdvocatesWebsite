@@ -21,13 +21,10 @@
 	}
 	.form-submit {
 		margin: 0em;
+		width: 50%;
 
 		#submit {
 			@extend .btn-red;
-			padding:0.5em;
-			line-height:1em;
-			height:auto;
-			min-height:1em;
 		}
 	}
 }
