@@ -15,7 +15,7 @@
 			}
 			&.active {
 				a {
-				color: $white;
+					color: $white;
 				}
 			}
 		}
@@ -25,11 +25,12 @@
 
 		.ts-fab-tab {
 			background-color: $secondary_color;
+			color: $white;
+			border: none;
 
 			.ts-fab-text {
 				.ts-fab-latest {
 					background-color: inherit;
-					color: $white;
 
 					li {
 						margin-left: 0em;

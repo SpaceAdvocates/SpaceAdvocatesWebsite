@@ -1,16 +1,21 @@
-#main {
-	margin: 2.75em 0em 0em;
+.single-post {	
+	#main {
+		margin: 2.75em 0em 0em;
 
-	h1 {
-		font-size: 3em;
-		line-height:1.4em;
-		@media #{$tablet} {
-			text-align:center;
-			font-size: 2.25em;
+		h1 {
+			font-size: 3em;
+			line-height:1.4em;
+			@media #{$tablet} {
+				text-align:center;
+				font-size: 2.25em;
+			}
+			@media #{$phone} {
+				text-align:center;
+				font-size: 2em;
+			}
 		}
-		@media #{$phone} {
-			text-align:center;
-			font-size: 2em;
+		#ts-fab-below {
+			margin: -1em;
 		}
 	}
 }
