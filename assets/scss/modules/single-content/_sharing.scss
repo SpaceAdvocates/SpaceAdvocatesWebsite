@@ -1,7 +1,5 @@
 .sharing {
-	background-color: $dark_blue;
-	padding: 1em 1em 0.5em;
-	margin: 1em 0em;
+	@extend %single-content-supplemental-bar;
 	
 	ul {
 		list-style-type: none;
