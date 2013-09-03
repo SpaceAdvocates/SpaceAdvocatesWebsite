@@ -31,19 +31,26 @@ function _mbbasetheme_comment( $comment, $args, $depth ) {
 			<?php endif; ?>
 
 			<div class="main-content">
-				<cite class="fn"><?php echo get_comment_author_link(); ?></cite>
-				<div class="comment-meta commentmetadata">
-					<time pubdate datetime="<?php comment_time( 'c' ); ?>">
-						<?php printf( __( '%1$s at %2$s', '_mbbasetheme' ), get_comment_date(), get_comment_time() ); ?>
-					</time>
-					<?php edit_comment_link( __( 'edit', '_mbbasetheme' ), ' ' ); ?>
-				</div><!-- .comment-meta .commentmetadata -->
+				<div class="row">
+					<div class="large-8 columns">
+						<cite class="fn"><?php echo get_comment_author_link(); ?></cite>
+						<div class="comment-meta commentmetadata">
+							<time pubdate datetime="<?php comment_time( 'c' ); ?>">
+								<?php printf( __( '%1$s at %2$s', '_mbbasetheme' ), get_comment_date(), get_comment_time() ); ?>
+							</time>
+						</div><!-- .comment-meta .commentmetadata -->
+					</div>
+					<div class="actions large-4 columns">
+						<div class="large-6 columns">
+							<?php edit_comment_link( __( 'edit', '_mbbasetheme' ), ' ' ); ?>
+						</div>
+						<div class="large-6 columns">
+							<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+						</div>
+					</div><!-- .reply -->
+				</div>
 
 				<div class="comment-content"><?php comment_text(); ?></div>
-
-				<div class="reply">
-					<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-				</div><!-- .reply -->
 			</div><!-- .main-content -->
 		</div><!-- #comment-## -->
 

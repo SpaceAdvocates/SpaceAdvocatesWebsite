@@ -1,3 +1,7 @@
 .tags {
-	@extend %single-content-supplemental-bar;
+	background-color: $secondary_color;
+	padding: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	color: $white;
 }

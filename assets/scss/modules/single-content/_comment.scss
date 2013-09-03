@@ -5,11 +5,39 @@ li.comment {
 	&:last-child {
 		margin-bottom: 0em;
 	}
+	&:hover {
+		.actions {
+			display: block;
+		}
+	}
 	div.comment {
 		$sidebar_width: 15%;
 		width: 100%;
 		overflow: hidden;
 
+		.main-content {
+			float: left;
+			width: 100 - $sidebar_width;
+			color: $white;
+			padding: 1em;
+
+			.fn {
+				font: normal bold 1.2em/1em $primary_font;
+				margin-bottom: 0.3em;
+			}
+			.comment-meta {
+				font-size: 0.9em;
+				line-height: 1em;
+			}
+			.comment-content {
+				clear: both;
+				margin-top: 1em;
+
+				p:last-child {
+					margin-bottom: 0em;
+				}
+			}
+		}
 		.vcard {
 			border: 0em;
 			margin: 0em;
@@ -26,47 +54,26 @@ li.comment {
 			}
 			
 		}
-		.notice {
-			color: $green;
+	}
+	a {
+		color: $light_blue;
+	}
+	
+	.notice {
+		color: $green;
+	}
+	.actions {
+		position: absolute;
+		right: 0;
+		display: none;
+
+		.comment-edit-link {
+			@extend .btn-blue;
+			font-size: 0.8em;
 		}
-		.main-content {
-			float: left;
-			width: 100 - $sidebar_width;
-			background-color: $white;
-			color: $black;
-			padding: 1em;
-
-			.fn {
-				font: normal bold 1.2em/1em $primary_font;
-				float: left;
-				margin-bottom: 0.3em;
-			}
-			.comment-meta {
-				float: right;
-				font-size: 0.9em;
-				line-height: 1em;
-
-				.comment-edit-link {
-					float: right;
-					@extend .btn-blue;
-					font-size: 0.8em;
-				}
-			}
-			.comment-content {
-				clear: both;
-
-				p:last-child {
-					margin-bottom: 0em;
-				}
-			}
-			.reply {
-				text-align: right;
-
-				.comment-reply-link {
-					@extend .btn-red;
-					font-size: 0.8em;
-				}
-			}
+		.comment-reply-link {
+			@extend .btn-red;
+			font-size: 0.8em;
 		}
 	}
 }
