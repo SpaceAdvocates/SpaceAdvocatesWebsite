@@ -1,20 +1,24 @@
-// GET https://www.googleapis.com/youtube/v3/videos
-// GET https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUHWBRuQtDWvYqPdaGzkGjLA&key={YOUR_API_KEY}
+SA.pageFunctionsMap = {
+	'page-home': 'Home',
+	'page-join': 'Join',
+	'page-donate': 'Donate'
+};
 
 $(function(){
 
-	if($('body').hasClass('page-home')) {
-		$('.card + .drawer h1').dotdotdot({
-			watch: 'window'
-		});
-	}
+	/* Load in the specific javascript page module
+	 *
+	 * This plugin iterates through the class string on the document body, finds a value
+	 * which exists in the pageFunctionsMap property of the current namespace, and initializes
+	 * that module.
+	 */
+	(function () {
+		for(var i = 0, classes = document.body.className.split(' '); i < classes.length; i++) {
+			if(classes[i] in this.pageFunctionsMap) {
+				var functionName = this.pageFunctionsMap[classes[i]];
+				(new this[functionName]()).init();
+			}
+		}
+	}).apply(SA);
 
-	$('[data-match-height]').each(function() {
-		var parentRow = $(this),
-		 childrenCols = parentRow.find('[data-height-watch]'),
-		 childHeights = childrenCols.map(function(){ return parentRow.height(); }).get(),
-		 tallestChild = Math.max.apply(Math, childHeights);
-
-		childrenCols.css('min-height', tallestChild);
-	});
 });

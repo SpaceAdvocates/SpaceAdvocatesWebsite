@@ -39,6 +39,9 @@ body {
 	label {
 		cursor: default;
 	}
+	button {
+		outline: none;
+	}
 	#flare {
 		background: url($action_image) no-repeat center -15em;
 		width: 100%;

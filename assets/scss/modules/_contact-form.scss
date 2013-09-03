@@ -26,10 +26,14 @@
 		}
 	}
 	.submit {
-		width: 100%;
-		padding: 1em;
+		padding: 0;
 		margin: 1em 0em;
-		text-align: center;
-		font-size: 1.2em;
+	}
+	.label {
+		display: none;
+
+		&.alert, &.success {
+			display: inline-block;
+		}
 	}
 }

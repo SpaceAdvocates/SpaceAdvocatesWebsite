@@ -47,8 +47,9 @@ nav {
 			}
 		}	
 		&:last-child {
-			padding:0.5em 0.75em 0;
-			float:right;
+			padding: 0.5em 0.75em 0;
+			float: right;
+			width: 7em;
 
 			a {
 				@extend .btn-red;

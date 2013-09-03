@@ -244,6 +244,23 @@ function mb_scripts() {
 }
 
 /**
+ * Define Custom Namespace
+ */
+
+function namespace_init () {
+	echo <<<end
+<script type="text/javascript">
+	var SA = window.SA || {
+		vars: {},
+		funcs: {}
+	};
+</script>
+end;
+}
+
+add_action('wp_footer', 'namespace_init', 0);
+
+/**
  * Initialise Foundation JS
  * @see: http://foundation.zurb.com/docs/javascript.html
  */

@@ -10,6 +10,9 @@
 	"jquery"		: true,
 	"devel"			: true,
 	"predef"        : [
-        "modules"
+        "modules",
+        "window",
+        "document",
+        "SA"
     ]
 }
