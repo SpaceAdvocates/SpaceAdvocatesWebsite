@@ -1,14 +1,16 @@
 .page-missions {
+	color: $white;
+
+	.mission {
+		margin-bottom: 2em;
+	}
 	#container {
 		.row {
-			background-color: $white;
+			background-color: $secondary_color;
 		}
 		a {
 			margin-top: 1.5em;
 		}
-	}
-	h2 {
-		color: $black;
 	}
 	img {
 		width: 100%;
