@@ -7,7 +7,7 @@ SA.Join.prototype.init = function () {
 };
 
 SA.Join.prototype.bindSubmit = function () {
-	$('.submit').on('click', this.subscribe);
+	$('.submit').one('click', this.subscribe);
 };
 
 SA.Join.prototype.subscribe = function () {
@@ -21,7 +21,6 @@ SA.Join.prototype.subscribe = function () {
 	}).done(function (data) {
 		$(this).addClass('success').removeClass('alert').text(data.message);
 	}).fail(function (jqXHR) {
-		console.log(jqXHR);
 		$(this).removeClass('success').addClass('alert').text(jqXHR.responseJSON.message);
 	}).always(function () {
 		Join.bindSubmit();

@@ -1,7 +1,8 @@
 SA.pageFunctionsMap = {
 	'page-home': 'Home',
 	'page-join': 'Join',
-	'page-donate': 'Donate'
+	'page-donate': 'Donate',
+	'page-contact-us': 'Contact'
 };
 
 $(function(){
