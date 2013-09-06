@@ -67,7 +67,7 @@ Template Name: About Page
 						<?php echo $person['name']; ?>
 					<?php endif; ?>
 				</h4>
-				<h5 class="position"><?= $peron['position']; ?></h5>
+				<h5 class="position"><?= $person['position']; ?></h5>
 				<div class="bio"><?= $person['bio']; ?></div>
 			</div>
 			<?php if ($person['isEven']) : ?>
