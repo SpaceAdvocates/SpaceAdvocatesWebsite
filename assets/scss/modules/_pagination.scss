@@ -1,0 +1,7 @@
+.navigation {
+	padding: 1em;
+
+	a {
+		@extend .btn-blue;
+	}
+}
