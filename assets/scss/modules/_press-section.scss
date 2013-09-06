@@ -1,0 +1,30 @@
+.press-section {
+	background-color: $secondary_color;
+	margin: 1em 0;
+
+	h3 {
+		margin: 0;
+		background: $blue_gradient;
+		padding: 0.5em;
+	}
+	a {
+		@extend %light-link;
+	}
+	.content {
+		padding: 1em;
+
+		ul {
+			margin: 0;
+			line-height: 1.2em;
+			list-style-type: none;
+
+			li {
+				margin-bottom: 0.5em;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
