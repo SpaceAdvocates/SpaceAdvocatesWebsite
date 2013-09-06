@@ -1,11 +1,3 @@
-%light-link {
-	color: $light_blue;
-
-	&:hover {
-		color: $white;
-	}
-}
-
 @mixin section_background($color) {
 	background-color: lighten($color, 20%);
 	border-radius: 2px;

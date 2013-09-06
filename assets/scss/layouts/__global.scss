@@ -31,10 +31,10 @@ body {
 		text-decoration: underline;
 	}
 	a {
-		color: $blue;
+		color: $light_blue;
 
 		&:hover {
-			color: $dark_blue;
+			color: $blue;
 		}
 	}
 	label {

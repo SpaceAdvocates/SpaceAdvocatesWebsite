@@ -30,20 +30,9 @@ Template Name: Involved Page
 		</div>
 	</div>
 </div>
-<div class="involvement-step">
-	<div class="row">
-		<span class="number">3</span>
-		<div class="large-4 large-offset-1 columns">
-			<a href="/donate" class="cta btn-red">Donate</a>
-		</div>
-		<div class="large-7 columns">
-			<p>Donate $5 or more to Space Advocates, and help us sustain our momentum towards victory in each of our missions.</p>
-		</div>
-	</div>
-</div>
 <div class="involvement-step social">
 	<div class="row">
-		<span class="number">4</span>
+		<span class="number">3</span>
 		<div class="large-4 large-offset-1 columns">
 			<div class="row">
 				<div class="small-3 large-4 columns social">
@@ -64,6 +53,17 @@ Template Name: Involved Page
 		</div>
 		<div class="large-7 columns">
 			<p>Like, follow, and subscribe to all of our social media pages!</p>
+		</div>
+	</div>
+</div>
+<div class="involvement-step">
+	<div class="row">
+		<span class="number">4</span>
+		<div class="large-4 large-offset-1 columns">
+			<a href="/donate" class="cta btn-red">Donate</a>
+		</div>
+		<div class="large-7 columns">
+			<p>Donate $5 or more to Space Advocates, and help us sustain our momentum towards victory in each of our missions.</p>
 		</div>
 	</div>
 </div>

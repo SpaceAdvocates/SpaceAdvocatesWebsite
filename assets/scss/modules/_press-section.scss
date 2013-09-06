@@ -7,9 +7,6 @@
 		background: $blue_gradient;
 		padding: 0.5em;
 	}
-	a {
-		@extend %light-link;
-	}
 	.content {
 		padding: 1em;
 

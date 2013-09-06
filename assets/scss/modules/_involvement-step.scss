@@ -8,9 +8,6 @@
 	&.social {
 		padding-bottom: 1em;
 	}
-	a {
-		@extend %light-link;
-	}
 	.cta {
 		padding: 0 1em;
 		display: block;
