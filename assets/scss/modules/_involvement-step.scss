@@ -1,0 +1,33 @@
+.involvement-step {
+	padding: 2em;
+	margin: 1em 0 2em;
+	background: $blue_gradient;
+	position: relative;
+	overflow: hidden;
+
+	a {
+		@extend %light-link;
+	}
+	.cta {
+		padding: 0 1em;
+		display: block;
+		height: 100%;
+		color: inherit;
+
+		&:hover {
+			color: inherit;
+		}
+	}
+	p {
+		margin: 0;
+		font-size: 1.1em;
+		line-height: 1.2em;
+	}
+	.number {
+		position: absolute;
+		top: 0;
+		@include user-select(none);
+		font: 10em/0.6em $primary_font;
+		opacity: 0.2;
+	}
+}
