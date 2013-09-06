@@ -8,6 +8,8 @@ Template Name: FAQ Page
 
 <h1>FAQ</h1>
 
+<ol id="toc"></ol>
+
 <?php while ( have_posts() ) : the_post(); ?>
 	<?php the_content(); ?>
 <?php endwhile; ?>

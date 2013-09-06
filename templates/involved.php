@@ -82,4 +82,8 @@ Template Name: Involved Page
 	<p>Educate Yourself by reading through our <a href="/faq">FAQ</a> page and checking out video on our <a href="http://www.youtube.com/SpaceAdvocates">YouTube channel</a>.</p>
 </div>
 
+<?php add_action('wp_footer', 'enqueue_facebook', 1); ?>
+<?php add_action('wp_footer', 'enqueue_google_plus', 1); ?>
+<?php add_action('wp_footer', 'enqueue_twitter', 1); ?>
+
 <?php get_footer(); ?>

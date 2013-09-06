@@ -275,7 +275,6 @@ add_action('wp_footer', 'foundation_js_init', 50);
 
 endif;
 
-add_action('wp_footer', 'enqueue_facebook', 1);
 function enqueue_facebook () {
 	echo <<<end
 <div id="fb-root"></div>
@@ -289,14 +288,12 @@ function enqueue_facebook () {
 end;
 }
 
-add_action('wp_footer', 'enqueue_google_plus', 1);
 function enqueue_google_plus () {
 	echo <<<end
 <script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
 end;
 }
 
-add_action('wp_footer', 'enqueue_twitter', 1);
 function enqueue_twitter () {
 	echo <<<end
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
