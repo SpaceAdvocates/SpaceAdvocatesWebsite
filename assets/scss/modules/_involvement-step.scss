@@ -1,10 +1,13 @@
 .involvement-step {
 	padding: 2em;
-	margin: 1em 0 2em;
+	margin: 1em 0;
 	background: $blue_gradient;
 	position: relative;
 	overflow: hidden;
 
+	&.social {
+		padding-bottom: 1em;
+	}
 	a {
 		@extend %light-link;
 	}
@@ -29,5 +32,8 @@
 		@include user-select(none);
 		font: 10em/0.6em $primary_font;
 		opacity: 0.2;
+	}
+	.social {
+		margin: 0 0 1em;
 	}
 }
