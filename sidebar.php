@@ -1,5 +1,5 @@
 <aside class="large-3 columns">
-
-    <?php dynamic_sidebar( 'Main Sidebar' ); ?>
-
+	<div class="row">
+    	<?php dynamic_sidebar( 'Main Sidebar' ); ?>
+    </div>
 </aside> <!-- /#sidebar -->

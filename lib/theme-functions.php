@@ -31,7 +31,7 @@ function mb_widgets_init() {
 		'name'          => __( 'Main Sidebar', 'mb' ),
 		'id'            => 'main-sidebar',
 		'description'   => __( 'Widgets for Main Sidebar.', 'mb' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s medium-12 small-6 columns">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'
@@ -42,7 +42,7 @@ function mb_widgets_init() {
 		'name'          => __( 'Footer', 'mb' ),
 		'id'            => 'footer-widgets',
 		'description'   => __( 'Widgets for Footer.', 'mb' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s large-3 medium-3 small-6 columns">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s medium-3 small-6 columns">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'

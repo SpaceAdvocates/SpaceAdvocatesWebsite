@@ -15,10 +15,18 @@
 			}
 		}
 		.info {
-			padding-top: 2em;
-
 			p {
 				margin: 0;
+			}
+		}
+	}
+}
+
+@media #{$small} {
+	.page-press {
+		.contact {
+			.info {
+				//padding-top: 2em;
 			}
 		}
 	}

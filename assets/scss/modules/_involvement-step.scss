@@ -1,5 +1,5 @@
 .involvement-step {
-	padding: 2em;
+	padding: 1em 2em;
 	margin: 1em 0;
 	background: $blue_gradient;
 	position: relative;
@@ -9,6 +9,7 @@
 		padding-bottom: 1em;
 	}
 	.cta {
+		margin: 0em 0 0.5em;
 		padding: 0 1em;
 		display: block;
 		height: 100%;
@@ -32,5 +33,15 @@
 	}
 	.social {
 		margin: 0 0 1em;
+	}
+}
+
+@media #{$small} {
+	.involvement-step {
+		padding: 2em;
+
+		.cta {
+			margin: 0;
+		}
 	}
 }

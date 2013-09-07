@@ -33,4 +33,6 @@ $(function(){
 		childrenCols.css('min-height', tallestChild);
 	});
 
+	$('#tag_cloud-2').removeClass('small-6');
+
 });
