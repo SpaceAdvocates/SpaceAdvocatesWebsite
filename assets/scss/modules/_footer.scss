@@ -36,6 +36,8 @@
 			}
 		}
 		#searchform {
+			margin: 0 0 2em;
+
 			input[type="text"] {
 				&:focus {
 					background-color: $dark-red;
@@ -45,5 +47,28 @@
 		#searchsubmit {
 			@extend .btn-red;
 		}
+		.cta {
+			margin: 2em 0 0;
+		}
+	}
+}
+
+@media #{$small} {
+	#footer-wrapper {
+		footer {
+			#searchform {
+				margin: 0;
+			}
+			.cta {
+				margin: 0;
+			}
+		}
+	}
+}
+
+// Overwrite styles for sticky-footer
+@media only screen and (max-width: $medium-screen) {
+	#footer-wrapper {
+		height: auto;
 	}
 }

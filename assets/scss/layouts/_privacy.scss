@@ -1,5 +1,5 @@
 .page-privacy {
-	.entry {
+	.content {
 		background-color: $white;
 		color: $black;
 		padding: 2em;
@@ -9,6 +9,13 @@
 		}
 		ul, ol {
 			margin-left: 2em;
+		}
+		a {
+			color: $blue;
+
+			&:hover {
+				color: $dark_blue;
+			}
 		}
 	}
 }

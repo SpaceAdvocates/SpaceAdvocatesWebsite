@@ -3,6 +3,7 @@
 
 	h1 {
 		text-align: center;
+		font-size: 2.5em;
 	}
 	section {
 		overflow: hidden;
@@ -22,5 +23,13 @@
 	}
 	.person img {
 		margin-right: 1.5em;
+	}
+}
+
+@media #{$medium} {
+	.page-about {
+		h1 {
+			font-size: 4em;
+		}
 	}
 }

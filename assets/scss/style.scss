@@ -11,11 +11,17 @@
 
 // Libraries
 // ------------------------------------------------------------------------------
+// Foundation
 @import "foundation";
+@import "foundation/components/grid-5";
 @import "libraries/foundation/variables";
+
+// Compass
 @import "compass/css3";
 @import "compass/css3/user-interface";
 @import "compass-placeholder";
+
+// Misc
 @import "spens/sticky-footer";
 
 // Web fonts

@@ -9,15 +9,15 @@ Template Name: Missions
 
 <h1>Missions</h1>
 
-<div class="mission">
+<div class="mission small-12 columns">
 	<div class="row">
 		<img alt="slide1" src="<?= get_bloginfo('template_directory'); ?>/assets/images/slide1.jpg" />
 	</div>
 	<div class="row">
-		<div class="large-8 columns">
+		<div class="medium-8 small-12 columns">
 			<h2>Penny4NASA</h2>
 		</div>
-		<div class="large-4 columns">
+		<div class="medium-4 small-12 columns">
 			<a class="btn-red" href="http://www.penny4nasa.org/take-action">Take Action</a>
 		</div>
 	</div>
@@ -28,15 +28,15 @@ Template Name: Missions
 	</div>
 </div>
 
-<div class="mission">
+<div class="mission small-12 columns">
 	<div class="row">
 		<img src="<?= get_bloginfo('template_directory'); ?>/assets/images/slide2.jpg" alt="slide2" />
 	</div>
 	<div class="row">
-		<div class="large-8 columns">
+		<div class="medium-8 small-12 columns">
 			<h2>Coming Soon</h2>
 		</div>
-		<div class="large-4 columns">
+		<div class="medium-4 small-12 columns">
 			<a class="btn-red" href="/join">Become a Space Advocate</a>
 		</div>
 	</div>

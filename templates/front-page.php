@@ -24,7 +24,7 @@ Template Name: Front Page
 <?php get_header(); ?>
 
 	<section id="action" class="row">
-        <div class="large-8 medium-12 small-12 columns">
+        <div class="small-12 medium-12 large-8 columns">
             <h1>EXPLORING THE FINAL FRONTIER MAKES US GREAT</h1>
         </div>
         

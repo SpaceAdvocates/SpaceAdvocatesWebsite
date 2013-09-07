@@ -23,9 +23,7 @@ $text_shadow: 1px 1px 3px $secondary_color;
 	position:relative;
 
 	&.featured {
-		$drawer_height: 5em;
-
-		@include card($drawer_height);
+		@include card(4em);
 
 		&:hover {
 			& + .drawer {
@@ -43,9 +41,7 @@ $text_shadow: 1px 1px 3px $secondary_color;
 		}
 	}
 	&.recentvideo{
-		$drawer_height: 3em;
-
-		@include card($drawer_height);
+		@include card(3em);
 
 		&:hover {
 			& + .drawer {
@@ -101,5 +97,13 @@ $text_shadow: 1px 1px 3px $secondary_color;
 		color: $black;
 		padding: 0.5em;
 		font-size: 0.7em;
+	}
+}
+
+@media #{$medium} {
+	.card {
+		&.featured {
+			@include card(5em);
+		}
 	}
 }

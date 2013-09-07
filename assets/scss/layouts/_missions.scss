@@ -9,10 +9,20 @@
 			background-color: $secondary_color;
 		}
 		a {
-			margin-top: 1.5em;
+			margin: 0 0 1.5em;
 		}
 	}
 	img {
 		width: 100%;
+	}
+}
+
+@media #{$small} {
+	.page-missions {
+		#container {
+			a {
+				margin: 1.5em 0 0;
+			}
+		}
 	}
 }

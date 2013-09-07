@@ -124,7 +124,6 @@ nav {
 					}
 				}
 				a {
-					//@extend .logos-logo-130;
 					background: $trans_dark_blue url($logo_image) no-repeat bottom center;
 					background-size: contain;
 					width: 100%;
@@ -136,11 +135,13 @@ nav {
 					margin:0;
 
 					&:hover {
-						//@extend .logos-logo-130;
 						background: $dark_blue url($logo_image) no-repeat bottom center;
 						background-size: contain;
 					}
 				}
+			}
+			&:last-child {
+				width: 7em;
 			}
 		}		
 		li {
@@ -165,7 +166,6 @@ nav {
 					}
 				}
 				a {
-					//@extend .logos-logo-130;
 					background: $trans_dark_blue url($logo_image) no-repeat bottom center;
 					background-size: contain;
 					width: 100%;
@@ -177,7 +177,6 @@ nav {
 					margin:0;
 
 					&:hover {
-						//@extend .logos-logo-130;
 						background: $dark_blue url($logo_image) no-repeat bottom center;
 						background-size: contain;
 					}
@@ -185,15 +184,12 @@ nav {
 			}
 			&:last-child {
 				padding:1em;
-
-				a {
-					width:100%;
-				}
+				width:100%;
 			}
 		}
 		li {
 			a {
-				box-shadow: 0 -1px 0 0 $nav-box-shadow-inner-color inset, 0 -2px 0 0 $nav-box-shadow-outer-color inset;
+				@include box-shadow(0 -1px 0 0 $nav-box-shadow-inner-color inset, 0 -2px 0 0 $nav-box-shadow-outer-color inset);
 			}	
 		}
 	}
