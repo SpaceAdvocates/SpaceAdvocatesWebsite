@@ -64,14 +64,3 @@ $phone_portrait_width: 320px; // min-width //
 $phone_landscape_width: 600px;
 
 $phone: "screen and (max-width: #{$phone_landscape_width})";
-
-$tablet_portrait_width: 601px;
-$tablet_landscape_width: 1024px;
-
-$tablet: "screen and (min-width: #{$tablet_portrait_width}) and (max-width: #{$tablet_landscape_width})";
-
-$desktop_width: 1025px;
-$desktop: "screen and (min-width: #{$desktop_width})";
-
-$breakpoint_width: 1032px; // design breakpoint //
-$breakpoint: "screen and (max-width: #{$breakpoint_width})";

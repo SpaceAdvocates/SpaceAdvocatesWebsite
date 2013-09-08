@@ -6,16 +6,9 @@ $nav-box-shadow-left: 1px 0 0 0 $nav-box-shadow-outer-color inset, 2px 0 0 0 $na
 
 nav {
 	@include box-shadow(0em 0em 1em 0.1em $light_blue);
-	background-color: $dark_blue;
-	padding: 0em;
 	background: $blue_gradient;
-	position: relative;
-	z-index: 2;
 
-	& > .row > .columns:first-child {
-		padding-left: 0em;
-	}
-	.large-12.columns{
+	& > .row > .columns {
 		padding: 0;
 	}
 }
@@ -25,6 +18,8 @@ nav {
 
 	& > li {	
 		&:first-child {
+			width: 100%;
+
 			&.current_page_item {
 				& > a {
 					background: url($logo_image) no-repeat center center;
@@ -32,13 +27,13 @@ nav {
 				}
 			}
 			a {
+				@include box-sizing(content-box);
 				background: url($logo_image) no-repeat center center;
 				background-size: contain;
-				width: 10em;
-				color: $red;
+				width: 100%;
+				min-height: 7em;
 				text-indent: -999em;
-				@include box-sizing(content-box);
-				padding-left: 0em;
+				padding-left: 0;
 
 				&:hover {
 					background: url($logo_image) no-repeat center center;
@@ -48,14 +43,9 @@ nav {
 		}	
 		&:last-child {
 			padding: 0.5em 0.75em 0;
-			float: right;
-			width: 7em;
 
 			a {
 				@extend .btn-red;
-				font-size: 0.875em;
-				font-weight: normal;
-				margin-bottom: 0;
 			}
 		}
 	}
@@ -98,99 +88,25 @@ nav {
 	}
 }
 
-@media #{$desktop} {
+@media #{$small} {
 	#menu-global-nav {
-		li {
-			display: inline-block;
-			width: auto;
-		}
-	}
-}
-
-
-@media #{$tablet} {
-	#menu-global-nav {
-		list-style-type: none;
-
 		& > li {	
 			&:first-child {
-				width: 100%;
-				box-shadow: 0 -1px 0 0 $nav-box-shadow-inner-color inset, 0 -2px 0 0 $nav-box-shadow-outer-color inset;
+				width: auto;
 
-				&.current_page_item {
-					& > a {
-						background: url($logo_image) no-repeat bottom center;
-						background-size: contain;
-					}
-				}
 				a {
-					background: $trans_dark_blue url($logo_image) no-repeat bottom center;
-					background-size: contain;
-					width: 100%;
-					min-height:7em;
-					color: $red;
-					text-indent: -999em;
-					@include box-sizing(content-box);
-					padding: 0em;
-					margin:0;
-
-					&:hover {
-						background: $dark_blue url($logo_image) no-repeat bottom center;
-						background-size: contain;
-					}
+					width: 10em;
+					min-height: 100%;
 				}
 			}
 			&:last-child {
+				float: right;
 				width: 7em;
 			}
-		}		
+		}
 		li {
 			display: inline-block;
 			width: auto;
-		}
-	}
-}
-
-@media #{$phone} {
-	#menu-global-nav {
-		list-style-type: none;
-
-		& > li {	
-			&:first-child {
-				width: 100%;
-
-				&.current_page_item {
-					& > a {
-						background: url($logo_image) no-repeat bottom center;
-						background-size: contain;
-					}
-				}
-				a {
-					background: $trans_dark_blue url($logo_image) no-repeat bottom center;
-					background-size: contain;
-					width: 100%;
-					min-height:7em;
-					color: $red;
-					text-indent: -999em;
-					@include box-sizing(content-box);
-					padding: 0em;
-					margin:0;
-
-					&:hover {
-						background: $dark_blue url($logo_image) no-repeat bottom center;
-						background-size: contain;
-					}
-				}
-			}
-			&:last-child {
-				padding:1em;
-				width:100%;
-			}
-		}
-		li {
-			a {
-				@include box-shadow(0 -1px 0 0 $nav-box-shadow-inner-color inset, 0 -2px 0 0 $nav-box-shadow-outer-color inset);
-			}	
 		}
 	}
 }

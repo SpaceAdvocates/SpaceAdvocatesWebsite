@@ -17,10 +17,6 @@ $recent-post-font-size: 1.5em;
 	    text-shadow: 1px 1px 3px $dark_grey;
 		border-bottom: 1px solid $black;
 		@include box-shadow(0 1px 0 rgba($white, 0.3) inset);
-		@media #{$breakpoint} {
-			margin: 0 0 0 0;
-			text-indent:0;
-		}
 	}
 	& > a {
 		padding: 0em;
@@ -35,49 +31,21 @@ $recent-post-font-size: 1.5em;
 	h2 {
 		font-size: 2em;
 	}
-	
 	#action {
 		margin: 2.75em 0em 0em;
 		padding: 0em 0em 0em 0em;
 		position: relative;
-		%social-icon {
-			margin:0 auto 0;
-			@media #{$tablet} {
-				margin-top:2em;
-				margin-bottom: 0em;
-			}
-		}
+
 		h1 {
-			font-size: 3em;
-			padding: 0em;
+			font-size: 2em;
+			line-height: 1.4em;
+			padding: 0;
 			margin: 0;
-			line-height:1.4em;
-
-			@media #{$tablet} {
-				text-align: center;
-				font-size: 2.25em;
-			}
-			@media #{$phone} {
-				text-align: center;
-				font-size: 2em;
-			}
 		}
-		.cta {
-			text-align: center;
-			display: block;
-			margin-bottom: 2em;
-
-			@media #{$tablet} {
-				margin-top:2em;
-				margin-bottom: 0em;
-			}
-			@media #{$phone} {
-				margin-top:2em;
-			}
+		.cta, .social {
+			margin-top: 1em;
 		}
-	}
-	
-	
+	}	
 	#orbitmission {
 		@extend %section_background;
 	
@@ -95,7 +63,7 @@ $recent-post-font-size: 1.5em;
 		.orbit-caption {
 			background: $trans_dark_blue;
 			font-size: 1em;
-			padding: 2em 1em;
+			padding: 1em 2em;
 
 			h3 {
 				font-size: 1.2em;
@@ -160,9 +128,28 @@ $recent-post-font-size: 1.5em;
 
 @media #{$small} {
 	.page-home {
+		#action {
+			h1 {
+				font-size: 2.25em;
+			}
+			.social {
+				margin-top: 1em;
+				margin-bottom: 1em;
+			}
+		}
 		#orbitmission {
 			.orbit-caption {
 				padding: 0.5em;
+			}
+		}
+	}
+}
+
+@media #{$medium} {
+	.page-home {
+		#action {
+			h1 {
+				font-size: 3em;
 			}
 		}
 	}

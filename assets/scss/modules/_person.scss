@@ -11,7 +11,7 @@
 	.name {
 		font-size: 2em;
 		margin-bottom: 0em;
-		margin-top: 0.8em;
+		margin-top: 0.3em;
 
 		a {
 			display: block;
@@ -26,5 +26,13 @@
 		line-height: 1.1em;
 		clear: both;
 		display: none;
+	}
+}
+
+@media #{$small} {
+	.person {
+		.name {
+			margin-top: 0.8em;
+		}
 	}
 }

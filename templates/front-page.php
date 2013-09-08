@@ -29,21 +29,25 @@ Template Name: Front Page
         </div>
         
         <div class="large-4 medium-12 small-12 columns">
-        	<div class="large-12 medium-6 small-12 columns">
-				<a class="btn-red cta" href="/join">Become A Space Advocate</a>
-            </div>
-            <div class="large-12 medium-6 small-12 columns">
-                <div class="small-3 columns">
-                    <a class="facebook" href="https://www.facebook.com/SpaceAdvocates"></a>
+            <div class="row">
+            	<div class="cta large-12 medium-6 small-12 columns">
+    				<a class="btn-red" href="/join">Become A Space Advocate</a>
                 </div>
-                <div class="small-3 columns">
-                    <a class="google" href="https://plus.google.com/b/116044676098904697251/116044676098904697251"></a>
-                </div>
-                <div class="small-3 columns">
-                    <a class="twitter" href="https://twitter.com/SpaceAdvocates"></a>
-                </div>
-                <div class="small-3 columns">
-                    <a class="youtube" href="http://www.youtube.com/SpaceAdvocates"></a>
+                <div class="social large-12 medium-6 small-12 columns">
+                    <div class="row">
+                        <div class="small-3 columns">
+                            <a class="facebook" href="https://www.facebook.com/SpaceAdvocates"></a>
+                        </div>
+                        <div class="small-3 columns">
+                            <a class="google" href="https://plus.google.com/b/116044676098904697251/116044676098904697251"></a>
+                        </div>
+                        <div class="small-3 columns">
+                            <a class="twitter" href="https://twitter.com/SpaceAdvocates"></a>
+                        </div>
+                        <div class="small-3 columns">
+                            <a class="youtube" href="http://www.youtube.com/SpaceAdvocates"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,8 +80,7 @@ Template Name: Front Page
                         </div>
                     </div>
                 </li>
-                
-                
+
             </ul>
             
             <div id="orbit-nav">
