@@ -22,22 +22,19 @@ nav {
 
 			&.current_page_item {
 				& > a {
-					background: url($logo_image) no-repeat center center;
-					background-size: contain;
+					background: url($logo_image) no-repeat center center / contain;
 				}
 			}
 			a {
 				@include box-sizing(content-box);
-				background: url($logo_image) no-repeat center center;
-				background-size: contain;
+				background: url($logo_image) no-repeat center center / contain;
 				width: 100%;
 				min-height: 7em;
 				text-indent: -999em;
 				padding-left: 0;
 
 				&:hover {
-					background: url($logo_image) no-repeat center center;
-					background-size: contain;
+					background: url($logo_image) no-repeat center center / contain;
 				}
 			}
 		}	

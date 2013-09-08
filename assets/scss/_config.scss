@@ -49,7 +49,6 @@ $button_box_shadow: inset 0 1px 0 rgba($white, 0.3);
 /////// Page dimension configuration ///////
 // -----------------------------------------------------------------------------
 $footer_height: 23em;
-$page-width: 1000px;
 
 $background: $black url($bg_image) repeat fixed center;
 
@@ -57,10 +56,3 @@ $background: $black url($bg_image) repeat fixed center;
 // -----------------------------------------------------------------------------
 $primary_font: Bebas, Arial, sans-serif;
 $secondary_font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-/////// UI @media breakpoint defaults /////// 
-// -----------------------------------------------------------------------------
-$phone_portrait_width: 320px; // min-width //
-$phone_landscape_width: 600px;
-
-$phone: "screen and (max-width: #{$phone_landscape_width})";

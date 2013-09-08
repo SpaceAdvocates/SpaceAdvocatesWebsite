@@ -1,6 +1,6 @@
 body {
 	font: #{$base-font-size}/1em $secondary_font;
-	background: $black url($bg_image) repeat fixed center;
+	background: $background;
 	color: $white;
 
 	h1, h2, h3, h4, h5, h6 {
