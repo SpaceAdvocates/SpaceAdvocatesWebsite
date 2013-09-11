@@ -4,6 +4,7 @@ Template Name: Contact Page
 */
 	
 	if(isset($_POST['email'])) {
+		header('Content-type: application/javascript');
 		$email = $_POST['email'];
 
 		// validate email
@@ -26,6 +27,12 @@ Template Name: Contact Page
 				'errors' => $errors
 			));
 		} else {
+			header("HTTP/1.0 200 OK");
+
+			if($email['subscribe'] && !strpos(file_get_contents('email.csv'), $email['email'])) {
+				file_put_contents('email.csv', "{$email['email']},", FILE_APPEND);
+			}
+
 			$to = 'jpspens@gmail.com';
 			$subject = $email['subject'];
 			$message = $email['message'];
@@ -46,7 +53,7 @@ Template Name: Contact Page
 <h1>Contact Us</h1>
 
 <div class="row">
-	<div class="small-12 tablet-12 large-9 columns" id="contact_form">
+	<div class="small-12 large-9 columns" id="contact_form">
 		<label for="contact_name">Name*</label>
 		<input type="text" id="contact_name" placeholder="Name" />
 
@@ -60,7 +67,7 @@ Template Name: Contact Page
 		<textarea id="contact_message" placeholder="Message"></textarea>
 
 		<label for="contact_updates" id="contact_updates_label">I would like to receive email updates</label>
-		<input type="checkbox" id="contact_updates" value="yes" defaultchecked="true" />
+		<input type="checkbox" id="contact_updates" checked="true" />
 		
 		<button class="submit btn-red">send message</button>
 	</div>

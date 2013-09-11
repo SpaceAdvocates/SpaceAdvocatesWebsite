@@ -2,7 +2,7 @@ SA.pageFunctionsMap = {
 	'page-home': 'Home',
 	'page-join': 'Join',
 	'page-donate': 'Donate',
-	'page-contact-us': 'Contact',
+	'page-contact': 'Contact',
 	'page-faq': 'FAQ'
 };
 

@@ -4,6 +4,7 @@ SA.Contact = function () {
 	this.$email			= $('#contact_email');
 	this.$subject		= $('#contact_subject');
 	this.$message		= $('#contact_message');
+	this.$updates		= $('#contact_updates');
 	this.$submit		= $('.submit');
 
 	return this;
@@ -20,25 +21,33 @@ SA.Contact.prototype.bindSubmit = function () {
 SA.Contact.prototype.sendMessage = function (event) {
 	var Contact = event.data.contact;
 
-	var email = {
+	var data = {
 		name: Contact.$name.val(),
 		email: Contact.$email.val(),
 		subject: Contact.$subject.val(),
-		message: Contact.$message.val()
+		message: Contact.$message.val(),
+		subscribe: Contact.$updates.is(':checked')
 	};
 
+	// Send the email
 	$.ajax({
 		type: 'post',
-		dataType: 'json',
-		data: { email: email },
-		context: Contact.$contactForm
-	}).done(function (data) {
-		$(this).addClass('success').removeClass('alert').text(data.message);
-	}).fail(function (jqXHR) {
-		var errors = jqXHR.responseJSON.errors;
-		$('label').removeClass('error');
-		for(var index in errors) {
-			$('label[for="'+errors[index]+'"]').addClass('error');
+		dataType: 'jsonp',
+		data: { email: data },
+		context: Contact.$contactForm,
+		statusCode: {
+			200: function (data) {
+				$('label').removeClass('error');
+				$(this).addClass('success').removeClass('alert').text(data.message);
+			},
+			500: function (jqXHR) {
+				var json = JSON.parse(jqXHR.responseText);
+				var errors = json.errors;
+				$('label').removeClass('error');
+				for(var index in errors) {
+					$('label[for="'+errors[index]+'"]').addClass('error');
+				}
+			}
 		}
 	}).always(function () {
 		Contact.bindSubmit();

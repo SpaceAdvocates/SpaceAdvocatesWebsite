@@ -144,20 +144,26 @@ function my_show_extra_profile_fields( $user ) { ?>
 			<th>Rank<br><span class="description">Choose which best describes you.</span></th>
 			<td>
 				<?php
-					$ranks = array('director','social_media','graphic_design','web_development','government_relations', 'video_development', 'public_and_media_relations');
 					$author_rank = esc_attr( get_the_author_meta( 'rank', $user->ID ) );
-
-					foreach($ranks as $rank): ?>
-						<input type="radio" name="rank" id="rank_<?php echo $rank; ?>" value="<?php echo $rank; ?>" <?php if($author_rank === $rank): ?> checked="checked"<?php endif; ?> />
-						<label for="rank_<?php echo $rank; ?>"><?php echo ucwords(str_replace('_',' ',$rank)); ?></label>
-
-						<br>
-					<?php endforeach;
+					do_action( 'show_ranks', true );
 				?>
 			</td>
 		</tr>
 	</table>
 <?php }
+
+add_action ( 'show_ranks', 'rank_checkboxes' );
+function rank_checkboxes( $shouldAddBreak = false ) {
+	$ranks = array('director','social_media','graphic_design','web_development','government_relations', 'video_development', 'public_and_media_relations');
+
+	foreach($ranks as $rank): ?>
+		<label for="rank_<?php echo $rank; ?>">
+			<input type="radio" name="rank" id="rank_<?php echo $rank; ?>" value="<?php echo $rank; ?>" <?php if($author_rank === $rank): ?> checked="checked"<?php endif; ?> />
+			<?php echo ucwords(str_replace('_',' ',$rank)); ?>
+		</label>
+		<?php if($shouldAddBreak): ?><br /><?php endif; ?>
+	<?php endforeach;
+}
 
 add_action( 'personal_options_update', 'my_save_extra_profile_fields' );
 add_action( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
