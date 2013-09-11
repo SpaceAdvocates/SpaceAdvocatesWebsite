@@ -6,7 +6,7 @@ Template Name: Join Page
 	if(isset($_POST['email'])) {
 		$email = htmlentities(strip_tags($_POST['email']));
 		 
-		$logname = 'email.csv';
+		$logname = get_template_directory() . '/email.csv';
 		$error = false;
 
 		// validate email

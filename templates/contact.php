@@ -29,8 +29,10 @@ Template Name: Contact Page
 		} else {
 			header("HTTP/1.0 200 OK");
 
-			if($email['subscribe'] && !strpos(file_get_contents('email.csv'), $email['email'])) {
-				file_put_contents('email.csv', "{$email['email']},", FILE_APPEND);
+			$filepath = get_template_directory() . '/email.csv';
+
+			if($email['subscribe'] && !strpos(file_get_contents($filepath), $email['email'])) {
+				file_put_contents($filepath, "{$email['email']},", FILE_APPEND);
 			}
 
 			$to = 'jpspens@gmail.com';
