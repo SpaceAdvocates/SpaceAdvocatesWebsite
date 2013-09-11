@@ -27,9 +27,12 @@
 	.number {
 		position: absolute;
 		top: 0;
+		left: 0;
 		@include user-select(none);
 		font: 10em/0.6em $primary_font;
 		opacity: 0.2;
+		text-align: center;
+		width: 0.7em;
 	}
 	.social {
 		margin: 0 0 1em;

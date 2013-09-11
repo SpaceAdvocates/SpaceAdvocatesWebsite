@@ -7,6 +7,8 @@ $nav-box-shadow-left: 1px 0 0 0 $nav-box-shadow-outer-color inset, 2px 0 0 0 $na
 nav {
 	@include box-shadow(0em 0em 1em 0.1em $light_blue);
 	background: $blue_gradient;
+	position: relative;
+	z-index: 2;
 
 	& > .row > .columns {
 		padding: 0;

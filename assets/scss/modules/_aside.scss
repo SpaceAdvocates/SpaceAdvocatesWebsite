@@ -1,12 +1,12 @@
 aside {
 	.widget {
 		margin-top: 1.5em;
-		padding:0.5em;
+		padding: 1em;
 
 		.widget-title {
 			background-color: transparent;
-			color:$light_red;
-			padding:0;
+			color: $light_red;
+			padding: 0;
 		}
 
 		ul {
@@ -23,7 +23,7 @@ aside {
 			text-decoration: underline;
 			
 			&:hover {
-				color:$white;
+				color: $white;
 			}
 		}
 	}
