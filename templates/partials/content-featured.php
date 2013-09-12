@@ -11,7 +11,7 @@
 
 ?>
 
-<a href="<?php the_permalink(); ?>" class="small-12 medium-6 large-3 columns">
+<a href="<?php the_permalink(); ?>" class="featured-card small-12 medium-6 large-3 columns">
 	<div id="post-<?php the_ID(); ?>" class="card featured" style="background-image: url(<?= $url ?>)"></div>
 	<div class="drawer">
 		<h1><?php the_title(); ?></h1>

@@ -1,0 +1,62 @@
+#orbit {
+	.orbit-container {
+		background-color: $secondary_color;
+
+		.orbit-bullets {
+			display: none;
+		}
+		.orbit-caption {
+			position: static;
+			background: $trans_dark_blue;
+			font-size: 1em;
+			padding: 1em 2em;
+
+			h3 {
+				font-size: 1em;
+			}
+			a {
+				display: block;
+			}
+		}
+	}
+	#orbit-nav {
+		ul {
+			list-style-type: none;
+			margin: 0;
+			top: 0;
+
+			li {
+				padding: 0;
+
+				a { 
+					display: block;
+					line-height: 3em;
+					font-family: $primary_font;
+					color: $white;
+					text-align: center;
+					@include blue_gradient;
+					@include box-shadow(-1px 0 0 0 rgba(147, 215, 249, 0.5) inset, -2px 0 0 0 #03273A inset);
+
+					&:last-child { 
+						@include box-shadow(none);
+					}
+					&.active {
+						background: $secondary_color;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media #{$small} {
+	#orbit {
+		.orbit-container {
+			.orbit-caption {
+				h3 {
+					font-size: 1.3em;
+				}
+			}
+		}
+	}
+}
