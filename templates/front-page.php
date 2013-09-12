@@ -56,12 +56,8 @@ Template Name: Front Page
 	<section id="orbitmission" class="row">
 	
 		<h2>Join A Mission</h2>
-		<div>
 		<div id="orbit" class="small-12 columns">
-			<div>
-				<?php get_template_part( 'templates/partials/content', 'orbit' ); ?>
-			</div>
-		</div>
+			<?php get_template_part( 'templates/partials/content', 'orbit' ); ?>
 		</div>
 		
 	</section>

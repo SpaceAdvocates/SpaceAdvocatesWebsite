@@ -12,8 +12,8 @@ $recent-post-font-size: 1.5em;
 	}
 
 	#action {
-		margin: 2.75em 0em 0em;
-		padding: 0em 0em 0em 0em;
+		margin: 2.75em 0 0;
+		padding: 0;
 		position: relative;
 
 		h1 {
@@ -29,8 +29,8 @@ $recent-post-font-size: 1.5em;
 
 	#orbitmission, #featured, #recent_videos {
 		@include border-radius(2px);
-		margin: 2.5em 0em 0em;
-		padding: 0em 0em 0em 0em;
+		margin: 2.5em 0 0;
+		padding: 0;
 		position: relative;
 		z-index: 1;
 
@@ -88,18 +88,6 @@ $recent-post-font-size: 1.5em;
 			}
 		}
 	}
-
-	/*
-	#orbitmission {
-		.btn-red {
-			float:right;
-		}
-		#orbit{
-			position:relative;
-			z-index:1;
-		}
-	}
-	*/
 }
 
 @media #{$medium} {

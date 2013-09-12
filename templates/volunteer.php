@@ -14,27 +14,9 @@ Template Name: Volunteer Page
 
 	<div class="row">
 		<div class="small-12 large-9 columns" id="volunteer_form">
-			<label for="volunteer_name">Name*</label>
-			<input type="text" id="volunteer_name" placeholder="Name" />
-
-			<label for="volunteer_email">Email*</label>
-			<input type="text" id="volunteer_email" placeholder="Email" />
-
-			<label for="volunteer_subject">Phone*</label>
-			<input type="text" id="volunteer_subject" placeholder="Subject" />
-
-			<label for="volunteer_positions">Position</label>
-			<div id="volunteer_positions">
-				<?php do_action( 'show_ranks' ); ?>
-			</div>
-
-			<label for="volunteer_website">Website</label>
-			<input type="text" id="volunteer_website" placeholder="http://" />
-
-			<label for="volunteer_message">Message*</label>
-			<textarea id="volunteer_message" placeholder="Message"></textarea>
-			
-			<button class="submit btn-red">send message</button>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php the_content(); ?>
+			<?php endwhile; ?>
 		</div>
 	</div>
 </div>
