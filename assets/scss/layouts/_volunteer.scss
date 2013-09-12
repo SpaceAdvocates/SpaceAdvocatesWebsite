@@ -1,12 +1,23 @@
 .page-volunteer {
-	#volunteer_positions {
-		margin-bottom: 1em;
-
-		input {
-			margin-bottom: 0;
-		}
+	input[type="submit"] {
+		@extend .btn-red;
+		margin-top: 1em;
 	}
-	textarea {
-		min-height: 7em;
+	input[type="checkbox"] {
+		margin: 0;
+	}
+	span {
+		margin: 0;
+	}
+	input[type="file"] {
+		&:focus {
+			outline: none;
+		}
+		&::-webkit-file-upload-button {
+			@extend .btn-red;
+			width: auto;
+			line-height: 1.5em;
+			min-height: 0;
+		}
 	}
 }
