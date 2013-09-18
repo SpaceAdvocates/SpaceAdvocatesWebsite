@@ -98,7 +98,7 @@ module.exports = function(grunt) {
         deploy: {
             staging: {
                 src: './',
-                dest: '~/www/dev1/wp-content/themes/spaceadvocates',
+                dest: '~/www/dev1/cms/wp-content/themes/spaceadvocates',
                 host: 'spaceadv@spaceadvocates.com',
                 recursive: true,
                 syncDest: true,
