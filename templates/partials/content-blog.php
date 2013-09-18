@@ -16,7 +16,6 @@
 
 	<a href="<?php the_permalink(); ?>">
 		<h1 class="<?php echo $class; ?>"><?php the_title(); ?></h1>
-		<div class="star"></div>
 	</a>
 
 	<div class="entry">

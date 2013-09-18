@@ -6,14 +6,6 @@
 		overflow: hidden;
 		display: block;
 
-		.star {
-			@extend .icons-star-150;
-			position: absolute;
-			right: -1em;
-			top: 1em;
-			@include opacity(0.2);
-			display: none;
-		}
 		h1 {
 			font-size: 2.5em;
 			line-height: 1.2em;
