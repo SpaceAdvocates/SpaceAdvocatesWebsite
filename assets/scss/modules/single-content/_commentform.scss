@@ -24,7 +24,8 @@
 		width: 50%;
 
 		#submit {
-			@extend .btn-red;
+			
+			@include btn-red;
 		}
 	}
 }

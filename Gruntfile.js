@@ -125,7 +125,7 @@ module.exports = function(grunt) {
             },
             production: {
                 src: './',
-                dest: '~/path/to/theme',
+                dest: '~/www/cms/wp-content/themes/spaceadvocates',
                 host: '<%= deploy.staging.host %>',
                 recursive: true,
                 syncDest: true,

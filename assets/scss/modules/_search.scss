@@ -2,7 +2,6 @@
 	margin: 0;
 
 	input[type="text"] {
-		//@extend %btn;
 		height: auto;
 		min-height: $button_line_height;
 		padding: 0 1em;
@@ -26,7 +25,6 @@
 }
 
 #searchsubmit {
-	@extend .btn-blue;
 	@include border-radius(0 0.2em 0.2em 0);
 	border-left-width:0px;
 }

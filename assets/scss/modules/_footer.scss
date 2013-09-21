@@ -45,7 +45,7 @@
 			}
 		}
 		#searchsubmit {
-			@extend .btn-red;
+			@include btn-red;
 		}
 		.cta {
 			margin: 2em 0 0;

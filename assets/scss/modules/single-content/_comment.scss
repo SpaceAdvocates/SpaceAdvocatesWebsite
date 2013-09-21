@@ -68,11 +68,13 @@ li.comment {
 		display: none;
 
 		.comment-edit-link {
+			
 			@extend .btn-blue;
 			font-size: 0.8em;
 		}
 		.comment-reply-link {
-			@extend .btn-red;
+			
+			@include btn-red;
 			font-size: 0.8em;
 		}
 	}

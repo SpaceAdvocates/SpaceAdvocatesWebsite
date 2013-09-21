@@ -35,8 +35,76 @@
 	}
 }
 
+@mixin btn-red {
+	display: inline-block;
+	height: auto;
+	min-height: $button_line_height;
+	width: 100%;
+	margin: 0;
+	color: $white;
+	line-height: $button_line_height;
+	font-family: $primary_font;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	letter-spacing: 0.08em;
+	text-shadow: 0 1px 0 rgba($black, 0.25);
+	text-align: center;
+	white-space: nowrap;
+	zoom: 1;
+	cursor: pointer;
+	overflow: hidden;
+	border: 1px solid transparent;
+	@include border-radius(0.2em);
+	@include box-shadow($button_box_shadow);
+
+	&:hover {
+		color: $white;
+	}
+
+	border-color: $red;
+	@include red_gradient;
+
+	&:active {
+		background: linear-gradient(to bottom, $dark_red 0%, $red 100%) repeat scroll 0 0 transparent;
+	}
+}
+
 .btn-blue {
 	@extend %btn;
+	border-color: $blue;
+	@include blue_gradient;
+
+	&:active {
+		background: linear-gradient(to bottom, $dark_blue 0%, $blue 100%) repeat scroll 0 0 transparent;
+	}
+}
+
+@mixin btn-blue {
+	display: inline-block;
+	height: auto;
+	min-height: $button_line_height;
+	width: 100%;
+	margin: 0;
+	color: $white;
+	line-height: $button_line_height;
+	font-family: $primary_font;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	letter-spacing: 0.08em;
+	text-shadow: 0 1px 0 rgba($black, 0.25);
+	text-align: center;
+	white-space: nowrap;
+	zoom: 1;
+	cursor: pointer;
+	overflow: hidden;
+	border: 1px solid transparent;
+	@include border-radius(0.2em);
+	@include box-shadow($button_box_shadow);
+
+	&:hover {
+		color: $white;
+	}
+
 	border-color: $blue;
 	@include blue_gradient;
 

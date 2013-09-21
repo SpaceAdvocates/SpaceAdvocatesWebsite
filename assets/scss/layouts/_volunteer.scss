@@ -1,6 +1,6 @@
 .page-volunteer {
 	input[type="submit"] {
-		@extend .btn-red;
+		@include btn-red;
 		margin-top: 1em;
 	}
 	input[type="checkbox"] {
@@ -14,7 +14,7 @@
 			outline: none;
 		}
 		&::-webkit-file-upload-button {
-			@extend .btn-red;
+			@include btn-red;
 			width: auto;
 			line-height: 1.5em;
 			min-height: 0;
