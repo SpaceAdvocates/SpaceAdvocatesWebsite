@@ -1,8 +1,11 @@
-
 <?php
 /*
 Template Name: Press Page
 */
+?>
+
+<?php 
+	$uploads = wp_upload_dir();
 ?>
 
 <?php get_header(); ?>
@@ -37,7 +40,7 @@ Template Name: Press Page
 				<h3>Press Releases</h3>
 				<div class="content">
 					<ul>
-						<li><a href="http://dev1.spaceadvocates.com/wp-content/uploads/2013/08/PressRelease1.pdf">3/12/2012 CITIZEN MOVEMENT SEEKS INCREASE TO NASA’S BUDGET</a></li>
+						<li><a href="<?= $uploads->url ?>/PressRelease1.pdf">3/12/2012 CITIZEN MOVEMENT SEEKS INCREASE TO NASA’S BUDGET</a></li>
 					</ul>
 				</div>
 			</div>
@@ -63,10 +66,10 @@ Template Name: Press Page
 				<div class="content">
 					<div class="row">
 						<div class="small-6 columns">
-							<a href="http://dev1.spaceadvocates.com/wp-content/uploads/2013/08/Space-Advocates-RGB-PNG.png"><img src="http://dev1.spaceadvocates.com/wp-content/uploads/2013/08/Space-Advocates-RGB-PNG.png" alt="Space Advocates Logo" width="150" height="150" class="alignnone size-full wp-image-2077" /></a>
+							<a href="<?= $uploads->url ?>/Space-Advocates-RGB-PNG.png"><img src="<?= $uploads->url ?>/Space-Advocates-RGB-PNG.png" alt="Space Advocates Logo" width="150" height="150" class="alignnone size-full wp-image-2077" /></a>
 						</div>
 						<div class="small-6 columns">
-							<a href="http://dev1.spaceadvocates.com/wp-content/uploads/2013/08/SA_logo_astronaut.png"><img src="http://dev1.spaceadvocates.com/wp-content/uploads/2013/08/SA_logo_astronaut.png" alt="Space Advocates Advocate" width="150" height="150" class="alignnone size-thumbnail wp-image-2078" /></a>
+							<a href="<?= $uploads->url ?>/SA_logo_astronaut.png"><img src="<?= $uploads->url ?>/SA_logo_astronaut.png" alt="Space Advocates Advocate" width="150" height="150" class="alignnone size-thumbnail wp-image-2078" /></a>
 						</div>
 					</div>
 				</div>
@@ -78,13 +81,13 @@ Template Name: Press Page
 				<div class="content">
 					<div class="row">
 						<div class="small-4 columns">
-							<a href="http://dev1.spaceadvocates.com/wp-content/uploads/2013/08/ICON.png"><img src="http://dev1.spaceadvocates.com/wp-content/uploads/2013/08/ICON.png" alt="Penny4NASA Logo" width="150" height="150" class="alignnone size-thumbnail wp-image-2079" /></a>
+							<a href="<?= $uploads->url ?>/ICON.png"><img src="<?= $uploads->url ?>/ICON.png" alt="Penny4NASA Logo" width="150" height="150" class="alignnone size-thumbnail wp-image-2079" /></a>
 						</div>
 						<div class="small-4 columns">
-							<a href="http://dev1.spaceadvocates.com/wp-content/uploads/2013/08/LOGO-VERTICAL-NEW.png"><img src="http://dev1.spaceadvocates.com/wp-content/uploads/2013/08/LOGO-VERTICAL-NEW.png" alt="Penny4NASA - Vertical" width="150" height="150" class="alignnone size-thumbnail wp-image-2080" /></a>
+							<a href="<?= $uploads->url ?>/LOGO-VERTICAL-NEW.png"><img src="<?= $uploads->url ?>/LOGO-VERTICAL-NEW.png" alt="Penny4NASA - Vertical" width="150" height="150" class="alignnone size-thumbnail wp-image-2080" /></a>
 						</div>
 						<div class="small-4 columns">
-							<a href="http://dev1.spaceadvocates.com/wp-content/uploads/2013/08/LOGO-HORIZONTAL-NEW.png"><img src="http://dev1.spaceadvocates.com/wp-content/uploads/2013/08/LOGO-HORIZONTAL-NEW.png" alt="Penny4NASA - Horizontal" width="150" height="150" class="alignnone size-thumbnail wp-image-2081" /></a>
+							<a href="<?= $uploads->url ?>/LOGO-HORIZONTAL-NEW.png"><img src="<?= $uploads->url ?>/LOGO-HORIZONTAL-NEW.png" alt="Penny4NASA - Horizontal" width="150" height="150" class="alignnone size-thumbnail wp-image-2081" /></a>
 						</div>
 					</div>
 				</div>
