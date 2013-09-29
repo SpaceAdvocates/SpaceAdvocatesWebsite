@@ -66,10 +66,10 @@ Template Name: Press Page
 				<div class="content">
 					<div class="row">
 						<div class="small-6 columns">
-							<a href="<?= $uploads->url ?>/Space-Advocates-RGB-PNG.png"><img src="<?= $uploads->url ?>/Space-Advocates-RGB-PNG.png" alt="Space Advocates Logo" width="150" height="150" class="alignnone size-full wp-image-2077" /></a>
+							<a href="<?= $uploads->url ?>/Space-Advocates-RGB-PNG.png"><img src="<?= $uploads->url ?>/Space-Advocates-RGB-PNG_x150.png" alt="Space Advocates Logo" width="150" height="150" class="alignnone size-full wp-image-2077" /></a>
 						</div>
 						<div class="small-6 columns">
-							<a href="<?= $uploads->url ?>/SA_logo_astronaut.png"><img src="<?= $uploads->url ?>/SA_logo_astronaut.png" alt="Space Advocates Advocate" width="150" height="150" class="alignnone size-thumbnail wp-image-2078" /></a>
+							<a href="<?= $uploads->url ?>/SA_logo_astronaut.png"><img src="<?= $uploads->url ?>/SA_logo_astronaut_x150.png" alt="Space Advocates Advocate" width="150" height="150" class="alignnone size-thumbnail wp-image-2078" /></a>
 						</div>
 					</div>
 				</div>
@@ -81,13 +81,13 @@ Template Name: Press Page
 				<div class="content">
 					<div class="row">
 						<div class="small-4 columns">
-							<a href="<?= $uploads->url ?>/ICON.png"><img src="<?= $uploads->url ?>/ICON.png" alt="Penny4NASA Logo" width="150" height="150" class="alignnone size-thumbnail wp-image-2079" /></a>
+							<a href="<?= $uploads->url ?>/ICON.png"><img src="<?= $uploads->url ?>/ICON_x150.png" alt="Penny4NASA Logo" width="150" height="150" class="alignnone size-thumbnail wp-image-2079" /></a>
 						</div>
 						<div class="small-4 columns">
-							<a href="<?= $uploads->url ?>/LOGO-VERTICAL-NEW.png"><img src="<?= $uploads->url ?>/LOGO-VERTICAL-NEW.png" alt="Penny4NASA - Vertical" width="150" height="150" class="alignnone size-thumbnail wp-image-2080" /></a>
+							<a href="<?= $uploads->url ?>/LOGO-VERTICAL-NEW.png"><img src="<?= $uploads->url ?>/LOGO-VERTICAL-NEW_x150.png" alt="Penny4NASA - Vertical" width="150" height="150" class="alignnone size-thumbnail wp-image-2080" /></a>
 						</div>
 						<div class="small-4 columns">
-							<a href="<?= $uploads->url ?>/LOGO-HORIZONTAL-NEW.png"><img src="<?= $uploads->url ?>/LOGO-HORIZONTAL-NEW.png" alt="Penny4NASA - Horizontal" width="150" height="150" class="alignnone size-thumbnail wp-image-2081" /></a>
+							<a href="<?= $uploads->url ?>/LOGO-HORIZONTAL-NEW.png"><img src="<?= $uploads->url ?>/LOGO-HORIZONTAL-NEW_x150.png" alt="Penny4NASA - Horizontal" width="150" height="150" class="alignnone size-thumbnail wp-image-2081" /></a>
 						</div>
 					</div>
 				</div>
